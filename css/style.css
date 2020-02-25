@@ -1,0 +1,41 @@
+/* @import "~antd/dist/antd.css"; */
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+.main {
+  background-color: #000000;
+  background-image: url("/images/home-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.minimal {
+  height: 10vh;
+  background-color: #000000;
+  background-image: url("/images/home-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.main-background {
+  width: 100%;
+  min-height: 60vh;
+  z-index: -1;
+}
+
+.icons {
+  font-size: 1.2rem;
+  color: #f3f3f369;
+  padding: 0.8rem;
+}
+
+.icons:hover {
+  color: #f4f4f4;
+}
