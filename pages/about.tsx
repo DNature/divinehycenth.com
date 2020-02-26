@@ -1,12 +1,12 @@
 import * as React from 'react'
 import Link from 'next/link'
-import Layout from '../components/Layout'
+import Layout from '../components/layouts'
 import { NextPage } from 'next'
 
 const AboutPage: NextPage = () =>{
   
   return (
-  <Layout>
+  <Layout title="Divine Hycenth | About Me">
     <h1>About</h1>
     <p>This is the about page</p>
     <p>

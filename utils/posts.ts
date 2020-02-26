@@ -7,39 +7,39 @@ const ArticleData: Post[] = [
       "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
     imageUrl: "/images/avatar.jpg",
     readTime: "2 min read",
-    path: "asdffas"
+    fileName: "first-mdx"
   },
   {
-    title: "first Article",
+    title: "Second Article",
     subTitle:
       "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
     imageUrl: "/images/home-bg.jpg",
     readTime: "2 min read",
-    path: "asdffas"
+    fileName: "second"
   },
   {
-    title: "first Article",
+    title: "Third Article",
     subTitle:
       "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
     imageUrl: "/images/avatar.jpg",
     readTime: "2 min read",
-    path: "asdffas"
+    fileName: "third"
   },
   {
-    title: "first Article",
+    title: "Fourth Article",
     subTitle:
       "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
     imageUrl: "/images/home-bg.jpg",
     readTime: "2 min read",
-    path: "asdffas"
+    fileName: "fourth"
   },
   {
-    title: "first Article",
+    title: "Fifth Article",
     subTitle:
       "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
     imageUrl: "/images/avatar.jpg",
     readTime: "2 min read",
-    path: "asdffas"
+    fileName: "fifth"
   }
 ];
 export default ArticleData;

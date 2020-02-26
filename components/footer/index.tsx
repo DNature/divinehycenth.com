@@ -3,11 +3,14 @@ import { NextPage } from "next";
 
 const Footer: NextPage = () => {
   return (
-    <footer className="mt-20">
-      <div className="container mx-auto">
+    <footer
+      className="mt-20 bg-gray-800 py-5"
+      style={{ justifySelf: "flex-start" }}
+    >
+      <div className="container  text-center flex flex-col items-center">
         <hr />
         <br />
-        <span>I'm here to stay (Footer)</span>
+        <span className="text-gray-500 hover:text-gray-100">&copy; Copyright 2020: Divine Hycenth</span>
       </div>
     </footer>
   );

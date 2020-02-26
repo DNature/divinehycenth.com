@@ -27,6 +27,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/interface-name-prefix": "off",
     "react/jsx-uses-vars": 2,
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/ban-ts-ignore": "off"
   }
 };

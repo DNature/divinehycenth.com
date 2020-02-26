@@ -1,54 +1,21 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 
-import Layout from "../components/Layout";
+import Layout from "../components/layouts";
 import { NextPage } from "next";
-import { Post } from "../interfaces";
-import { dataFetch } from "../utils/data-api";
 import ArticleCard from "../components/articles/articleCard";
 
-interface Props {
-  articleData: Post[];
-  pathname: string;
-}
-
-const IndexPage: NextPage<Props> = ({ pathname, articleData }) => {
-  console.log({ pathname });
-  if (!articleData) {
-    return (
-      <>
-        <Layout
-          isMain
-          title="😃 Divine Hycenth 👋 Full Stack Software Developer"
-        >
-          <h1>No Posts found</h1>
-        </Layout>
-      </>
-    );
-  }
-
+const IndexPage: NextPage = () => {
+  
   return (
     <>
-      <Layout isMain title="😃 Divine Hycenth 👋 Full Stack Software Developer">
-        <div className="grid grid-cols-3 mt-12 ">
-          <ArticleCard data={articleData} />
+      <Layout>
+          <h1 className="bg-gray-100 -mb-10 inline-block px-3 rounded-full py-3 md:text-4xl text-2xl font-bold text-gray-700">Recent Posts</h1>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 mt-12 ">
+          <ArticleCard />
         </div>
       </Layout>
     </>
   );
-};
-
-IndexPage.getInitialProps = async ({ pathname }): Promise<Props> => {
-  const articleData: Post[] = await dataFetch(
-    "http://localhost:3000/api/posts"
-  );
-
-  return { articleData, pathname };
-};
-
-IndexPage.propTypes = {
-  pathname: PropTypes.string.isRequired,
-  articleData: PropTypes.array.isRequired
 };
 
 export default IndexPage;

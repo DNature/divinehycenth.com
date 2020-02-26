@@ -14,5 +14,5 @@ export interface Post   {
   subTitle: string;
   imageUrl: string;
   readTime: string;
-  path: string;
+  fileName: string;
 }

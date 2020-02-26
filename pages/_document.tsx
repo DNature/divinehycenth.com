@@ -7,7 +7,17 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* <link rel="stylesheet" href="/_next/static/style.css" /> */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+							window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-145785346-1');
+						`
+            }}
+          />
         </Head>
         <body>
           <Main />
