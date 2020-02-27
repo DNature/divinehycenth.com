@@ -1,4 +1,7 @@
 // eslint-disable-next-line no-undef
+const nightOwl = require("@theme-ui/prism/presets/shades-of-purple.json");
+
+// eslint-disable-next-line no-undef
 module.exports = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
@@ -96,16 +99,28 @@ module.exports = {
     a: {
       color: "primary"
     },
-    pre: {
-      fontFamily: "monospace",
-      overflowX: "auto",
+    li: {
       code: {
-        color: "inherit"
+        fontFamily: "monospace",
+        fontSize: "inherit",
+        backgroundColor: "#2D2A55",
+        padding: "3px 5px",
+        borderRadius: "4px",
+        color: "#9EFEFF"
       }
     },
     code: {
       fontFamily: "monospace",
       fontSize: "inherit"
+    },
+    pre: {
+      ...nightOwl,
+      clipPath: 'url("#svg-blob__clip--fbba1d21-968d-413e-b1ca-2bf36d30eb0b")',
+      padding: "25px",
+      borderRadius: "7px",
+      fontFamily: "monospace",
+      margin: "10px 0",
+      overFlow: "scroll"
     },
     table: {
       width: "100%",

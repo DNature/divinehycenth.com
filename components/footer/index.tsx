@@ -7,10 +7,12 @@ const Footer: NextPage = () => {
       className="mt-20 bg-gray-800 py-5"
       style={{ justifySelf: "flex-start" }}
     >
-      <div className="container  text-center flex flex-col items-center">
+      <div className="container text-center mx-auto flex flex-col items-center">
         <hr />
         <br />
-        <span className="text-gray-500 hover:text-gray-100">&copy; Copyright 2020: Divine Hycenth</span>
+        <span className="text-gray-500 hover:text-gray-100">
+          &copy; Copyright 2020: Divine Hycenth
+        </span>
       </div>
     </footer>
   );
