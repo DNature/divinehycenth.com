@@ -1,3 +1,6 @@
+const toTailwind = require("@theme-ui/tailwind");
+const theme = require("./theme");
+
 module.exports = {
   theme: {
     screens: {
