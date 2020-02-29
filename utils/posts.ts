@@ -1,45 +1,21 @@
-import { Post } from "../interfaces";
+import { IBlogPost } from "../interfaces";
 
-const ArticleData: Post[] = [
+const ArticleData: IBlogPost[] = [
   {
-    title: "first Article",
-    subTitle:
+    title: "Deploy to zeit",
+    summary:
       "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
     imageUrl: "/images/avatar.jpg",
     readTime: "2 min read",
-    fileName: "first-mdx"
+    fileName: "deploy"
   },
   {
-    title: "Second Article",
-    subTitle:
+    title: "Git CLI",
+    summary:
       "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
     imageUrl: "/images/home-bg.jpg",
-    readTime: "2 min read",
-    fileName: "second"
-  },
-  {
-    title: "Third Article",
-    subTitle:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/avatar.jpg",
-    readTime: "2 min read",
-    fileName: "third"
-  },
-  {
-    title: "Fourth Article",
-    subTitle:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/home-bg.jpg",
-    readTime: "2 min read",
-    fileName: "fourth"
-  },
-  {
-    title: "Fifth Article",
-    subTitle:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/avatar.jpg",
-    readTime: "2 min read",
-    fileName: "fifth"
+    readTime: "12 min read",
+    fileName: "git-cli"
   }
 ];
 export default ArticleData;

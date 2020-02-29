@@ -1,5 +1,5 @@
 module.exports = {
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "files.autoSave": "off",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,

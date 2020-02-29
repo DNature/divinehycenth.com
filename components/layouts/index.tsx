@@ -16,7 +16,7 @@ const MainLayout: NextPage<Props> = ({ children, title }) => {
       <NextHead pageTitle={title} />
       <div className="flex flex-col h-full" style={{ height: "100vh" }}>
         <Header />
-        <main className="container mx-auto h-auto md:px-10 lg:px-20 p-2 flex-1 bg-white rounded-md">
+        <main className="container mx-auto h-auto md:px-10 p-2 flex-1 bg-white rounded-md">
           {children}
         </main>
         <Footer />

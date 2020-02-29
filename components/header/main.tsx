@@ -6,11 +6,11 @@ import CustomLink from "../CustomLink";
 const Main: NextPage = () => {
   return (
     <>
-      <div className="pt-10 bg-gray-900 h-full relative">
-        <header className="container z-10 mx-auto md:px-10 lg:px-20 p-2">
+      <div className="pt-10 bg-gray-300 h-full relative custom-bg">
+        <header className="container z-10 mx-auto md:px-6 lg:px-12 p-2">
           <>
             <SocialIcons />
-            <div className="h-full mt-20 text-center md:px-48 lg:px-56 px-16">
+            <div className="h-full mt-20 text-center md:px-32 lg:px-40 px-16">
               <h1 className="lg:text-6xl md:text-5xl sm:text-4xl text-4xl text-gray-200">
                 Hey, I'm Divine.
               </h1>

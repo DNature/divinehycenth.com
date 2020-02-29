@@ -1,13 +1,9 @@
 import * as React from "react";
-
-import { ThemeProvider } from "theme-ui";
-import theme from "../theme";
-import Layout from "../components/layouts";
 import { NextPage } from "next";
-import ArticleCard from "../components/articles/articleCard";
 
-// @ts-ignore
-import MD from "./blog/deploy.md";
+import Layout from "../components/layouts";
+
+import ArticleCard from "../components/articles/articleCard";
 
 const IndexPage: NextPage = () => {
   return (
@@ -19,9 +15,6 @@ const IndexPage: NextPage = () => {
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 mt-12">
           <ArticleCard />
         </div>
-        <ThemeProvider theme={theme}>
-          <MD />
-        </ThemeProvider>
       </Layout>
     </>
   );
