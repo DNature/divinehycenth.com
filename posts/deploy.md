@@ -2,6 +2,8 @@
 
 [Next.js](https://nextjs.org) is a React framework for building universal web applications. It supports server-side rendering, SPAs and static generated sites. With all these options, you can build from simple to complex web applications easily. In this tutorial, we'll learn how to build and deploy a portfolio website and deploy to Netlify within minutes. You can follow along or find the entire codebase in this [repository](https://github.com/francisudeji/next.js-portfolio-site).
 
+<br/>
+
 ## Scaffolding a New Next.js App
 
 In order to scaffold a new Next.js app, we need to have node and npm installed on your our machines. To verify, open up a terminal and type the following:
@@ -9,6 +11,8 @@ In order to scaffold a new Next.js app, we need to have node and npm installed o
 ```bash
 npm --version
 ```
+
+<br/>
 
 If you get back a version number then you're all setup. If not, then download node from the [official website](https://nodejs.org) and then try again.
 

@@ -1,10 +1,13 @@
 import React from "react";
 import { NextPage } from "next";
+import PropTypes from 'prop-types'
 
-import data from "../../utils/posts";
+
 import CustomLink from "../CustomLink";
+import { IArticleCardProps } from '../../interfaces';
 
-const ArticleCard: NextPage = () => {
+const ArticleCard: NextPage<IArticleCardProps> = ({data}) => {
+
   return (
     <>
       {data.map((data, i) => (
@@ -36,5 +39,9 @@ const ArticleCard: NextPage = () => {
     </>
   );
 };
+
+ArticleCard.propTypes = {
+  data: PropTypes.array.isRequired,
+}
 
 export default ArticleCard;
