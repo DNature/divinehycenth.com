@@ -13,7 +13,7 @@ const BlogLayout: NextPage<Props> = ({ children, title }) => {
   return (
     <>
       <Layout title={title}>
-        <div className="lg:px-48 md:px-40 mt-10">{children}</div>
+        <div className="lg:px-32 md:px-10 mt-10">{children}</div>
       </Layout>
     </>
   );

@@ -11,7 +11,7 @@ module.exports = {
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     monospace: "Menlo, monospace"
   },
-  fontSizes: [12,14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 600,
@@ -94,7 +94,15 @@ module.exports = {
       color: "text",
       fontFamily: "body",
       fontWeight: "body",
-      lineHeight: "body"
+      lineHeight: "body",
+      code: {
+        fontFamily: "monospace",
+        fontSize: "inherit",
+        backgroundColor: "#2D2A55",
+        padding: "3px 5px",
+        borderRadius: "4px",
+        color: "#9EFEFF"
+      }
     },
     a: {
       color: "primary"
@@ -116,7 +124,7 @@ module.exports = {
     pre: {
       ...nightOwl,
       clipPath: 'url("#svg-blob__clip--fbba1d21-968d-413e-b1ca-2bf36d30eb0b")',
-      padding: "25px",
+      padding: "18px",
       borderRadius: "7px",
       fontFamily: "monospace",
       margin: "10px 0",
@@ -133,7 +141,7 @@ module.exports = {
     },
     td: {
       textAlign: "left",
-      borderBottomStyle: "solid",
+      borderBottomStyle: "solid"
     },
     img: {
       maxWidth: "100%"

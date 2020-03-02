@@ -13978,7 +13978,7 @@ body {
   z-index: -2;
   overflow-x: hidden;
   line-height: 2 !important;
-  font-size: 20px !important;
+  font-size: 18px !important;
 }
 
 pre,
@@ -13999,6 +13999,20 @@ code::-webkit-scrollbar {
 
 a:hover {
   text-decoration: underline;
+}
+
+blockquote {
+  padding-left: 0.7rem;
+  background: #f4f4f4;
+  border-left: 4px solid #5c6ac4;
+}
+
+blockquote:hover {
+  background-color: #fafafa;
+}
+
+img {
+  margin: 1rem 0;
 }
 
 @media (min-width: 640px) {

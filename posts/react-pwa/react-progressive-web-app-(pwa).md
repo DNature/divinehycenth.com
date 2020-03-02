@@ -1,17 +1,14 @@
 # Build a Progressive Web App with React.js
 
-<br/>
-
 ![Progressive web app with react.js](/images/blog/react-pwa/react-pwa.jpg)
-
-<br/>
 
 ## What is a Progressive Web Application (PWA)
 
 <br/>
 
 > A progressive web app (PWA) is the set of mobile web application development techniques that entails building apps that feel and look like native ones. Using a web stack (JS, HTML, and CSS), progressive web apps combine a rich functionality and smooth user experience associated with native apps. Simply put, PWA is the web app with the native-app flavor: After the installation, a user clicks on its icon on a device home screen and gets straight to the website.
-> <br/>
+
+<br/>
 
 Progressive web apps provides huge benefits like:
 
@@ -32,3 +29,163 @@ Progressive web apps provides huge benefits like:
 - **Offline Support:** Your application can work offline except the page requires a real time data fetching.
 
 [Learn more about progressive web apps](https://web.dev/progressive-web-apps)
+
+<br/>
+
+## Service Workers
+
+A service worker is a specific type of JavaScript worker, which is a script that runs in the _background of the user’s browser_.
+That way we are able to do allot of things in the _background_ like caching static contents of our website(Images, Css files, Html files, Videos, JS files ...) etc.
+[Learn more about _service workers_](https://www.keycdn.com/blog/service-workers#keeping-service-workers-up-to-date).
+
+<br/>
+
+## Lets get started 😁
+
+Since we are going to use React we need to initialize our project with `create-react-app cli tool`
+
+```bash
+yarn create react-app react-pwa
+            # OR
+npx create-react-app react-pwa
+```
+
+Next we will change directory into our working project folder by running `cd react-pwa` in the terminal and I'm going to open the project on _VS Code_ using the `code .` command.
+
+![Initialized Project](/images/blog/react-pwa/init-app.png/)
+
+As you can see there's a bunch of files and folders that `create-react-app` comes with but i am not going to go through everything in this tutorial.
+
+<br/>
+
+There is an important file called `manifest.json` in the `/public` directory which contains information(metadata) that defines your applications appearance in different devices.
+
+![Manifest Project](/images/blog/react-pwa/manifest.png)
+
+- ** - short_name**: The name of your app when added to your home screen.
+
+- ** - name**: The name that the browser uses to prompt users to add your app to their home scree.
+
+- ** - icons**: Specifies icons that will be displayed in different devices including the web browser.
+
+- ** - start_url**: The base path of your app when initialized.
+
+- ** - display**: Here you can customize the browser view. Other options are _"fullscreen","standalone","minimal-ui","browser"_
+
+- ** - theme_color**: The color of the browser toolbar
+
+- ** - background_color**: The color of the splash screen that shows when the app is launched by clicking on its icon in the Home screen.
+
+In the public/index.html
+
+```html
+<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+```
+
+Notice the use of %PUBLIC_URL% in the tags above. It will be replaced with the URL of the public folder during the build. Only files inside the public folder can be referenced from the HTML.
+
+Lets play around with this app by adding some piece of code in our _src/App.js_ file.
+
+```js
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+function App() {
+  const [value, setValue] = React.useState(0);
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1>{value}</h1>
+        <button
+          style={{ padding: 12, backgroundColor: "#61dafb", border: "none" }}
+          onClick={() => setValue(value + 1)}
+        >
+          Add 1
+        </button>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Next we are going to build our app by running
+
+```bash
+npm run build
+    #OR
+yarn build
+```
+
+> Note: we are able to use this command because its present in our _package.json_ file.
+
+The build script generates some files and stores it in a `build` directory.
+
+![Manifest Project](/images/blog/react-pwa/build.png)
+
+The static folder holds all the js and css files. The _index.html_ is our main page that loads all our React files stored in the _static/js_ folder and also our CSS that is stored in the _static/css_ folder. We can the _service-worker.js_ file, that’s where all service worker code is stored. The _precache-manifest.\*.js_ file holds all the files the service worker caches in an array. We see the manifest.json file, as we already know it tells the browser how our _PWA_ will behave.
+
+We need to install a http-server to be able to run our app in the browser so i'm going to install live-server by running:
+
+```bash
+npm install --global live-server
+```
+
+After installing _live-server_ we can add a script in our package.json to start our server.
+
+```json
+"scripts": {
+    ...
+    "serve": "live-server ./build"
+}
+
+```
+
+Now run `npm run serve` in your terminal and navigate to [http://localhost:8080/](http://localhost:8080/?target=_blank) in your browser.
+
+![Manifest Project](/images/blog/react-pwa/build-serve.png)
+
+### 😎 Our app is live.
+
+💩 However, If our server goes down at this point our application is going to fail because its not _PWA_. There are many tools for testing _PWA_ but we are going to use the built in tool that comes with Google Chrome.
+
+<br/>
+
+If you press `F12` on your keyboard to open the chrome dev tools and navigate to the application tab you can see that the _service-worker.js_ file is missing and that is because we didn't register it in our application before build
+
+To register it we just need to make one little change in our `src/index.js`.
+
+```jsx
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+
+ReactDOM.render(<App />, document.getElementById("root"));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.register();
+```
+
+> Note: we changed _~~serviceWorker.unregister()~~_ to serviceWorker.register(). These are built in functions that comes with CRA.
+
+Next we will build and serve our project by running
+
+```bash
+npm run build && npm run serve
+```
+
+and when you reload your browser you can see the _service-worker.js_ file in the application tab of your console.
+
+> Also note that the browser cached our static files in the CacheStorage
+
+![service-worker.js](/images/blog/react-pwa/service-worker.png)![Cached files](/images/blog/react-pwa/cache.png)
+
+To test if our application is now a PWA we shutdown our server by holding `ctrl + c` in the terminal then Refresh the browser and everything still works the same way and no errors even though our server is down.

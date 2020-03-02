@@ -39,6 +39,7 @@
     "autoprefixer": "^9.7.4",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.3",
+    "next-purgecss": "^3.1.2",
     "theme-ui": "^0.3.1",
     "typescript": "3.7.3"
   },
