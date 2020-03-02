@@ -55,6 +55,7 @@ const NextHead: NextPage<Props> = ({
     )}
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet"/>
   </Head>
 );
 

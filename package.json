@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "NODE_ENV=production next build",
     "start": "next start",
     "type-check": "tsc",
-    "build:theme": "yarn tailwind build styles/style.css -o styles/style.css --watch",
-    "post:css": "postcss styles/tailwind.css -o styles/style.css",
+    "build:theme": "yarn tailwind build styles/tailwind.css -o public/css/style.css --watch",
+    "post:css": "postcss styles/tailwind.css -o public/css/style.css",
     "build:css": "yarn build:theme && yarn post:css --watch"
   },
   "dependencies": {
@@ -37,9 +37,11 @@
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
     "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.18.3",
     "next-purgecss": "^3.1.2",
+    "postcss-import": "^12.0.1",
     "theme-ui": "^0.3.1",
     "typescript": "3.7.3"
   },

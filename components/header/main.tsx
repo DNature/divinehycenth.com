@@ -11,7 +11,7 @@ const Main: NextPage = () => {
           <>
             <SocialIcons />
             <div className="h-full mt-20 text-center md:px-32 lg:px-40 px-10">
-              <h1 className="lg:text-5xl md:text-4xl text-3xl text-gray-200">
+              <h1 className="lg:text-5xl md:text-4xl text-3xl text-gray-200 custom-text">
                 Hey, I'm Divine.
               </h1>
               <h1 className="lg:text-2xl md:text-xl text-lg text-white">

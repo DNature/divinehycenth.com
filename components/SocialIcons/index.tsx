@@ -13,14 +13,14 @@ const SocialIcons: React.FC = () => {
       </CustomLink>
       <div className="flex">
         <CustomLink href="//twitter.com/DivineHycenth" target="_blank">
-          <FiTwitter className="mx-2 text-2xl  text-gray-500 hover:text-gray-200" />
+          <FiTwitter className="mx-2 text-2xl  text-gray-200 hover:text-white" />
         </CustomLink>
 
         <CustomLink href="//www.linkedin.com/in/dnature" target="_blank">
-          <FiLinkedin className="mx-2 text-2xl text-gray-500 hover:text-gray-200" />
+          <FiLinkedin className="mx-2 text-2xl text-gray-200 hover:text-white" />
         </CustomLink>
         <CustomLink href="//github.com/dnature" target="_blank">
-          <FiGithub className="mx-2 text-2xl text-gray-500 hover:text-gray-200" />
+          <FiGithub className="mx-2 text-2xl text-gray-200 hover:text-white" />
         </CustomLink>
       </div>
     </nav>
