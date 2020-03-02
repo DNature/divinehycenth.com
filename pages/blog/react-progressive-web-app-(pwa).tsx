@@ -9,7 +9,7 @@ import MD from "../../posts/react-pwa/react-progressive-web-app-(pwa).md";
 const IndexPage: NextPage = () => {
   return (
     <>
-      <BlogLayout title="Divine | Depoly to Zeit">
+      <BlogLayout title="Divine | Build a Progressive Web App with React.js">
         <MD />
       </BlogLayout>
     </>

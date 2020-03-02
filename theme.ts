@@ -2,7 +2,7 @@
 const nightOwl = require("@theme-ui/prism/presets/shades-of-purple.json");
 
 // eslint-disable-next-line no-undef
-module.exports = {
+export default {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body:
