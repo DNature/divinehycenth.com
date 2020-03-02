@@ -10,15 +10,14 @@ const Main: NextPage = () => {
         <header className="container z-10 mx-auto md:px-6 lg:px-12 p-2">
           <>
             <SocialIcons />
-            <div className="h-full mt-20 text-center md:px-32 lg:px-40 px-16">
-              <h1 className="lg:text-6xl md:text-5xl sm:text-4xl text-4xl text-gray-200">
+            <div className="h-full mt-20 text-center md:px-32 lg:px-40 px-10">
+              <h1 className="lg:text-5xl md:text-4xl text-3xl text-gray-200">
                 Hey, I'm Divine.
               </h1>
-              <h1 className="lg:text-3xl md:text-2xl sm:text-2xl text-lg text-white">
+              <h1 className="lg:text-2xl md:text-xl text-lg text-white">
                 I'm a full stack software developer creating open source
                 projects and writing about modern JavaScript, Typescript,
-                Graphql, Python, Node.js, and development. I'm alse a huge fan
-                of JAMStack
+                Graphql, Python, Node.js, and development. 
               </h1>
             </div>
 

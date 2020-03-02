@@ -6,20 +6,20 @@ module.exports = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body:
-      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+      '"Roboto Slab", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif ',
     heading:
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     monospace: "Menlo, monospace"
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [12,14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
     heading: 600,
     bold: 700
   },
   lineHeights: {
-    body: 1.75,
-    heading: 1.25
+    body: 1.8,
+    heading: 2
   },
   colors: {
     text: "#454f5b",
@@ -133,7 +133,7 @@ module.exports = {
     },
     td: {
       textAlign: "left",
-      borderBottomStyle: "solid"
+      borderBottomStyle: "solid",
     },
     img: {
       maxWidth: "100%"

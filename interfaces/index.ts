@@ -6,6 +6,7 @@ export interface IBlogPost {
   imageUrl: string;
   readTime: string;
   fileName: string;
+  tags: string[];
 }
 
 export type IArticleCardProps = {

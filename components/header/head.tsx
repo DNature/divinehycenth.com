@@ -53,6 +53,8 @@ const NextHead: NextPage<Props> = ({
     ) : (
       <title>Divine Hycenth | Full Stack Software Developer</title>
     )}
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet"/>
   </Head>
 );
 

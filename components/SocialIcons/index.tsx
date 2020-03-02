@@ -5,7 +5,7 @@ import CustomLink from "../CustomLink";
 
 const SocialIcons: React.FC = () => {
   return (
-    <nav className="flex items-center justify-between lg:p-0 p-6">
+    <nav className="flex items-center justify-between lg:p-0 p-2 md:p-6">
       <CustomLink href="/" className="">
         <h1 className="text-xl text-gray-400 hover:text-gray-100">
           Divine Hycenth
