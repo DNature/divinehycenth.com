@@ -10942,7 +10942,7 @@ code::-webkit-scrollbar {
 }
 
 a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: #5c6ac4;
 }
 
@@ -10960,19 +10960,14 @@ img {
   margin: 1rem 0;
 }
 
-.btn-grad {
-  background-image: linear-gradient(to right, #e55d87 0%, #5fc3e4 51%, #e55d87 100%);
-}
-
-.btn-grad:hover {
-  background-position: right center;
-  cursor: pointer;
-}
-
 footer {
   clip-path: polygon(1% 5%, 100% 1%, 100% 100%, 0% 100%);
   background: rgb(50, 191, 189);
-  background: linear-gradient(114deg, rgba(50, 191, 189, 1) 0%, rgba(45, 84, 253, 1) 100%);
+  background: linear-gradient(
+    114deg,
+    rgba(50, 191, 189, 1) 0%,
+    rgba(45, 84, 253, 1) 100%
+  );
 }
 
 @media (min-width: 640px) {

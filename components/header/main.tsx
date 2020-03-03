@@ -17,8 +17,16 @@ const Main: NextPage = () => {
               <h1 className="lg:text-2xl md:text-xl text-lg text-white">
                 I'm a full stack software developer creating open source
                 projects and writing about modern JavaScript, Typescript,
-                Graphql, Python, Node.js, and development. 
+                Graphql, Python, Node.js, and development.
               </h1>
+              <div className=" my-6 ">
+                <CustomLink
+                  className="px-8 py-3 text-white hover:text-white hover:shadow-2xl rounded-md shadow-xl hover:border-blue-300 border"
+                  href="/about"
+                >
+                  About Me 👉
+                </CustomLink>
+              </div>
             </div>
 
             <div className="mt-12 h-auto pb-5">
@@ -28,18 +36,18 @@ const Main: NextPage = () => {
               >
                 Home
               </CustomLink>
-              <CustomLink
-                className="px-2 text-gray-300 text-lg hover:text-gray-100"
-                href="/about"
-              >
-                About
-              </CustomLink>
 
               <CustomLink
                 className="px-2 text-gray-300 text-lg hover:text-gray-100"
                 href="/blog"
               >
                 Articles
+              </CustomLink>
+              <CustomLink
+                className="px-2 text-gray-300 text-lg hover:text-gray-100"
+                href="/works"
+              >
+                Works
               </CustomLink>
 
               <CustomLink

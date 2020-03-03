@@ -18,17 +18,17 @@ const Minimal: NextPage = () => {
             </CustomLink>
             <CustomLink
               className="px-2 text-gray-300 text-base hover:text-gray-100"
-              href="/about"
-            >
-              About
-            </CustomLink>
-
-            <CustomLink
-              className="px-2 text-gray-300 text-base hover:text-gray-100"
               href="/blog"
             >
               Articles
             </CustomLink>
+            <CustomLink
+              className="px-2 text-gray-300 text-base hover:text-gray-100"
+              href="/works"
+            >
+              Works
+            </CustomLink>
+
 
             <CustomLink
               className="px-2 text-gray-300 text-base hover:text-gray-100"
