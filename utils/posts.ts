@@ -12,6 +12,16 @@ const ArticleData: IBlogPost[] = [
     createdAt: "Oct 10"
   },
   {
+    title: "Remove all unused CSS",
+    summary:
+      "Learn how to remove unused CSS classes, Minify CSS files and reduce your website's loading time by 70%",
+    imageUrl: "/images/remove-unused-css/remove-unused.jpg",
+    readTime: "9 min read",
+    fileName: "remove-all-unused-css",
+    createdAt: "Oct 16",
+    tags: ["#CSS", "#Minify Files", "#Sass", "#React"]
+  },
+  {
     title: "Setup Tailwind, and PurgeCSS in nextjs",
     summary:
       "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",

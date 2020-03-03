@@ -1,9 +1,3 @@
----
-title: Example Page
-description: Lorem ipsum dolor sit amet.
-published: true
----
-
 import Author from "../../components/author";
 
 # Build a Progressive Web App with React.js
