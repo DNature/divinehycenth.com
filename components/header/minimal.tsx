@@ -4,8 +4,9 @@ import SocialIcons from "../SocialIcons";
 import CustomLink from "../CustomLink";
 
 const Minimal: NextPage = () => {
+
   return (
-    <div className="custom-bg pt-5 bg-gray-900 relative">
+    <div className="custom-bg pt-5 bg-gray-900 relative top-0">
       <header className="container  mx-auto md:px-10 lg:px-20 p-2">
         <>
           <SocialIcons />

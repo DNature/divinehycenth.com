@@ -10,7 +10,6 @@ const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
     <>
       {data.map((data, i) => (
         <CustomLink
-          // prefetch
           href={`/blog/[id]`}
           as={`/blog/${data.fileName}`}
           key={data.title + i}

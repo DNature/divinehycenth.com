@@ -4,6 +4,8 @@ import SocialIcons from "../SocialIcons";
 import CustomLink from "../CustomLink";
 
 const Main: NextPage = () => {
+
+  
   return (
     <>
       <div className="pt-10 bg-gray-300 h-full relative custom-bg">

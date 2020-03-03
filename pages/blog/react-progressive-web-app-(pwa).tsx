@@ -7,6 +7,9 @@ import BlogLayout from "../../components/layouts/blog";
 import MD from "../../posts/react-pwa/react-progressive-web-app-(pwa).md";
 
 const IndexPage: NextPage = () => {
+  // window.scrollTo(0, 0);
+
+
   return (
     <>
       <BlogLayout title="Divine | Build a Progressive Web App with React.js">

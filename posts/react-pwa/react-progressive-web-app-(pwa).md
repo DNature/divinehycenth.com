@@ -181,3 +181,7 @@ and when you reload your browser you can see the _service-worker.js_ file in the
 ![service-worker.js](/images/blog/react-pwa/service-worker.png)![Cached files](/images/blog/react-pwa/cache.png)
 
 To test if our application is now a PWA we shutdown our server by holding `ctrl + c` in the terminal then Refresh the browser and everything still works the same way and no errors even though our server is down.
+
+export const meta = {
+name: "react-progressive-web-app-(pwa)"
+}

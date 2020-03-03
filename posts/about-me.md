@@ -82,6 +82,16 @@ Here are some of the technical skills I poses:
 
 <br/>
 
+## Testing
+
+> Jest 🔥
+
+> Chai and Mocha 😏
+
+> Enzyme
+
+<br/>
+
 ## Dev Ops
 
 > [Docker](https://www.docker.com/)
@@ -90,19 +100,46 @@ Here are some of the technical skills I poses:
 
 > [NginX](https://www.nginx.com)
 
+> [PM2](https://pm2.keymetrics.io/)
+
+> [...]()
+
+<br/>
+
 ## Build Tools
 
-Babel
-Webpack
-Parcel Bundler
-ESLint
-Gulp
-Git
-Prettier
-TsLint
+> [Babel](https://babeljs.io/)
+
+> [Webpack](https://webpack.js.org/)
+
+> [ESLint](https://eslint.org/)
+
+> [Gulp]()
+
+> [Git](https://git-scm.com/)
+
+> [Prettier]()
+
+> [TsLint](https://palantir.github.io/tslint/)
+
+<br/>
 
 ## UI/UX
 
+> PhotoShop
+
+> Adobe XD
+
+> Adobe Illustrator
+
+> CorelDraw
+
+<br/>
+
 ## Favorite Quotes
 
-> If we wait for the moment when everything, absolutely everything is ready, we shall never begin.”Ivan Turgenev
+> If we wait for the moment when everything, absolutely everything is ready, we shall never begin.(”Ivan Turgenev")
+
+export const meta = {
+name: "About me"
+}
