@@ -31,10 +31,10 @@ const Main: NextPage = () => {
 
             <div className="mt-12 h-auto pb-5">
               <CustomLink
-                href="/"
+                href="/about"
                 className="px-2 text-gray-300 text-lg hover:text-gray-100"
               >
-                Home
+                About
               </CustomLink>
 
               <CustomLink

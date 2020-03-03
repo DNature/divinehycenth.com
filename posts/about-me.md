@@ -84,6 +84,12 @@ Here are some of the technical skills I poses:
 
 ## Dev Ops
 
+> [Docker](https://www.docker.com/)
+
+> [Docker Compose](https://docs.docker.com/compose)
+
+> [NginX](https://www.nginx.com)
+
 ## Build Tools
 
 Babel
@@ -96,3 +102,7 @@ Prettier
 TsLint
 
 ## UI/UX
+
+## Favorite Quotes
+
+> If we wait for the moment when everything, absolutely everything is ready, we shall never begin.”Ivan Turgenev

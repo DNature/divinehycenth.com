@@ -11,10 +11,10 @@ const Minimal: NextPage = () => {
           <SocialIcons />
           <div className="py-5">
             <CustomLink
-              href="/"
+              href="/about"
               className="pr-2 text-gray-300 text-base hover:text-gray-100"
             >
-              Home
+              About
             </CustomLink>
             <CustomLink
               className="px-2 text-gray-300 text-base hover:text-gray-100"
@@ -28,7 +28,6 @@ const Minimal: NextPage = () => {
             >
               Works
             </CustomLink>
-
 
             <CustomLink
               className="px-2 text-gray-300 text-base hover:text-gray-100"

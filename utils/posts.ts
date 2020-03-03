@@ -11,7 +11,7 @@ const ArticleData: IBlogPost[] = [
     tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
   },
   {
-    title: "Git CLI",
+    title: "Setup Tailwind, and PurgeCSS in nextjs",
     summary:
       "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
     imageUrl: "/images/home-bg.jpg",

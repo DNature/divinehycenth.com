@@ -12,25 +12,15 @@
 
 Progressive web apps provides huge benefits like:
 
-<br/>
-
 - **Self-updates:** Able to update themselves automatically, apps stay fresh.
 
-<br/>
-
-- **Cross platform compatibility:** These apps are built according to progressive enhancement principles. Progressive enhancement is the web design strategy of providing the basic functionality and content to everyone regardless of browsers they use or connection quality while delivering more sophisticated page versions to users whose newer browsers can support them.
-
-<br/>
+* **Cross platform compatibility:** These apps are built according to progressive enhancement principles. Progressive enhancement is the web design strategy of providing the basic functionality and content to everyone regardless of browsers they use or connection quality while delivering more sophisticated page versions to users whose newer browsers can support them.
 
 - **App-like experience:** It provides the feels and looks of a native mobile application.
 
-<br/>
-
-- **Offline Support:** Your application can work offline except the page requires a real time data fetching.
+* **Offline Support:** Your application can work offline except the page requires a real time data fetching.
 
 [Learn more about progressive web apps](https://web.dev/progressive-web-apps)
-
-<br/>
 
 ## Service Workers
 
@@ -40,7 +30,9 @@ That way we are able to do allot of things in the _background_ like caching stat
 
 <br/>
 
-## Lets get started 😁
+## 🚀 Lets get started 🔥
+
+<br/>
 
 Since we are going to use React we need to initialize our project with `create-react-app cli tool`
 
@@ -62,19 +54,19 @@ There is an important file called `manifest.json` in the `/public` directory whi
 
 ![Manifest Project](/images/blog/react-pwa/manifest.png)
 
-- ** - short_name**: The name of your app when added to your home screen.
+- **short_name**: The name of your app when added to your home screen.
 
-- ** - name**: The name that the browser uses to prompt users to add your app to their home scree.
+- **name**: The name that the browser uses to prompt users to add your app to their home scree.
 
-- ** - icons**: Specifies icons that will be displayed in different devices including the web browser.
+- **icons**: Specifies icons that will be displayed in different devices including the web browser.
 
-- ** - start_url**: The base path of your app when initialized.
+- **start_url**: The base path of your app when initialized.
 
-- ** - display**: Here you can customize the browser view. Other options are _"fullscreen","standalone","minimal-ui","browser"_
+- **display**: Here you can customize the browser view. Other options are _"fullscreen","standalone","minimal-ui","browser"_
 
-- ** - theme_color**: The color of the browser toolbar
+- **theme_color**: The color of the browser toolbar
 
-- ** - background_color**: The color of the splash screen that shows when the app is launched by clicking on its icon in the Home screen.
+- **background_color**: The color of the splash screen that shows when the app is launched by clicking on its icon in the Home screen.
 
 In the public/index.html
 
