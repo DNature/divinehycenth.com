@@ -139,7 +139,3 @@ Here are some of the technical skills I poses:
 ## Favorite Quotes
 
 > If we wait for the moment when everything, absolutely everything is ready, we shall never begin.(”Ivan Turgenev")
-
-export const meta = {
-name: "About me"
-}
