@@ -1,4 +1,14 @@
+---
+title: Example Page
+description: Lorem ipsum dolor sit amet.
+published: true
+---
+
+import Author from "../../components/author";
+
 # Build a Progressive Web App with React.js
+
+<Author />
 
 ![Progressive web app with react.js](/images/blog/react-pwa/react-pwa.jpg)
 

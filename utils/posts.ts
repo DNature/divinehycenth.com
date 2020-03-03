@@ -8,7 +8,8 @@ const ArticleData: IBlogPost[] = [
     imageUrl: "/images/avatar.jpg",
     readTime: "8 min read",
     fileName: "react-progressive-web-app-(pwa)",
-    tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
+    tags: ["#PWA", "#Progressive web app", "#React app (PWA)"],
+    createdAt: "Oct 10"
   },
   {
     title: "Setup Tailwind, and PurgeCSS in nextjs",
@@ -17,78 +18,7 @@ const ArticleData: IBlogPost[] = [
     imageUrl: "/images/home-bg.jpg",
     readTime: "12 min read",
     fileName: "git-cli",
-    tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
-  },
-  {
-    title: "Git CLI",
-    summary:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/home-bg.jpg",
-    readTime: "12 min read",
-    fileName: "git-cli",
-    tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
-  },
-  {
-    title: "Git CLI",
-    summary:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/home-bg.jpg",
-    readTime: "12 min read",
-    fileName: "git-cli",
-    tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
-  },
-  {
-    title: "Git CLI",
-    summary:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/home-bg.jpg",
-    readTime: "12 min read",
-    fileName: "git-cli",
-    tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
-  },
-  {
-    title: "Git CLI",
-    summary:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/home-bg.jpg",
-    readTime: "12 min read",
-    fileName: "git-cli",
-    tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
-  },
-  {
-    title: "Git CLI",
-    summary:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/home-bg.jpg",
-    readTime: "12 min read",
-    fileName: "git-cli",
-    tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
-  },
-  {
-    title: "Git CLI",
-    summary:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/home-bg.jpg",
-    readTime: "12 min read",
-    fileName: "git-cli",
-    tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
-  },
-  {
-    title: "Git CLI",
-    summary:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/home-bg.jpg",
-    readTime: "12 min read",
-    fileName: "git-cli",
-    tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
-  },
-  {
-    title: "Git CLI",
-    summary:
-      "Build an API driven static-site with Gatsby.js and use Ghost as a completely decoupled headless CMS. Read more about how it works and how to use this starter theme here!",
-    imageUrl: "/images/home-bg.jpg",
-    readTime: "12 min read",
-    fileName: "git-cli",
+    createdAt: "Oct 16",
     tags: ["#PWA", "#Progressive web app", "#React app (PWA)"]
   }
 ];

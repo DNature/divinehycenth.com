@@ -7,6 +7,7 @@ export interface IBlogPost {
   readTime: string;
   fileName: string;
   tags: string[];
+  createdAt: string;
 }
 
 export type IArticleCardProps = {

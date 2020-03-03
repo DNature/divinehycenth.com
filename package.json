@@ -20,6 +20,7 @@
     "glob": "^7.1.6",
     "isomorphic-unfetch": "3.0.0",
     "next": "latest",
+    "next-mdx-frontmatter": "^0.0.3",
     "next-typed-css": "^1.1.0",
     "postcss-cli": "^7.1.0",
     "react": "^16.12.0",

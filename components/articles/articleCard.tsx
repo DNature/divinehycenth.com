@@ -29,6 +29,17 @@ const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
                 </span>
               ))}
             </div>
+            <div className="px-6 flex items-center">
+              <img
+                className="w-10 h-10 rounded-full mr-4"
+                src="/images/avatar.png"
+                alt="Avatar of Divine Hycenth"
+              />
+              <div className="text-sm">
+                <p className="text-gray-500 leading-none ">Divine Nature</p>
+                <p className="text-gray-400">{data.createdAt}</p>
+              </div>
+            </div>
           </div>
         </CustomLink>
       ))}

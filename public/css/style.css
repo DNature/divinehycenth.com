@@ -571,6 +571,10 @@ img {
   font-weight: 700;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-24 {
   height: 6rem;
 }
@@ -581,6 +585,10 @@ img {
 
 .h-full {
   height: 100%;
+}
+
+.leading-none {
+  line-height: 1;
 }
 
 .m-4 {
@@ -614,6 +622,10 @@ img {
   margin-bottom: 0.5rem;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -640,6 +652,14 @@ img {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
 }
 
 .overflow-hidden {
@@ -771,6 +791,10 @@ img {
   color: #cbd5e0;
 }
 
+.text-gray-500 {
+  color: #a0aec0;
+}
+
 .text-gray-700 {
   color: #4a5568;
 }
@@ -813,6 +837,10 @@ img {
 
 .underline {
   text-decoration: underline;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .z-10 {
