@@ -1,4 +1,6 @@
 import Author from "../../components/author";
+import CustomLink from "../../components/CustomLink.tsx";
+import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
 # Remove all unused CSS files
 
@@ -74,6 +76,9 @@ Now you know why some websites takes longer to load and removing unused css sele
 
 ## Learn more
 
-## [Optimise your website speed with Gulp.js](/blog/optimise-website-speed-with-gulp)
-
-## [How to setup Tailwind with Postcss and Purgecss](/blog/how-to-setup-tailwind-with-postcss-and-purgecss)
+<CustomLink href="/blog/optimise-website-speed-with-gulp">
+<div className="flex">
+{/* <RelatedArticles name="optimise-website-speed-with-gulp"/> */}
+<RelatedArticles name="react-progressive-web-app-(pwa)"/>
+</div>
+</CustomLink>

@@ -5,6 +5,7 @@ import Layout from "../components/layouts";
 import completeData from "../utils/posts";
 
 import ArticleCard from "../components/articles/articleCard";
+import CustomButton from '../components/CustomButton';
 
 const size = 6;
 const data = completeData.slice( 0, size )
@@ -19,6 +20,7 @@ const IndexPage: NextPage = () => {
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 mt-12">
           <ArticleCard data={data}/>
         </div>
+        <CustomButton />
       </Layout>
     </>
   );

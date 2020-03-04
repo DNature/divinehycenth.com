@@ -34,6 +34,7 @@ code::-webkit-scrollbar {
 
 a:hover {
   /* text-decoration: underline; */
+  background-position: right center;
   color: #5c6ac4;
 }
 
@@ -54,15 +55,41 @@ img {
 footer {
   clip-path: polygon(1% 5%, 100% 1%, 100% 100%, 0% 100%);
   background: rgb(50, 191, 189);
-  background: linear-gradient(
-    114deg,
-    rgba(50, 191, 189, 1) 0%,
-    rgba(45, 84, 253, 1) 100%
-  );
+  background: linear-gradient(114deg, rgba(50, 191, 189, 1) 0%, #2d54fd 100%);
 }
 
 em {
   color: #32bfbd;
   background: #f4f4f4;
   font-style: normal;
+}
+
+.custom-button {
+  background: linear-gradient(
+    to right,
+    #304adbb7 0%,
+    #26d0cda4 51%,
+    #304adb9c 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.custom-button-transparent {
+  background: linear-gradient(
+    to right,
+    #304adb27 0%,
+    #26d0cd4b 51%,
+    #304adb67 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.custom-button-transparent:hover {
+  background-position: right center;
+}
+
+.custom-button:hover {
+  background-position: right center;
 }

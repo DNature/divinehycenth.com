@@ -1,10 +1,12 @@
 import * as React from "react";
 import { NextPage } from "next";
+import { useRouter } from 'next/router';
+
 import SocialIcons from "../SocialIcons";
 import CustomLink from "../CustomLink";
 
 const Minimal: NextPage = () => {
-
+const {pathname} = useRouter()
   return (
     <div className="custom-bg pt-5 bg-gray-900 relative top-0">
       <header className="container  mx-auto md:px-10 lg:px-20 p-2">
@@ -12,11 +14,12 @@ const Minimal: NextPage = () => {
           <SocialIcons />
           <div className="py-5">
             <CustomLink
-              href="/about"
-              className="pr-2 text-gray-300 text-base hover:text-gray-100"
+              href={pathname === "/about" ? "/" : "/about"}
+              className="px-2 text-gray-300 text-lg hover:text-gray-100"
             >
-              About
+              {pathname === "/about" ? "Home" : "About"}
             </CustomLink>
+
             <CustomLink
               className="px-2 text-gray-300 text-base hover:text-gray-100"
               href="/blog"
@@ -25,14 +28,14 @@ const Minimal: NextPage = () => {
             </CustomLink>
             <CustomLink
               className="px-2 text-gray-300 text-base hover:text-gray-100"
-              href="/works"
+              href="/construction"
             >
               Works
             </CustomLink>
 
             <CustomLink
               className="px-2 text-gray-300 text-base hover:text-gray-100"
-              href="/contact"
+              href="/construction"
             >
               Contact
             </CustomLink>
