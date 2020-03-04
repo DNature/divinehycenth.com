@@ -1,20 +1,20 @@
 import * as React from "react";
 import { NextPage } from "next";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 import SocialIcons from "../SocialIcons";
 import CustomLink from "../CustomLink";
 
 const Main: NextPage = () => {
-const {pathname} = useRouter()
-  
+  const { pathname } = useRouter();
+
   return (
     <>
-      <div className="pt-10 bg-gray-300 h-full relative custom-bg">
+      <div className="md:pt-10 lg:pt-10 pt-3 bg-gray-300 relative custom-bg pb-10">
         <header className="container z-10 mx-auto md:px-6 lg:px-12 p-2">
           <>
             <SocialIcons />
-            <div className="h-full mt-20 text-center md:px-32 lg:px-40 px-10">
+            <div className="h-full lg:mt-20 md:mt-20 text-center md:px-32 lg:px-40 px-10">
               <h1 className="lg:text-5xl md:text-4xl text-3xl text-gray-200 custom-text">
                 Hey, I'm Divine.
               </h1>
@@ -28,7 +28,7 @@ const {pathname} = useRouter()
                   className="custom-button-transparent px-8 py-3 text-white hover:text-white hover:shadow-2xl rounded-md shadow-xl hover:border-blue-300 border"
                   href="/about"
                 >
-                  About Me 👉
+                  About Me <span className="text-2xl"> &#10171;</span>
                 </CustomLink>
               </div>
             </div>
