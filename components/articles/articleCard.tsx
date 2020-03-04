@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import CustomLink from "../CustomLink";
 import { IArticleCardProps } from "../../interfaces";
+import Author from "../author";
 
 const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
   return (
@@ -16,7 +17,9 @@ const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
         >
           <div className="max-w-sm rounded-md hover mx-auto overflow-hidden shadow-md hover:shadow-xl sm:m-4 m-4 cursor-pointer bg-white">
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">{data.title}</div>
+              <h1 className="font-bold text-xl hover:text-link">
+                {data.title}
+              </h1>
               <p className="text-gray-700 text-sm">{data.summary}</p>
             </div>
             <div className="px-6 py-4">
@@ -29,17 +32,7 @@ const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
                 </span>
               ))}
             </div>
-            <div className="px-6 flex items-center">
-              <img
-                className="w-10 h-10 rounded-full mr-4"
-                src="/images/avatar.png"
-                alt="Avatar of Divine Hycenth"
-              />
-              <div className="text-sm">
-                <p className="text-gray-500 leading-none ">Divine Nature</p>
-                <p className="text-gray-400">{data.createdAt}</p>
-              </div>
-            </div>
+            <Author />
           </div>
         </CustomLink>
       ))}

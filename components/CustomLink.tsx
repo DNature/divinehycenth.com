@@ -11,28 +11,28 @@ interface Props {
   as?: string;
 }
 
-interface ComponentProps {
-  className?: string;
-  onClick?: () => void;
-  href?: string;
-  children: React.ReactNode;
-  target?: string;
-}
+// interface ComponentProps {
+//   className?: string;
+//   onClick?: () => void;
+//   href?: string;
+//   children: React.ReactNode;
+//   target?: string;
+// }
 
-export const AnchorTag = React.forwardRef<HTMLButtonElement, ComponentProps>(
-  (props, ref) => {
+// export const AnchorTag = React.forwardRef<HTMLButtonElement, ComponentProps>(
+//   (props, ref) => {
     
-    // eslint-disable-next-line react/prop-types
-    const { className, children, href} = props;
+//     // eslint-disable-next-line react/prop-types
+//     const { className, children, href} = props;
 
-    return (
-      //@ts-ignore
-      <a className={className} href={href} ref={ref}>
-        {children}
-      </a>
-    );
-  }
-);
+//     return (
+//       //@ts-ignore
+//       <a className={className} href={href} ref={ref}>
+//         {children}
+//       </a>
+//     );
+//   }
+// );
 
 const CustomLink: React.FC<Props> = ({ href, children, target, className,as }) => {
   return (

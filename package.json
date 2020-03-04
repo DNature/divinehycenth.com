@@ -6,7 +6,7 @@
     "build": "NODE_ENV=production next build",
     "start": "next start",
     "type-check": "tsc",
-    "build:theme": "yarn tailwind build styles/tailwind.css -o public/css/style.css --watch",
+    "build:theme": "yarn tailwind build styles/tailwind.css -o public/css/style.css",
     "post:css": "postcss styles/tailwind.css -o public/css/style.css",
     "build:css": "yarn build:theme && yarn post:css --watch"
   },

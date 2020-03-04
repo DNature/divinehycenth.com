@@ -11,17 +11,19 @@ module.exports = {
           preset: "default"
         })
       : null,
-    purgecss({
-      content: [
-        "./components/**/*.tsx",
-        "./posts/**/*.mdx",
-        "./posts/**/*.md",
-        "./pages/**/*.tsx",
-        "./theme.ts",
-        "./styles/tailwind.css",
-        "./tailwind.config.js"
-      ],
-      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-    })
+    process.env.NODE_ENV === "production"
+      ? purgecss({
+          content: [
+            "./components/**/*.tsx",
+            "./posts/**/*.mdx",
+            "./posts/**/*.md",
+            "./pages/**/*.tsx",
+            "./theme.ts",
+            "./styles/tailwind.css",
+            "./tailwind.config.js"
+          ],
+          defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+        })
+      : null
   ]
 };
