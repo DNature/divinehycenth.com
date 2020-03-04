@@ -30,7 +30,7 @@ Progressive web apps provides huge benefits like:
 
 A service worker is a specific type of JavaScript worker, which is a script that runs in the _background of the user’s browser_.
 That way we are able to do allot of things in the _background_ like caching static contents of our website(Images, Css files, Html files, Videos, JS files ...) etc.
-[Learn more about _service workers_](https://www.keycdn.com/blog/service-workers#keeping-service-workers-up-to-date).
+[Learn more about **service workers**](https://www.keycdn.com/blog/service-workers#keeping-service-workers-up-to-date).
 
 <br/>
 
@@ -38,7 +38,7 @@ That way we are able to do allot of things in the _background_ like caching stat
 
 <br/>
 
-Since we are going to use React we need to initialize our project with `create-react-app cli tool`
+Since we are going to use React we need to initialize our project with _create-react-app cli tool_.
 
 ```bash
 yarn create react-app react-pwa
@@ -50,11 +50,11 @@ Next we will change directory into our working project folder by running `cd rea
 
 ![Initialized Project](/images/blog/react-pwa/init-app.png/)
 
-As you can see there's a bunch of files and folders that `create-react-app` comes with but i am not going to go through everything in this tutorial.
+As you can see there's a bunch of files and folders that _create-react-app_ comes with but i am not going to go through everything in this tutorial.
 
 <br/>
 
-There is an important file called `manifest.json` in the `/public` directory which contains information(metadata) that defines your applications appearance in different devices.
+There is an important file called _manifest.json_ in the _/public_ directory which contains information(metadata) that defines your applications appearance in different devices.
 
 ![Manifest Project](/images/blog/react-pwa/manifest.png)
 
@@ -119,7 +119,7 @@ yarn build
 
 > Note: we are able to use this command because its present in our _package.json_ file.
 
-The build script generates some files and stores it in a `build` directory.
+The build script generates some files and stores it in a _build_ directory.
 
 ![Manifest Project](/images/blog/react-pwa/build.png)
 
@@ -153,7 +153,7 @@ Now run `npm run serve` in your terminal and navigate to [http://localhost:8080/
 
 If you press `F12` on your keyboard to open the chrome dev tools and navigate to the application tab you can see that the _service-worker.js_ file is missing and that is because we didn't register it in our application before build
 
-To register it we just need to make one little change in our `src/index.js`.
+To register it we just need to make one little change in our _src/index.js_.
 
 ```jsx
 import React from "react";

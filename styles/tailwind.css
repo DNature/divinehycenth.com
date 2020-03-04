@@ -60,3 +60,9 @@ footer {
     rgba(45, 84, 253, 1) 100%
   );
 }
+
+em {
+  color: #32bfbd;
+  background: #f4f4f4;
+  font-style: normal;
+}

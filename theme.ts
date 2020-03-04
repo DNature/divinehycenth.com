@@ -112,20 +112,21 @@ export default {
     li: {
       code: {
         fontFamily: "monospace",
-        fontSize: "inherit",
         backgroundColor: "#2D2A55",
         padding: "3px 5px",
         borderRadius: "4px",
+        fontSize: "16px",
         color: "#9EFEFF"
       }
     },
     code: {
       fontFamily: "monospace",
-      fontSize: "inherit"
+      fontSize: "16px"
     },
     pre: {
       ...nightOwl,
-      clipPath: 'url("#svg-blob__clip--fbba1d21-968d-413e-b1ca-2bf36d30eb0b")',
+      clipPath:
+        "polygon(33% 0, 53% 1%, 72% 0, 100% 1%, 100% 99%, 69% 100%, 37% 99%, 0 100%, 0 0, 18% 1%);",
       padding: "18px",
       borderRadius: "7px",
       fontFamily: "monospace",
