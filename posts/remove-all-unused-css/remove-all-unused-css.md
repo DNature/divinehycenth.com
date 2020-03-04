@@ -13,7 +13,7 @@ There are different [**factors**](/blog/optimize-your-website-speed) that can ca
 
 ## What are unused CSS?
 
-When developing a website/application, we developers tend to use different CSS frameworks with large file sizes and can really mess up our website loading time. For example, frameworks like [Tailwindcss](https://tailwindcss.com) , [Bootstrap](https://getbootstrap.com) come with dozens of CSS styles that you probably do not need.
+When developing a website/application, we developers tend to use different CSS frameworks with large file sizes and can really mess up our website loading time. For example, frameworks like [Tailwindcss](https://tailwindcss.com) and [Bootstrap](https://getbootstrap.com) come with dozens of CSS styles that you probably do not need.
 
 > **Unused CSS are _CSS selectors_ that are not implemented in your application and contributes to the growth of web page size**. Removing them is really going to improve our page performance.
 
@@ -65,6 +65,10 @@ module.exports = {
 # ⚡️ run this command to remove all unused css selectors
 npm run purgecss --config ./purgecss.config.js
 ```
+
+## Summary
+
+Now you know why some websites takes longer to load and removing unused css selectors can improve the loading time. You're most likely to notice the changes when using some frameworks like [Tailwindcss](https://tailwindcss.com) and [Bootstrap](https://getbootstrap.com).
 
 <br/>
 
