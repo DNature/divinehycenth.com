@@ -1,4 +1,6 @@
 import Author from "../../components/author";
+import CustomLink from "../../components/CustomLink.tsx";
+import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
 # Build a Progressive Web App with React.js
 
@@ -95,10 +97,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>{value}</h1>
-        <button
-          style={{ padding: 12, backgroundColor: "#61dafb", border: "none" }}
-          onClick={() => setValue(value + 1)}
-        >
+        <button style={{ padding: 12, backgroundColor: "#61dafb", border: "none" }} onClick={() => setValue(value + 1)}>
           Add 1
         </button>
       </header>
@@ -186,6 +185,11 @@ and when you reload your browser you can see the _service-worker.js_ file in the
 
 To test if our application is now a PWA we shutdown our server by holding `ctrl + c` in the terminal then Refresh the browser and everything still works the same way and no errors even though our server is down.
 
-export const meta = {
-name: "react-progressive-web-app-(pwa)"
-}
+<br/>
+
+## Learn more
+
+<div className="flex">
+<RelatedArticles name="how-to-setup-tailwind-purgecss-and-nextjs"/> 
+<RelatedArticles name="remove-all-unused-css"/>
+</div>

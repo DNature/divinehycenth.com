@@ -1,4 +1,6 @@
 import Author from "../../components/author";
+import CustomLink from "../../components/CustomLink.tsx";
+import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
 # Setup Tailwind, and PurgeCSS in Nextjs
 
@@ -61,26 +63,19 @@ Create a new stylesheet and call it _tailwind.css_ then import the tailwind css 
 @tailwind utilities;
 ```
 
-Next we will generate the tailwind styles by running
-
-```bash
-npx tailwindcss build ./tailwind.css -o styles.css
-```
-
-> The `tailwindcss` command is comming from the package we installed. the build command takes all our css selectors including the default tailwind imports and generates a new file called styles.css with the `-o` flag.
-
-Next is to create a _\app.js_ file in the pages directory and paste the following code to import _tailwind.css_ .
+Next thing is to create a file and call it _/\_app.js_ in the pages directory and paste the following code to import _tailwind.css_ .
 
 ```js
+// pages/_app.js
 import React from "react";
-import "../styles.css";
+import "../tailwind.css";
 
 export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 ```
 
-Lets use our tailwind css selectors in our app to make it more appealing by adding the follow lines code:
+Lets apply some tailwind css selectors in our app to test if it's going to work:
 
 ```js
 // pages/index.js
@@ -118,15 +113,13 @@ export default function About() {
 }
 ```
 
-<br/>
-
 <span className="text-4xl">😲</span> With just few lines of css selectors we got our app to look great
 
 ![example gif](/images/blog/how-to-setup-tailwind-purgecss-and-nextjs/tailwind-next.gif)
 
 You may notice that the default tailwind bundle is up to _4mb_ but we can get rid of unused css selectors by adding some modules.
 
-## PurgeCss
+## [PurgeCss](/blog/remove-all-unused-css)
 
 ```bash
 # install pugecss and postcss for nextjs
@@ -143,7 +136,7 @@ module.exports = {
     [
       "@fullhuman/postcss-purgecss",
       {
-        content: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+        content: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}", "./tailwind.css"],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
       }
     ],
@@ -151,3 +144,33 @@ module.exports = {
   ]
 };
 ```
+
+For development purpose, its a good practice to not engage your computer in much processing tasks. Every enhancement/optimization techniques is best for production or testing purposes so we are going to perform these optimizations in production by tweaking our code a little bit.
+
+```js
+module.exports = {
+  plugins: [
+    "tailwindcss",
+    process.env.NODE_ENV === "production" ? "autoprefixer" : undefined,
+    process.env.NODE_ENV === "production"
+      ? [
+          "@fullhuman/postcss-purgecss",
+          {
+            content: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}", "./tailwind.css"],
+            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+          }
+        ]
+      : undefined,
+    "postcss-preset-env"
+  ]
+};
+```
+
+<br/>
+
+## Learn more
+
+<div className="flex">
+<RelatedArticles name="remove-all-unused-css"/> 
+<RelatedArticles name="react-progressive-web-app-(pwa)"/>
+</div>

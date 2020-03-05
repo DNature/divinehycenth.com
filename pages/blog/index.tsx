@@ -7,10 +7,7 @@ import completeData from "../../utils/posts";
 import ArticleCard from "../../components/articles/articleCard";
 
 const IndexPage: NextPage = () => {
-  console.log(
-    // <a className="bg-gray-600 bg-gray-900 bg-gray-800 bg-gray-700 bg-gray-500 bg-gray-400 bg-gray-300 bg-gray-200 bg-gray-100"></a>
-  )
-  
+ 
   return (
     <>
       <Layout>

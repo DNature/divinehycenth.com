@@ -11,7 +11,6 @@ const posts = completeData.slice(0, size);
 const RelatedArticles: NextPage<{ name: string }> = ({ name }) => {
   const relatedPosts = posts.find(n => n.fileName === name);
   if (!relatedPosts) return null;
-  console.log(relatedPosts.fileName);
   return (
     <>
       <CustomLink

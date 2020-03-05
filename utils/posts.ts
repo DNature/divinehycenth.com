@@ -30,7 +30,7 @@ const ArticleData: IBlogPost[] = [
   {
     title: "Remove all unused CSS",
     summary:
-      "A reference guide on how to remove unused CSS classes, Minify CSS files and reduce your website's loading time by 70%",
+      "A reference guide on how to remove unused CSS classes, Minify CSS files to reduce your website's loading time.. %",
     readTime: "9 min read",
     fileName: "remove-all-unused-css",
     createdAt: "Dec 24",

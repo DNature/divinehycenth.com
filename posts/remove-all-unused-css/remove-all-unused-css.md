@@ -6,7 +6,7 @@ import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
 <Author />
 
-### A reference guide on how to remove unused CSS selectors, Minify CSS files and reduce your website's loading time by 70%
+### A reference guide on how to remove unused CSS selectors, Minify CSS files to reduce your website's loading time
 
 ![Minify Css files](/images/blog/remove-unused-css/remove-unused.jpg)
 
@@ -76,9 +76,7 @@ Now you know why some websites takes longer to load and removing unused css sele
 
 ## Learn more
 
-<CustomLink href="/blog/optimise-website-speed-with-gulp">
 <div className="flex">
-{/* <RelatedArticles name="optimise-website-speed-with-gulp"/> */}
+<RelatedArticles name="how-to-setup-tailwind-purgecss-and-nextjs"/> 
 <RelatedArticles name="react-progressive-web-app-(pwa)"/>
 </div>
-</CustomLink>
