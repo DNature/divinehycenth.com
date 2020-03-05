@@ -1,6 +1,5 @@
 import React from "react";
 import { NextPage } from "next";
-import PropTypes from 'prop-types'
 
 
 import CustomLink from "../CustomLink";
@@ -23,15 +22,11 @@ const Author: NextPage= () => {
             <CustomLink href="/about">
               <span className="leading-none hover:text-link">{name}</span>
             </CustomLink>
-            
         </div>
       </span>
     </>
   );
 };
 
-Author.propTypes = {
-  data: PropTypes.any.isRequired
-};
 
 export default Author;

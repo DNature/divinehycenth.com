@@ -1,6 +1,6 @@
 import * as React from "react";
 import { AppProps } from "next/app";
-import "../public/css/style.css";
+import "../styles/tailwind.css";
 import { ThemeProvider } from "theme-ui";
 import Prism from "@theme-ui/prism";
 

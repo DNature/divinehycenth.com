@@ -93,9 +93,7 @@ export default function Index() {
       <p className="text-4xl">Hello Next.js</p>
 
       <Link href="/about">
-        <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          About
-        </a>
+        <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">About</a>
       </Link>
     </div>
   );
@@ -113,11 +111,43 @@ export default function About() {
       <p className="text-2xl">This is the about page</p>
 
       <Link href="/">
-        <a className="bg-yellow-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
-          Home
-        </a>
+        <a className="bg-yellow-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">Home</a>
       </Link>
     </div>
   );
 }
+```
+
+<br/>
+
+<span className="text-4xl">😲</span> With just few lines of css selectors we got our app to look great
+
+![example gif](/images/blog/how-to-setup-tailwind-purgecss-and-nextjs/tailwind-next.gif)
+
+You may notice that the default tailwind bundle is up to _4mb_ but we can get rid of unused css selectors by adding some modules.
+
+## PurgeCss
+
+```bash
+# install pugecss and postcss for nextjs
+npm i -D @fullhuman/postcss-purgecss autoprefixer postcss-preset-env
+```
+
+create a file and call it _postcss.config.js_ then add the following piece of code:
+
+```js
+module.exports = {
+  plugins: [
+    "tailwindcss",
+    "autoprefixer",
+    [
+      "@fullhuman/postcss-purgecss",
+      {
+        content: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+      }
+    ],
+    "postcss-preset-env"
+  ]
+};
 ```
