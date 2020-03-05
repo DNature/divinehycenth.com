@@ -15,7 +15,7 @@ const {pathname} = useRouter()
           <div className="py-5">
             <CustomLink
               href={pathname === "/about" ? "/" : "/about"}
-              className="px-2 text-gray-300 text-lg hover:text-gray-100"
+              className="px-2 text-gray-300 text-base hover:text-gray-100"
             >
               {pathname === "/about" ? "Home" : "About"}
             </CustomLink>

@@ -17,7 +17,7 @@ const IndexPage: NextPage = () => {
         <h1 className="-mb-10 inline-block px-3 md:text-3xl text-2xl font-bold text-gray-700 mt-6">
           Recent Posts
         </h1>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 mt-12">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 mt-12  mx-4 md:mx-0 lg:mx-0">
           <ArticleCard data={data}/>
         </div>
         <CustomButton />

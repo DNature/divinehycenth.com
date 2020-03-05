@@ -14,11 +14,11 @@ const Main: NextPage = () => {
         <header className="container z-10 mx-auto md:px-6 lg:px-12 p-2">
           <>
             <SocialIcons />
-            <div className="h-full lg:mt-20 md:mt-20 text-center md:px-32 lg:px-40 px-10">
-              <h1 className="lg:text-5xl md:text-4xl text-3xl text-gray-200 custom-text">
+            <div className="h-full lg:mt-20 md:mt-20 text-center md:px-32 lg:px-40 px-0">
+              <h1 className="lg:text-5xl md:text-4xl text-2xl text-gray-200 custom-text">
                 Hey, I'm Divine.
               </h1>
-              <h1 className="lg:text-2xl md:text-xl text-lg text-white">
+              <h1 className="lg:text-2xl md:text-xl text-base text-white">
                 I'm a full stack software developer creating open source
                 projects and writing about modern JavaScript, Typescript,
                 Graphql, Python, Node.js, and development.
@@ -33,29 +33,29 @@ const Main: NextPage = () => {
               </div>
             </div>
 
-            <div className="mt-12 h-auto pb-5">
+            <div className="mt-12 h-auto">
               <CustomLink
                 href={pathname === "/about" ? "/" : "/about"}
-                className="px-2 text-gray-300 text-lg hover:text-gray-100"
+                className="px-2 text-base text-gray-300 hover:text-gray-100"
               >
                 {pathname === "/about" ? "Home" : "About"}
               </CustomLink>
 
               <CustomLink
-                className="px-2 text-gray-300 text-lg hover:text-gray-100"
+                className="px-2 text-base text-gray-300 hover:text-gray-100"
                 href="/blog"
               >
                 Articles
               </CustomLink>
               <CustomLink
-                className="px-2 text-gray-300 text-lg hover:text-gray-100"
+                className="px-2 text-base text-gray-300 hover:text-gray-100"
                 href="/construction"
               >
                 Works
               </CustomLink>
 
               <CustomLink
-                className="px-2 text-gray-300 text-lg hover:text-gray-100"
+                className="px-2 text-base text-gray-300 hover:text-gray-100"
                 href="/construction"
               >
                 Contact

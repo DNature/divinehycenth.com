@@ -11,8 +11,8 @@ const Author: NextPage= () => {
   }= data;
   return (
     <>
-      <hr className="bg-gray-700" />
-      <span className="px-6 flex items-center opacity-50 hover:opacity-100 border-t">
+      <hr className="border-0" />
+      <span className="px-6 md:flex lg:flex items-center opacity-50 hover:opacity-100 border-t hidden">
         <img
           className="w-10 h-10 rounded-full mr-4"
           src={imageUrl}

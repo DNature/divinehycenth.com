@@ -6,8 +6,8 @@ import CustomLink from "../CustomLink";
 import { IArticleCardProps } from "../../interfaces";
 
 const RecentPosts: NextPage<IArticleCardProps> = ({ data }) => {
-    const size = 3;
-    const recentPosts = data.slice(0, size);
+  const size = 3;
+  const recentPosts = data.slice(0, size);
   return (
     <>
       {recentPosts.map((data, i) => (
@@ -23,7 +23,7 @@ const RecentPosts: NextPage<IArticleCardProps> = ({ data }) => {
               </h1>
               <p className="text-gray-700 text-sm">{data.summary}</p>
             </div>
-                      </div>
+          </div>
         </CustomLink>
       ))}
     </>

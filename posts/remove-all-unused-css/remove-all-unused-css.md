@@ -2,11 +2,11 @@ import Author from "../../components/author";
 import CustomLink from "../../components/CustomLink.tsx";
 import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
-# Remove all unused CSS files
+# Remove all unused CSS Selectors
 
 <Author />
 
-### A reference guide on how to remove unused CSS selectors, Minify CSS files to reduce your website's loading time
+> A reference guide on how to remove unused CSS selectors, Minify CSS files to reduce your website's loading time
 
 ![Minify Css files](/images/blog/remove-unused-css/remove-unused.jpg)
 
@@ -76,7 +76,7 @@ Now you know why some websites takes longer to load and removing unused css sele
 
 ## Learn more
 
-<div className="flex">
+<div className="md:flex lg:flex">
 <RelatedArticles name="how-to-setup-tailwind-purgecss-and-nextjs"/> 
 <RelatedArticles name="react-progressive-web-app-(pwa)"/>
 </div>

@@ -18,9 +18,9 @@ const RelatedArticles: NextPage<{ name: string }> = ({ name }) => {
         as={`/blog/${relatedPosts.fileName}`}
         //   key={data.title + i}
       >
-        <div className="max-w-sm rounded-md hover mx-auto overflow-hidden shadow-md hover:shadow-xl hover:border-link border-2 border-transparent sm:m-4 m-4 cursor-pointer bg-white">
+        <div className="max-w-sm rounded-md border-2 border-gray-300 hover mx-auto overflow-hidden shadow-md hover:shadow-xl hover:border-link border-2 border-transparent sm:m-4 m-4 cursor-pointer bg-white">
           <div className="px-6 py-4">
-            <h1 className="font-bold text-xl hover:text-link">
+            <h1 className="font-bold text-base lg:text-lg hover:text-link">
               {relatedPosts.title}
             </h1>
             <p className="text-gray-700 text-sm">{relatedPosts.summary}</p>

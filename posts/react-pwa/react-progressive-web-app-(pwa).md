@@ -97,7 +97,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>{value}</h1>
-        <button style={{ padding: 12, backgroundColor: "#61dafb", border: "none" }} onClick={() => setValue(value + 1)}>
+        <button
+          style={{ padding: 12, backgroundColor: "#61dafb", border: "none" }}
+          onClick={() => setValue(value + 1)}
+        >
           Add 1
         </button>
       </header>
@@ -189,7 +192,7 @@ To test if our application is now a PWA we shutdown our server by holding `ctrl 
 
 ## Learn more
 
-<div className="flex">
+<div className="lg:flex md:flex">
 <RelatedArticles name="how-to-setup-tailwind-purgecss-and-nextjs"/> 
 <RelatedArticles name="remove-all-unused-css"/>
 </div>
