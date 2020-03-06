@@ -1,11 +1,9 @@
 const withPlugins = require("next-compose-plugins");
-const withMdxFm = require("next-mdx-frontmatter")({
-  extension: /\.(md|mdx)$/
-});
+const images = require("next-images");
 
 const withMDX = require("@next/mdx")({
   extension: /\.(md|mdx)$/
 });
 
-const plugins = [withMDX];
+const plugins = [withMDX, images];
 module.exports = withPlugins(plugins);

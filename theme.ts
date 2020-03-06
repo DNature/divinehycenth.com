@@ -11,7 +11,7 @@ export default {
       '"Roboto Slab", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif ',
     heading:
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    monospace: "Menlo, monospace"
+    monospace: "'Fira code', monospace, Menlo"
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
@@ -129,9 +129,10 @@ export default {
         "polygon(33% 0, 53% 1%, 72% 0, 100% 1%, 100% 99%, 69% 100%, 37% 99%, 0 100%, 0 0, 18% 1%);",
       padding: "18px",
       borderRadius: "7px",
-      fontFamily: "monospace",
+      fontFamily: "'Fira Code', monospace",
       margin: "10px 0",
-      overFlow: "scroll"
+      overFlow: "scroll",
+      maxHeight: "80vh"
     },
     table: {
       width: "100%",

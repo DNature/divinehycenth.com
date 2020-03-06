@@ -40,12 +40,13 @@ a:hover {
 
 blockquote {
   padding-left: 0.7rem;
-  background: #f4f4f4;
-  border-left: 4px solid #5c6ac4;
+  font-family: sans-serif;
+  background: #fafafad7;
+  border-left: 4px solid #32bfbdcc;
 }
 
 blockquote:hover {
-  background-color: #fafafa;
+  background-color: #fffaff;
 }
 
 img {
@@ -54,7 +55,7 @@ img {
 
 footer {
   clip-path: polygon(1% 5%, 100% 1%, 100% 100%, 0% 100%);
-  background: rgb(50, 191, 189);
+  background: #32bfbd;
   background: linear-gradient(114deg, rgba(50, 191, 189, 1) 0%, #2d54fd 100%);
 }
 
@@ -65,23 +66,13 @@ em {
 }
 
 .custom-button {
-  background: linear-gradient(
-    to right,
-    #304adbb7 0%,
-    #26d0cda4 51%,
-    #304adb9c 100%
-  );
+  background: linear-gradient(to right, #304adbb7 0%, #26d0cda4 51%, #304adb9c 100%);
   transition: 0.5s;
   background-size: 200% auto;
 }
 
 .custom-button-transparent {
-  background: linear-gradient(
-    to right,
-    #304adb27 0%,
-    #26d0cd4b 51%,
-    #304adb67 100%
-  );
+  background: linear-gradient(to right, #304adb27 0%, #26d0cd4b 51%, #304adb67 100%);
   transition: 0.5s;
   background-size: 200% auto;
 }
