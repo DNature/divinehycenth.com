@@ -5,6 +5,7 @@ import { FiLink, FiGithub } from "react-icons/fi";
 import workData from "../../utils/worksData";
 import Layout from "../../components/layouts";
 import CustomLink from "../../components/CustomLink";
+import CustomButton from "../../components/CustomButton";
 //@ts-ignore
 
 const AboutPage: NextPage = () => {
@@ -56,6 +57,9 @@ const AboutPage: NextPage = () => {
           </div>
         ))}
       </div>
+
+      <br />
+      <CustomButton>LOAD MORE</CustomButton>
     </Layout>
   );
 };

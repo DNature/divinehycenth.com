@@ -28,7 +28,8 @@ const Main: NextPage = () => {
                   className="custom-button-transparent px-8 py-3 text-white hover:text-white hover:shadow-2xl rounded-md shadow-xl hover:border-blue-300 border"
                   href="/about"
                 >
-                  About Me <span className="text-2xl"> &#10171;</span>
+                  About Me 
+                  {/* <span className="text-2xl"> &#10171;</span> */}
                 </CustomLink>
               </div>
             </div>
@@ -36,26 +37,26 @@ const Main: NextPage = () => {
             <div className="mt-12 h-auto">
               <CustomLink
                 href={pathname === "/about" ? "/" : "/about"}
-                className="px-2 text-base text-gray-300 hover:text-gray-100"
+                className="px-2 text-base text-gray-300 hover:text-gray-100  font-sans pl-0"
               >
                 {pathname === "/about" ? "Home" : "About"}
               </CustomLink>
 
               <CustomLink
-                className="px-2 text-base text-gray-300 hover:text-gray-100"
+                className="px-2 text-base text-gray-300 hover:text-gray-100  font-sans"
                 href="/blog"
               >
                 Articles
               </CustomLink>
               <CustomLink
-                className="px-2 text-base text-gray-300 hover:text-gray-100"
+                className="px-2 text-base text-gray-300 hover:text-gray-100  font-sans"
                 href="/works"
               >
                 Works
               </CustomLink>
 
               <CustomLink
-                className="px-2 text-base text-gray-300 hover:text-gray-100"
+                className="px-2 text-base text-gray-300 hover:text-gray-100  font-sans"
                 href="/construction"
               >
                 Contact

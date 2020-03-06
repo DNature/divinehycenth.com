@@ -7,7 +7,7 @@ const SocialIcons: React.FC = () => {
   return (
     <nav className="flex items-center justify-between lg:p-0 sm:p-2 md:p-6">
       <CustomLink href="/" className="">
-        <h1 className="md:text-xl lg:text-lg text-gray-400 hover:text-gray-100">
+        <h1 className="md:text-xl lg:text-lg text-gray-400 hover:text-gray-100  font-sans">
           Divine Hycenth
         </h1>
       </CustomLink>
