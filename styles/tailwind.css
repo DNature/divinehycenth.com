@@ -65,23 +65,13 @@ em {
 }
 
 .custom-button {
-  background: linear-gradient(
-    to right,
-    #304adbb7 0%,
-    #26d0cda4 51%,
-    #304adb9c 100%
-  );
+  background: linear-gradient(to right, #304adbb7 0%, #26d0cda4 51%, #304adb9c 100%);
   transition: 0.5s;
   background-size: 200% auto;
 }
 
 .custom-button-transparent {
-  background: linear-gradient(
-    to right,
-    #304adb27 0%,
-    #26d0cd4b 51%,
-    #304adb67 100%
-  );
+  background: linear-gradient(to right, #304adb27 0%, #26d0cd4b 51%, #304adb67 100%);
   transition: 0.5s;
   background-size: 200% auto;
 }

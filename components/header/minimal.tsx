@@ -28,7 +28,7 @@ const {pathname} = useRouter()
             </CustomLink>
             <CustomLink
               className="px-2 text-gray-300 text-base hover:text-gray-100"
-              href="/construction"
+              href="/works"
             >
               Works
             </CustomLink>

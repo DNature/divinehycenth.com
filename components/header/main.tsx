@@ -49,7 +49,7 @@ const Main: NextPage = () => {
               </CustomLink>
               <CustomLink
                 className="px-2 text-base text-gray-300 hover:text-gray-100"
-                href="/construction"
+                href="/works"
               >
                 Works
               </CustomLink>

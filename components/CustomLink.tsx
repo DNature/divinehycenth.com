@@ -36,7 +36,7 @@ interface Props {
 
 const CustomLink: React.FC<Props> = ({ href, children, target, className,as }) => {
   return (
-    <Link as={as}  href={href} scroll={true}>
+    <Link as={as}  href={href} >
       <a target={target} className={className}>
         {children}
       </a>

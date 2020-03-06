@@ -1,5 +1,13 @@
 export type IBLogMeta = (metaPath: string, fileMeta: string[]) => any;
 
+export interface IWorksData {
+  title: string;
+  url: string;
+  gitUrl: string;
+  summary: string;
+  path: string;
+}
+
 export interface IBlogPost {
   title: string;
   summary: string;
