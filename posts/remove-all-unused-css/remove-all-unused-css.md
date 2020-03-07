@@ -6,7 +6,7 @@ import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
 <Author />
 
-> A reference guide on how to remove unused CSS selectors, Minify CSS files to reduce your website's loading time
+A reference guide on how to remove unused CSS selectors, Minify CSS files to reduce your website's loading time
 
 ![Minify Css files](/images/blog/remove-unused-css/remove-unused.jpg)
 

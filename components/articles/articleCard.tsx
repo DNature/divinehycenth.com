@@ -9,10 +9,16 @@ const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
   return (
     <>
       {data.map((d, i) => (
-        <CustomLink href={`/blog/[id]`} as={`/blog/${d.fileName}`} key={d.title + i}>
+        <CustomLink
+          href={`/blog/[id]`}
+          as={`/blog/${d.fileName}`}
+          key={d.title + i}
+        >
           <div className="max-w-sm rounded-md hover mx-auto overflow-hidden border-2 border-gray-200 shadow-md hover:shadow-xl sm:m-4 m-4 cursor-pointer bg-white">
             <div className="px-6 py-4">
-              <h1 className="font-bold text-base md:text-lg lg:text-xl hover:text-link">{d.title}</h1>
+              <h1 className="font-bold text-base md:text-lg lg:text-xl hover:text-link">
+                {d.title}
+              </h1>
               <p className="text-gray-700 text-sm">{d.summary}</p>
             </div>
             <div className="px-6 py-4">

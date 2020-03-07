@@ -15,6 +15,7 @@ pre,
 code {
   overflow: scroll;
   scrollbar-width: 0;
+  line-height: 1.7;
 }
 
 pre::-webkit-scrollbar,
@@ -23,7 +24,7 @@ code::-webkit-scrollbar {
 }
 
 .custom-text {
-  font-family: "Satisfy";
+  font-family: "Satisfy", cursive;
 }
 
 .custom-bg {
@@ -39,15 +40,19 @@ a:hover {
 }
 
 blockquote {
-  padding-left: 0.7rem;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
   font-family: sans-serif;
-  background: #fafafad7;
-  border-left: 4px solid #32bfbdcc;
+  background: #5c6ac409;
+  border-left: 4px solid #5c6ac4;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
-blockquote:hover {
+/* blockquote:hover {
+  background-color: #5c6ac4;
   background-color: #fffaff;
-}
+} */
 
 img {
   margin: 1rem 0;
@@ -60,19 +65,34 @@ footer {
 }
 
 em {
-  color: #32bfbd;
-  background: #f4f4f4;
+  /* color: #5c6ac4; */
+  background: #fad00085;
+  /* background: #5c6ac409; */
   font-style: normal;
 }
 
+em:hover {
+  background: #fad000;
+}
+
 .custom-button {
-  background: linear-gradient(to right, #304adbb7 0%, #26d0cda4 51%, #304adb9c 100%);
+  background: linear-gradient(
+    to right,
+    #304adbb7 0%,
+    #26d0cda4 51%,
+    #304adb9c 100%
+  );
   transition: 0.5s;
   background-size: 200% auto;
 }
 
 .custom-button-transparent {
-  background: linear-gradient(to right, #304adb27 0%, #26d0cd4b 51%, #304adb67 100%);
+  background: linear-gradient(
+    to right,
+    #304adb27 0%,
+    #26d0cd4b 51%,
+    #304adb67 100%
+  );
   transition: 0.5s;
   background-size: 200% auto;
 }

@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import BlogLayout from "../../components/layouts/blog";
 
 // @ts-ignore
-import MD from "../../posts/remove-all-unused-css/remove-all-unused-css.md";
+import MD from "../../posts/yarn-workspace-monorepo/yarn-workspace-monorepo.md";
 
 const IndexPage: NextPage = () => {
   // window.scrollTo(0, 0);
@@ -12,8 +12,8 @@ const IndexPage: NextPage = () => {
   return (
     <>
       <BlogLayout
-        description="A reference guide on how to remove unused CSS selectors, Minify CSS files to reduce your website's loading time"
-        title="Divine | Build a Progressive Web App with React.js"
+        description="How to setup Yarn workspace for Nodejs, React, and React-Native in 2020"
+        title="How to setup Yarn workspace for Nodejs, React, and React-Native"
       >
         <MD />
       </BlogLayout>

@@ -5,9 +5,12 @@ import CustomLink from "../CustomLink";
 
 const SocialIcons: React.FC = () => {
   return (
-    <nav className="flex items-center justify-between lg:p-0 sm:p-2 md:p-6">
+    <nav className="flex items-center justify-between lg:py-0 sm:py-2 md:py-6">
       <CustomLink href="/" className="">
-        <h1 className="md:text-xl lg:text-lg text-gray-400 hover:text-gray-100  font-sans">
+        <h1
+          className="md:text-xl lg:text-lg text-gray-400 hover:text-gray-100"
+          style={{ fontFamily: "Satisfy" }}
+        >
           Divine Hycenth
         </h1>
       </CustomLink>

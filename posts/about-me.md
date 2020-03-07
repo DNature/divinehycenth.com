@@ -26,113 +26,119 @@ Here are some of the technical skills I poses:
 
 ## Programming Languages
 
-> [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript)
 
-> [Typescript](https://www.typescriptlang.org/)
+- [Typescript](https://www.typescriptlang.org/)
 
-> [Python](https://www.python.org/)
+- [Python](https://www.python.org/)
 
 <br/>
 
 ## Front End
 
-> [HTML & CSS](https://www.w3.org/standards/webdesign/htmlcss)
+- [HTML & CSS](https://www.w3.org/standards/webdesign/htmlcss)
 
-> [Bootstrap](https://getbootstrap.com/)
+- [Bootstrap](https://getbootstrap.com/)
 
-> [jQuery](https://www.jquery.com)
+- [jQuery](https://www.jquery.com)
 
-> [React.js](https://reactjs.org)
+- [React.js](https://reactjs.org)
 
-> [Next.js](https://nextjs.org)
+- [Next.js](https://nextjs.org)
 
-> [Gulp.js](https://gulpjs.com)
+- [Gulp.js](https://gulpjs.com)
 
-> [Redux](https://redux.js.org/)
+- [Redux](https://redux.js.org/)
 
-> [Firebase](https://firebase.google.com)
+- [Firebase](https://firebase.google.com)
 
-> [Apollo](https://apollographql.com)
+- [Apollo](https://apollographql.com)
 
-> [Markdown (MDX)](https://mdxjs.com/)
+- [Markdown (MDX)](https://mdxjs.com/)
 
-> [Sass (SCSS)](https://sass-lang.com/)
+- [Sass (SCSS)](https://sass-lang.com/)
 
-> [Material UI](https://material-ui.com) | [Tailwind CSS](https://tailwindcss.com) | [Ant design](https://ant.design)
+- [Material UI](https://material-ui.com) | [Tailwind CSS](https://tailwindcss.com) | [Ant design](https://ant.design)
 
-> [...]()
+- [...]()
 
 <br/>
 
 ## Back End
 
-> [Nodejs](https://nodejs.org)
+- [Nodejs](https://nodejs.org)
 
-> [Graphql](https://graphql.org)
+- [Graphql](https://graphql.org)
 
-> [Express](https://expressjs.com)
+- [Express](https://expressjs.com)
 
-> [MongoDB](https://mongodb.com)
+- [MongoDB](https://mongodb.com)
 
-> [PostgreSQL](https://postgresql.org)
+- [PostgreSQL](https://postgresql.org)
 
-> [TypeORM](https://opencollective.com/typeorm)
+- [TypeORM](https://opencollective.com/typeorm)
 
-> [Django](https://www.djangoproject.com/)
+- [Django](https://www.djangoproject.com/)
+
+<br/>
+
+## Mobile
+
+- React Native
 
 <br/>
 
 ## Testing
 
-> Jest 🔥
+- Jest 🔥
 
-> Chai and Mocha 😏
+- Chai and Mocha 😏
 
-> Enzyme
+- Enzyme
 
 <br/>
 
 ## Dev Ops
 
-> [Docker](https://www.docker.com/)
+- [Docker](https://www.docker.com/)
 
-> [Docker Compose](https://docs.docker.com/compose)
+- [Docker Compose](https://docs.docker.com/compose)
 
-> [NginX](https://www.nginx.com)
+- [NginX](https://www.nginx.com)
 
-> [PM2](https://pm2.keymetrics.io/)
+- [PM2](https://pm2.keymetrics.io/)
 
-> [...]()
+- [...]()
 
 <br/>
 
 ## Build Tools
 
-> [Babel](https://babeljs.io/)
+- [Babel](https://babeljs.io/)
 
-> [Webpack](https://webpack.js.org/)
+- [Webpack](https://webpack.js.org/)
 
-> [ESLint](https://eslint.org/)
+- [ESLint](https://eslint.org/)
 
-> [Gulp]()
+- [Gulp]()
 
-> [Git](https://git-scm.com/)
+- [Git](https://git-scm.com/)
 
-> [Prettier]()
+- [Prettier]()
 
-> [TsLint](https://palantir.github.io/tslint/)
+- [TsLint](https://palantir.github.io/tslint/)
 
 <br/>
 
 ## UI/UX
 
-> PhotoShop
+- PhotoShop
 
-> Adobe XD
+- Adobe XD
 
-> Adobe Illustrator
+- Adobe Illustrator
 
-> CorelDraw
+- CorelDraw
 
 <br/>
 

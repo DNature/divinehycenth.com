@@ -7,9 +7,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet"/>
-          <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet" />
           <script
             dangerouslySetInnerHTML={{
               __html: `

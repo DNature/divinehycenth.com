@@ -4,6 +4,8 @@ import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
 # Build a Progressive Web App with React.js
 
+A guide on creating or converting your react application into a progressive web app.
+
 <Author />
 
 ![Progressive web app with react.js](/images/blog/react-pwa/react-pwa.jpg)

@@ -9,6 +9,11 @@ import MD from "../../posts/how-to-setup-tailwind-purgecss-and-nextjs/how-to-set
 const IndexPage: NextPage = () => {
   // window.scrollTo(0, 0);
 
+    React.useEffect(() => {
+      console.log('useEffect')
+      window.scrollTo(0, 0);
+    }, []);
+
   return (
     <>
       <BlogLayout title="Divine | Build a Progressive Web App with React.js">

@@ -10,11 +10,11 @@ const Main: NextPage = () => {
 
   return (
     <>
-      <div className="md:pt-10 lg:pt-10 pt-3 bg-gray-300 relative custom-bg pb-10">
+      <div className="pt-3 bg-gray-300 relative custom-bg pb-10">
         <header className="container z-10 mx-auto md:px-6 lg:px-12 p-2">
           <>
             <SocialIcons />
-            <div className="h-full lg:mt-20 md:mt-20 text-center md:px-32 lg:px-40 px-0">
+            <div className="h-full lg:mt-10 md:mt-10 text-center md:px-32 lg:px-40 px-0">
               <h1 className="lg:text-5xl md:text-4xl text-2xl text-gray-200 custom-text">
                 Hey, I'm Divine.
               </h1>

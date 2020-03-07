@@ -2,6 +2,19 @@ import { IBlogPost } from "../interfaces";
 
 const ArticleData: IBlogPost[] = [
   {
+    title: "Monorepo setup with Lerna and Yarn workspaces in 2020",
+    summary:
+      "How to setup Yarn workspace for Nodejs, React, and React-Native(expo)",
+    readTime: "9 min read",
+    fileName: "yarn-workspace-monorepo",
+    tags: ["#Monorepo", "#YarnWorkspace", "#React", "#React-Native", "#Nodejs"],
+    createdAt: "Jan 9",
+    author: {
+      name: "Divine Hycenth",
+      imageUrl: "/images/avatar.png"
+    }
+  },
+  {
     title: "Setup Tailwind, and PurgeCSS in Nextjs",
     summary:
       "How to setup your Nextjs project with tailwindcss, purgecss, autoprefixer and postcss",
@@ -31,7 +44,7 @@ const ArticleData: IBlogPost[] = [
     title: "Remove all unused CSS",
     summary:
       "A reference guide on how to remove unused CSS classes, Minify CSS files to reduce your website's loading time.. %",
-    readTime: "9 min read",
+    readTime: "5 min read",
     fileName: "remove-all-unused-css",
     createdAt: "Dec 24",
     tags: ["#CSS", "#Minify Files", "#Purgecss"],

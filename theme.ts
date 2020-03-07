@@ -10,7 +10,7 @@ export default {
     body:
       '"Roboto Slab", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif ',
     heading:
-      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+      '"Roboto Slab", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     monospace: "'Fira code', monospace, Menlo"
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
@@ -98,10 +98,11 @@ export default {
       fontWeight: "body",
       lineHeight: "body",
       code: {
+        backgroundColor: "#21262d",
         fontFamily: "monospace",
         fontSize: "inherit",
-        backgroundColor: "#2D2A55",
-        padding: "3px 5px",
+        // backgroundColor: "#2D2A55",
+        padding: "0 5px",
         borderRadius: "4px",
         color: "#9EFEFF"
       }
@@ -112,7 +113,8 @@ export default {
     li: {
       code: {
         fontFamily: "monospace",
-        backgroundColor: "#2D2A55",
+        backgroundColor: "#21262d",
+        // backgroundColor: "#2D2A55",
         padding: "3px 5px",
         borderRadius: "4px",
         fontSize: "16px",
@@ -121,12 +123,13 @@ export default {
     },
     code: {
       fontFamily: "monospace",
+      backgroundColor: "#21262d",
       fontSize: "16px"
     },
     pre: {
       ...nightOwl,
-      clipPath:
-        "polygon(33% 0, 53% 1%, 72% 0, 100% 1%, 100% 99%, 69% 100%, 37% 99%, 0 100%, 0 0, 18% 1%);",
+      // clipPath: "polygon(33% 0, 53% 1%, 72% 0, 100% 1%, 100% 99%, 69% 100%, 37% 99%, 0 100%, 0 0, 18% 1%);",
+      backgroundColor: "#21262d",
       padding: "18px",
       borderRadius: "7px",
       fontFamily: "'Fira Code', monospace",

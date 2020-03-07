@@ -7,12 +7,15 @@ import Layout from "../../components/layouts";
 interface Props {
   children: React.ReactNode;
   title?: string;
+  description?: string;
 }
 
-const BlogLayout: NextPage<Props> = ({ children, title }) => {
+const BlogLayout: NextPage<Props> = ({ children, title, description }) => {
+  
+
   return (
     <>
-      <Layout title={title}>
+      <Layout title={title} description={description}>
         <div className="lg:px-32 md:px-10 mt-10">{children}</div>
       </Layout>
     </>
@@ -21,7 +24,8 @@ const BlogLayout: NextPage<Props> = ({ children, title }) => {
 
 BlogLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string
+  title: PropTypes.string,
+  description: PropTypes.string
 };
 
 export default BlogLayout;
