@@ -2,12 +2,11 @@ import { IBlogPost } from "../interfaces";
 
 const ArticleData: IBlogPost[] = [
   {
-    title: "Monorepo setup with Lerna and Yarn workspaces in 2020",
-    summary:
-      "How to setup Yarn workspace for Nodejs, React, and React-Native(expo)",
+    title: "Monorepo setup with Yarn workspaces in 2020",
+    summary: "How to setup Yarn workspace for React, and React-Native(expo)",
     readTime: "9 min read",
     fileName: "yarn-workspace-monorepo",
-    tags: ["#Monorepo", "#YarnWorkspace", "#React", "#React-Native", "#Nodejs"],
+    tags: ["#Monorepo", "#YarnWorkspace", "#React", "#React-Native", "#expo"],
     createdAt: "Jan 9",
     author: {
       name: "Divine Hycenth",

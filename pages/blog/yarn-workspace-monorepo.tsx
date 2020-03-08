@@ -12,7 +12,7 @@ const IndexPage: NextPage = () => {
   return (
     <>
       <BlogLayout
-        description="How to setup Yarn workspace for Nodejs, React, and React-Native in 2020"
+        description="How to setup Yarn workspace for React, and React-Native(expo) in 2020"
         title="Typescript setup for Yarn workspace with React, and React-Native"
       >
         <MD />
