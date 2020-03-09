@@ -8,6 +8,7 @@ import { IArticleCardProps } from "../../interfaces";
 const RecentPosts: NextPage<IArticleCardProps> = ({ data }) => {
   const size = 3;
   const recentPosts = data.slice(0, size);
+  
   return (
     <>
       {recentPosts.map((data, i) => (

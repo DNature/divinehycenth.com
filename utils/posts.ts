@@ -2,12 +2,37 @@ import { IBlogPost } from "../interfaces";
 
 const ArticleData: IBlogPost[] = [
   {
+    title: "How to Reduce file sizes with Gulpjs",
+    summary: "Learn how to automatically minify your files with gulpjs?.",
+    readTime: "5 min read",
+    fileName: "how-to-reduce-file-sizes-with-gulpjs",
+    tags: ["#Gulpjs", "#Minify", "#Optimize"],
+    createdAt: "Feb 5",
+    author: {
+      name: "Divine Hycenth",
+      imageUrl: "/images/avatar.png"
+    }
+  },
+  {
+    title: "How to deploy nextjs project to netlify",
+    summary:
+      "A comprehensive guide on how to deploy your nextjs project to netlify.com which is a hosting platform",
+    readTime: "5 min read",
+    fileName: "deploy-nextjs-project-to-netlify",
+    tags: ["#Deploy", "#netlify", "#nextjs", "#devops"],
+    createdAt: "Jan 20",
+    author: {
+      name: "Divine Hycenth",
+      imageUrl: "/images/avatar.png"
+    }
+  },
+  {
     title: "Monorepo setup with Yarn workspaces in 2020",
     summary: "How to setup Yarn workspace for React, and React-Native(expo)",
-    readTime: "9 min read",
+    readTime: "11 min read",
     fileName: "yarn-workspace-monorepo",
     tags: ["#Monorepo", "#YarnWorkspace", "#React", "#React-Native", "#expo"],
-    createdAt: "Jan 9",
+    createdAt: "Jan 18",
     author: {
       name: "Divine Hycenth",
       imageUrl: "/images/avatar.png"

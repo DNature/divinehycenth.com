@@ -5,16 +5,17 @@ import PropTypes from "prop-types";
 import CustomLink from "../CustomLink";
 import completeData from "../../utils/posts";
 
-const size = 3;
-const posts = completeData.slice(0, size);
-
 const RelatedArticles: NextPage<{ name: string }> = ({ name }) => {
+  // const size = 2;
+  const posts = completeData.slice(0, -1);
   const relatedPosts = posts.find(n => n.fileName === name);
+
+
   if (!relatedPosts) return null;
   return (
     <>
       <CustomLink
-        href={`/blog/[id]`}
+        href={`/blog/[name]`}
         as={`/blog/${relatedPosts.fileName}`}
         //   key={data.title + i}
       >

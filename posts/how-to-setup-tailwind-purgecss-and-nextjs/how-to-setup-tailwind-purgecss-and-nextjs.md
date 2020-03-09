@@ -1,6 +1,4 @@
 import Author from "../../components/author";
-import CustomLink from "../../components/CustomLink.tsx";
-import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
 # Setup Tailwind, and PurgeCSS in Nextjs
 
@@ -88,9 +86,7 @@ export default function Index() {
       <p className="text-4xl">Hello Next.js</p>
 
       <Link href="/about">
-        <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          About
-        </a>
+        <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">About</a>
       </Link>
     </div>
   );
@@ -108,9 +104,7 @@ export default function About() {
       <p className="text-2xl">This is the about page</p>
 
       <Link href="/">
-        <a className="bg-yellow-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
-          Home
-        </a>
+        <a className="bg-yellow-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">Home</a>
       </Link>
     </div>
   );
@@ -140,11 +134,7 @@ module.exports = {
     [
       "@fullhuman/postcss-purgecss",
       {
-        content: [
-          "./pages/**/*.{js,jsx,ts,tsx}",
-          "./components/**/*.{js,jsx,ts,tsx}",
-          "./tailwind.css"
-        ],
+        content: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}", "./tailwind.css"],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
       }
     ],
@@ -164,11 +154,7 @@ module.exports = {
       ? [
           "@fullhuman/postcss-purgecss",
           {
-            content: [
-              "./pages/**/*.{js,jsx,ts,tsx}",
-              "./components/**/*.{js,jsx,ts,tsx}",
-              "./tailwind.css"
-            ],
+            content: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}", "./tailwind.css"],
             defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
           }
         ]
@@ -182,9 +168,11 @@ Complete code [https://github.com/dnature/hello-next](https://github.com/dnature
 
 <br/>
 
-## Learn more
+## Conclusion
 
-<div className="md:flex lg:flex">
-<RelatedArticles name="remove-all-unused-css"/> 
-<RelatedArticles name="react-progressive-web-app-(pwa)"/>
-</div>
+Setting up tailwindcss, purgecss with nextjs is quite easy isn't it?. It does not require a lot of code to setup and our reward is the smooth experience users get when accessing our website/application.
+<br/>
+
+### Learn more
+
+[How to reduce file sizes with **Gulpjs**](/blog/how-to-reduce-file-sizes-with-gulpjs)
