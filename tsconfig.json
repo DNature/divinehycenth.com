@@ -21,6 +21,6 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true
   },
-  "exclude": ["node_modules", "**/*.md"],
-  "include": ["**/*.ts", "**/*.tsx", "next.config.js"]
+  "exclude": ["node_modules", "**/*.md", "**/*/gulpfile.js"],
+  "include": ["**/*.ts", "**/*.tsx", "next.config.js", "gulpfile.js"]
 }
