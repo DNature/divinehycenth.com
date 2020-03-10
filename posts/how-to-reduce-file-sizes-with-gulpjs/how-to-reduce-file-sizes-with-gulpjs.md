@@ -4,12 +4,20 @@ import Author from "../../components/author";
 
 <Author/>
 
-> How to setup your Nextjs project with tailwindcss, purgecss, autoprefixer and postcss
+How to setup your Nextjs project with tailwindcss, purgecss, autoprefixer and postcss
 
 ![How to minify file sizes with gulpjs](/images/blog/how-to-reduce-file-sizes-with-gulpjs/how-to-reduce-file-sizes-with-gulpjs.jpg)
 
 <div className="text-center text-sm -mt-3 mb-4 opacity-75">Photo credit: <a href="https://www.pexels.com/photo/person-holding-green-cup-2969312/">
 Isaac Taylor</a> on <a href="https://www.pexels.com/@yungsaac">Pexels</a></div>
+
+## Prerequisites
+
+- Make sure you have [NODEJS](https://nodejs.org/)
+
+- Make sure [NPM](https://www.npmjs.com/) is installed in your computer
+
+<br/>
 
 ## To start — what is gulp?
 
@@ -22,3 +30,244 @@ Gulp is a JavaScript task runner that lets you automate tasks such as…
 - And much more!
 
 An alternative to Gulp is [Grunt](https://gruntjs.com/)
+<br/>
+
+We can create tasks that we would like to fulfill. In these tasks we load files that we want gulp to work on (modifying or not), then we return them to some return folder.
+<br/>
+
+Setting up Gulp is simple compared to Grunt.
+<br/>
+
+In this little tutorial, I will teach you how to create a task to minify all CSS files in your folder. Then put the minified ones in another folder.
+<br/>
+
+## Let’s start 🚀
+
+Our project structure 👇
+
+```bash
+├── css/
+├── node_modules/
+├── images/
+├── js/
+├── gulpfile.js
+├── index.html
+└── package.json
+```
+
+First thing is to install [gulp-cli](https://gulpjs.com/) globally by running:
+
+```bash
+npm install gulp-cli -g
+```
+
+Next step is to initialize our project with npm by running:
+
+```bash
+npm init -y
+```
+
+> I'm using the _-y_ flag to skip all the prompts
+
+We will create a **gulpfile.js** by running:
+
+```bash
+npx -p touch nodetouch gulpfile.js
+```
+
+There are tons of **open source plugins** for almost every task in the [official gulpjs website](https://gulpjs.com/plugins/) however, we are going to consider some plugins for
+
+- [Minifying images](https://www.npmjs.com/package/gulp-imagemin/)
+- [Uglify our CSS files](https://www.npmjs.com/package/gulp-clean-css/)
+- [Uglify our JS files](https://www.npmjs.com/package/gulp-uglify/)
+- and much more...
+
+First lets work on **Images.**
+<br/>
+
+I am going to use an uncompressed version of my profile photo for this demo which is about _1.4mb_ so that we can know how useful it is to compress our images without loosing its quality and details.
+
+<br/>
+
+The first step is to install the plugins we wish to use.
+
+```bash
+npm i -D gulp-imagemin
+```
+
+## In Gulpfile.js
+
+Add the following code to the **gulpfile.js** file we created earlier.
+
+```js
+const { src, dest } = require("gulp");
+const imagemin = require("gulp-imagemin");
+
+function minifyImages() {
+  return src(["./images/**/*"])
+    .pipe(imagemin())
+    .pipe(dest("dist/images"));
+}
+
+exports.minifyImages = minifyImages;
+```
+
+First of all we **require** our **plugins** then we create a function and call it **_minifyImages_**. This function return a **gulp task** that maps through everything in our **/images** directory, then we call our **imagemin()** function that we got from the plugin we imported. next we specify our output directory in the **dest**().
+Finally we export our function.
+
+You might be wondering — you’re already able to minify your files? Yes, by executing the gulp command in the terminal followed by the task name.
+
+<br/>
+
+We can view all available tasks we have written by executing the following command:
+
+```bash
+gulp --tasks
+```
+
+![gulp tasks](/images/blog/how-to-reduce-file-sizes-with-gulpjs/gulp-tasks.gif)
+
+The only defined task in our gulpfile is the _**minifyImages**_ task so if we execute
+
+```bash
+gulp minifyImages
+```
+
+It is going to create a new folder called **/dist/images** and put all our files as we specified in the **dest.**
+
+If you compare the size of our original image to the minified version you will see a big difference because our minified image is **490kb** while our original image is **1.40mb.** Thats awesome right?.
+
+## Minify CSS files
+
+The next thing we are going to checkout is how to minify **CSS** files?.
+
+The steps are pretty much the same.
+
+We will start off by installing **gulp-clean-css** plugin
+
+```bash
+npm i -D gulp-clean-css
+```
+
+Next we will require our plugin and add a function that will minify our **CSS** files.
+
+```js
+const { src, dest } = require("gulp");
+const imagemin = require("gulp-imagemin");
+const cleancss = require("gulp-clean-css");
+
+function minifyImages() {
+  return src(["./images/**/*"])
+    .pipe(imagemin())
+    .pipe(dest("dist/images"));
+}
+
+function minifyCss() {
+  return src(["css/**/*.css"])
+    .pipe(cleancss())
+    .pipe(dest("dist/css"));
+}
+
+exports.minifyCss = minifyCss;
+exports.minifyImages = minifyImages;
+```
+
+Then we can minify our css files by running:
+
+```bash
+gulp minifyCss
+```
+
+To minify your javascript files your code should look like:
+
+```js
+const { src, dest } = require("gulp");
+const imagemin = require("gulp-imagemin");
+const cleancss = require("gulp-clean-css");
+const javascript = require("gulp-uglify");
+
+function minifyImages() {
+  return src(["./images/**/*"])
+    .pipe(imagemin())
+    .pipe(dest("dist/images"));
+}
+
+function minifyCss() {
+  return src(["css/**/*.css"])
+    .pipe(cleancss())
+    .pipe(dest("dist/css"));
+}
+
+function minifyJS() {
+  return src(["js/**/*.js"])
+    .pipe(javascript())
+    .pipe(dest("dist/js"));
+}
+
+exports.minifyCss = minifyCss;
+exports.minifyImages = minifyImages;
+exports.minifyJS = minifyJS;
+```
+
+Gulp provides us with a method called **series() & parallel()**
+
+## series()
+
+- Combines task functions and/or composed operations into larger operations that will be executed one after another, in sequential order. There are no imposed limits on the nesting depth of composed operations using series() and parallel().
+
+Lets enhance our DX by applying the series method.
+
+<br/>
+
+Your code should look like:
+
+```js
+const { src, dest, task, series } = require("gulp");
+const imagemin = require("gulp-imagemin");
+const cleancss = require("gulp-clean-css");
+const javascript = require("gulp-uglify");
+
+function minifyImages() {
+  return src(["./images/**/*"])
+    .pipe(imagemin())
+    .pipe(dest("dist/images"));
+}
+
+function minifyCss() {
+  return src(["css/**/*.css"])
+    .pipe(cleancss())
+    .pipe(dest("dist/css"));
+}
+
+function minifyJS() {
+  return src(["js/**/*.js"])
+    .pipe(javascript())
+    .pipe(dest("dist/js"));
+}
+
+exports.minifyCss = minifyCss;
+exports.minifyImages = minifyImages;
+exports.minifyJS = minifyJS;
+
+task("start", series(minifyCss, minifyImages, minifyJS));
+```
+
+Now you can execute all your gulp tasks with one command
+
+```bash
+gulp start
+```
+
+## Conclusion
+
+This is just a small way that gulp can help us in the development of our applications.
+
+<br/>
+
+You can find the code for this project in [this repository](https://github.com/DNature/gulpjs) on GitHub.
+
+<br/>
+
+Thank you for reading, please feel free to ? and help others find it.
+
+_See you soon. ?_
