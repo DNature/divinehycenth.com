@@ -33,23 +33,25 @@ const AboutPage: NextPage = () => {
                 placeholder="Email"
               />
             </div>
-            <textarea
-              className="bg-white focus:outline-none bg-gray-200 h-24 focus:bg-white focus:shadow-xl rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-              placeholder="Message"
-              rows={5}
-              id="message"
-            />
+            <div>
+              <textarea
+                className="bg-white focus:outline-none bg-gray-200 h-24 focus:bg-white focus:shadow-xl rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+                placeholder="Message"
+                rows={5}
+                id="message"
+              />
+            </div>
             <br />
-            <button
+            <div><button
               type="submit"
               className="w-full border-white text-white border-2 hover:text-black  hover:bg-white my-4 rounded-full px-7 font-sans hover:shadow-lg"
             >
               Send Message ➻
-            </button>
+            </button></div>
+          </form>
             <br />
             <br />
             <SocialIcons />
-          </form>
         </div>
       </div>
     </Layout>
