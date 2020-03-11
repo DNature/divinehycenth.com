@@ -50,14 +50,14 @@ const Main: NextPage = () => {
               </CustomLink>
               <CustomLink
                 className="px-2 text-base text-gray-300 hover:text-gray-100  font-sans"
-                href="/construction"
+                href="/works"
               >
                 Works
               </CustomLink>
 
               <CustomLink
                 className="px-2 text-base text-gray-300 hover:text-gray-100  font-sans"
-                href="/construction"
+                href="/contact"
               >
                 Contact
               </CustomLink>

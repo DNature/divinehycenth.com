@@ -34,6 +34,21 @@ code::-webkit-scrollbar {
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
 }
 
+.custom-bg2 {
+  background: linear-gradient(
+    to right,
+    #304adbb7 0%,
+    #26a8d0a4 51%,
+    #304adb9c 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.custom-bg2:hover {
+  background-position: right center;
+}
+
 a:hover {
   /* text-decoration: underline; */
   background-position: right center;
@@ -77,13 +92,23 @@ em:hover {
 }
 
 .custom-button {
-  background: linear-gradient(to right, #304adbb7 0%, #26d0cda4 51%, #304adb9c 100%);
+  background: linear-gradient(
+    to right,
+    #304adbb7 0%,
+    #26d0cda4 51%,
+    #304adb9c 100%
+  );
   transition: 0.5s;
   background-size: 200% auto;
 }
 
 .custom-button-transparent {
-  background: linear-gradient(to right, #304adb27 0%, #26d0cd4b 51%, #304adb67 100%);
+  background: linear-gradient(
+    to right,
+    #304adb27 0%,
+    #26d0cd4b 51%,
+    #304adb67 100%
+  );
   transition: 0.5s;
   background-size: 200% auto;
 }

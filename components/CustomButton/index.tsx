@@ -6,13 +6,14 @@ import CustomLink from "../CustomLink";
 
 interface Props {
   children: React.ReactNode;
+  href: string;
 }
 
-const CustomButton: NextPage<Props> = ({children}) => {
+const CustomButton: NextPage<Props> = ({children, href}) => {
   return (
     <>
       <div className="container mx-auto text-center">
-        <CustomLink href="/blog">
+        <CustomLink href={href}>
           <button className="custom-button px-10 py-1 rounded-md bg-gray-600 text-white shadow-lg hover:shadow-2xl">
             {children}
           </button>
@@ -24,6 +25,7 @@ const CustomButton: NextPage<Props> = ({children}) => {
 
 CustomButton.propTypes = {
   children: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
 }
 
 export default CustomButton;

@@ -2,43 +2,67 @@ import { IWorksData } from "../interfaces";
 
 export default [
   {
-    title: "Setup Tailwind",
-    url: "https://github.com/dnature/next-blog",
-    gitUrl: "https://github.com/dnature/next-blog",
+    title: "CRWN Clothing",
+    url: "https://crwn-clothing-navy-ten.now.sh/",
+    gitUrl: "https://github.com/DNature/crwn-clothing",
     summary:
-      "This is my first blog website and it took me two weeks to build and deploy it",
+      "CRWN clothing is a demo e-commerce app bootstrapped with Create React App and firebase. Some features includes payment with stripe, redux, firebase and lots more. THis project is still on development.",
     path: "abb"
   },
   {
-    title: "Setup Tailwind",
-    url: "https://github.com/dnature/next-blog",
-    gitUrl: "https://github.com/dnature/next-blog",
+    title: "Office Pages",
+    url: "https://officepages.co",
+    gitUrl: "https://github.com/DNature/office-pages-website",
     summary:
-      "This is my first blog website and it took me two weeks to build and deploy it",
+      "Office pages is a Document management system software for both large and small organizations.",
     path: "abb"
   },
   {
-    title: "Setup Tailwind",
-    url: "https://github.com/dnature/next-blog",
-    gitUrl: "https://github.com/dnature/next-blog",
+    title: "Cleanfits",
+    url: "https://cleanfits.herokuapp.com/",
+    gitUrl: "https://github.com/DNature/cleanfits_original",
     summary:
-      "This is my first blog website and it took me two weeks to build and deploy it",
+      "Cleanfits is a demo website for a laundry and dry cleaning agency. It lets users book cleaning appointments, track delivery and pay online.",
     path: "abb"
   },
   {
-    title: "Setup Tailwind",
-    url: "https://github.com/dnature/next-blog",
-    gitUrl: "https://github.com/dnature/next-blog",
+    title: "TransferWise Clone",
+    url: "https://transferwise.netlify.com/",
+    gitUrl: "https://github.com/dnature/transferwise",
     summary:
-      "This is my first blog website and it took me two weeks to build and deploy it",
+      "I cloned the homepage of transferwise.com. I attempted the design and most functionalities present on the website.",
     path: "abb"
   },
   {
-    title: "Setup Tailwind",
-    url: "https://github.com/dnature/next-blog",
+    title: "Social Ape",
+    url: "https://socialape-0.web.app/",
+    gitUrl: "https://github.com/DNature/movietime",
+    summary:
+      "Social ape is a demo twitter clone application built with React, Redux and Firebase.",
+    path: "abb"
+  },
+  {
+    title: "Dream house",
+    url: "https://github.com/DNature/team-superusers",
+    gitUrl: "https://github.com/DNature/team-superusers",
+    summary:
+      "This is a demo Real estate project for Najahacks 2019(hackerthon) and it's still on development. Its built with Graphql, Nodejs, React and Apollo.",
+    path: "abb"
+  },
+  {
+    title: "Movie Time",
+    url: "https://movietimesng.herokuapp.com/",
     gitUrl: "https://github.com/dnature/next-blog",
     summary:
-      "This is my first blog website and it took me two weeks to build and deploy it",
+      "A web app for booking movie tickets from a fictional cinema. It features movie trailers, rating, description, online payment and email notifications.",
+    path: "abb"
+  },
+  {
+    title: "Unsplash Clone",
+    url: "https://mini-unsplash.netlify.com/",
+    gitUrl: "https://github.com/DNature/mini-unsplash-clone",
+    summary:
+      "I cloned the homepage of transferwise.com. I attempted the design and most functionalities present on the website.",
     path: "abb"
   }
 ] as IWorksData[];
