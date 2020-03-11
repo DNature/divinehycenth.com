@@ -30,7 +30,7 @@ const AboutPage: NextPage = () => {
                 <div className="w-6/12">
                   <CustomLink href={`/works/[id]`} as={`/works/${data.path}`}>
                     {/* <button className="text-xs font-sans text-link">
-                      Read more →
+                    Read more →
                     </button> */}
                   </CustomLink>
                 </div>
