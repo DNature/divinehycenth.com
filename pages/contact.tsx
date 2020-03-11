@@ -39,6 +39,7 @@ const AboutPage: NextPage = () => {
                 placeholder="Message"
                 rows={5}
                 id="message"
+                name="message"
               />
             </div>
             <br />
