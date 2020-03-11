@@ -21,7 +21,7 @@ const IndexPage: NextPage = () => {
           <ArticleCard data={data}/>
         </div>
         <br/>
-        <CustomButton>LOAD MORE</CustomButton>
+        <CustomButton href="/blog">LOAD MORE</CustomButton>
       </Layout>
     </>
   );

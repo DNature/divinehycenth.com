@@ -23,20 +23,26 @@ const AboutPage: NextPage = () => {
             name="Contact from divinehycenth.com"
           >
             <CustomInput id="name" name="name" type="text" placeholder="Name" />
-            <CustomInput name="email" id="email" type="email" placeholder="Email" />
+            <CustomInput
+              name="email"
+              id="email"
+              type="email"
+              placeholder="Email"
+            />
             <textarea
               className="bg-white focus:outline-none bg-gray-200 h-24 focus:bg-white focus:shadow-xl rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
               placeholder="Message"
               rows={5}
               id="message"
             />
-
+            <br />
             <button
               type="submit"
               className="w-full border-white text-white border-2 hover:text-black  hover:bg-white my-4 rounded-full px-7 font-sans hover:shadow-lg"
             >
               Send Message ➻
             </button>
+            <br />
             <br />
             <SocialIcons />
           </form>
