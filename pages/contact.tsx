@@ -28,7 +28,7 @@ const AboutPage: NextPage = () => {
     fetch("/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...values })
+      body: encode( { "form-name": "Contact from divinehycenth.com", ...values })
     })
       .then(() => console.log("sent successfully"))
       .catch(e => console.log(e));
