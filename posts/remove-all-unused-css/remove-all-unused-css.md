@@ -21,7 +21,7 @@ When developing a website/application, we developers tend to use different CSS f
 
 Now you know what and why we should remove unused css so **Lets hit the ground running 🚀**.
 
-# [Purge CSS](https://purgecss.com/)
+## [Purge CSS](https://purgecss.com/)
 
 ![Purge CSS](/images/blog/remove-unused-css/purgecss.webp)
 

@@ -32,7 +32,7 @@ git clone https://github.com/dnature/hello-next
 
 cd hello-next
 
-# install dependencies
+## install dependencies
 npm install
 ```
 
@@ -86,7 +86,9 @@ export default function Index() {
       <p className="text-4xl">Hello Next.js</p>
 
       <Link href="/about">
-        <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">About</a>
+        <a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          About
+        </a>
       </Link>
     </div>
   );
@@ -104,7 +106,9 @@ export default function About() {
       <p className="text-2xl">This is the about page</p>
 
       <Link href="/">
-        <a className="bg-yellow-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">Home</a>
+        <a className="bg-yellow-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+          Home
+        </a>
       </Link>
     </div>
   );
@@ -134,7 +138,11 @@ module.exports = {
     [
       "@fullhuman/postcss-purgecss",
       {
-        content: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}", "./tailwind.css"],
+        content: [
+          "./pages/**/*.{js,jsx,ts,tsx}",
+          "./components/**/*.{js,jsx,ts,tsx}",
+          "./tailwind.css"
+        ],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
       }
     ],
@@ -154,7 +162,11 @@ module.exports = {
       ? [
           "@fullhuman/postcss-purgecss",
           {
-            content: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}", "./tailwind.css"],
+            content: [
+              "./pages/**/*.{js,jsx,ts,tsx}",
+              "./components/**/*.{js,jsx,ts,tsx}",
+              "./tailwind.css"
+            ],
             defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
           }
         ]

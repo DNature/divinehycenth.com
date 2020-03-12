@@ -62,9 +62,9 @@ const AboutPage: NextPage = () => {
       <CustomButton href="//github.com/dnature">LOAD MORE</CustomButton>
       <br />
 
-      <h1 className="py-12 border-b font-bold text-2xl px-2 text-center">
+      <h2 className="py-12 border-b font-bold text-2xl px-2 text-center">
         Open Source Projects
-      </h1>
+      </h2>
       <div className="container mx-auto lg:w-4/12 md:w-5/12">
         <ul>
           <li>
