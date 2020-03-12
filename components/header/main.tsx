@@ -15,14 +15,14 @@ const Main: NextPage = () => {
           <>
             <SocialIcons />
             <div className="h-full lg:mt-10 md:mt-10 text-center md:px-32 lg:px-40 px-0">
-              <h1 className="lg:text-5xl md:text-4xl text-2xl text-gray-200 custom-text">
+              <h2 className="lg:text-5xl md:text-4xl text-2xl text-gray-200 custom-text">
                 Hey, I'm Divine.
-              </h1>
-              <h1 className="lg:text-2xl md:text-xl text-base text-white">
+              </h2>
+              <h2 className="lg:text-2xl md:text-xl text-base text-white">
                 I'm a full stack software developer creating open source
                 projects and writing about modern JavaScript, Typescript,
                 Graphql, Python, Node.js, and development.
-              </h1>
+              </h2>
               <div className=" my-6 ">
                 <CustomLink
                   className="custom-button-transparent px-8 py-3 text-white hover:text-white hover:shadow-2xl rounded-md shadow-xl hover:border-blue-300 border"

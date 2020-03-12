@@ -15,11 +15,11 @@ const Construction: NextPage = () => {
       <Layout title="Divine Hycenth | Not Found">
         <div className="lg:px-64 md:px-40 sm:px-20 px-12 mx-auto text-center">
           <img src="/images/construction.svg" alt="page under construction" />
-          <h1 className="text-3xl mb-10 text-gray-700">This Page is under construction!</h1>
+          <h2 className="text-3xl mb-10 text-gray-700">This Page is under construction!</h2>
         </div>
         <hr className="border-2"/>
 
-        <h1 className="text-2xl text-gray-700">Recent Articles</h1>
+        <h2 className="text-2xl text-gray-700">Recent Articles</h2>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2">
           <RecentPosts data={data} />
         </div>

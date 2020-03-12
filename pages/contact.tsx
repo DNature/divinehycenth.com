@@ -12,7 +12,7 @@ const AboutPage: NextPage = () => {
           <img src="/images/contact.svg" className="w-full " alt="Contact me" />
         </div>
         <div className="container p-6 md:px-16 mx-auto w-full shadow-lg custom-bg2 rounded-lg md:py-16">
-          <h1 className="text-4xl font-sans font-bold text-white">Contact me</h1>
+          <h2 className="text-4xl font-sans font-bold text-white">Contact me</h2>
 
           <form
             method="POST"

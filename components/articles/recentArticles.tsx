@@ -19,9 +19,9 @@ const RecentPosts: NextPage<IArticleCardProps> = ({ data }) => {
         >
           <div className="max-w-sm rounded-md hover mx-auto overflow-hidden shadow-md hover:shadow-xl hover:border-link border-2 border-transparent sm:m-4 m-4 cursor-pointer bg-white">
             <div className="px-6 py-4">
-              <h1 className="font-bold text-xl hover:text-link">
+              <h2 className="font-bold text-xl hover:text-link">
                 {data.title}
-              </h1>
+              </h2>
               <p className="text-gray-700 text-sm">{data.summary}</p>
             </div>
           </div>

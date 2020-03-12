@@ -11,9 +11,9 @@ import CustomButton from "../../components/CustomButton";
 const AboutPage: NextPage = () => {
   return (
     <Layout title="Divine Hycenth | Projects">
-      <h1 className="py-12 border-b font-bold text-2xl px-2 text-center">
+      <h2 className="py-12 border-b font-bold text-2xl px-2 text-center">
         Recent Projects
-      </h1>
+      </h2>
       <div>
         {workData.map((data, i) => (
           <div
@@ -21,9 +21,9 @@ const AboutPage: NextPage = () => {
             className="mx-auto hover:shadow-lg px-4 w-full py-5 border-b"
           >
             <div className="container lg:w-4/12 md:w-5/12 mx-auto">
-              <h1 className="text-sm md:text-lg font-sans font-semibold text-black">
+              <h2 className="text-sm md:text-lg font-sans font-semibold text-black">
                 {data.title}
-              </h1>
+              </h2>
               <p className="text-sm">{data.summary}</p>
 
               <div className="flex gap justify-between">
