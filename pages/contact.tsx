@@ -25,13 +25,14 @@ const AboutPage: NextPage = () => {
     e.preventDefault();
     console.log(values);
 
-    fetch("/", {
+    fetch("/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...values })
     })
       .then(() => console.log("sent successfully"))
       .catch(e => console.log(e));
+    // TODO: Create a success redirect page
   };
 
   return (
