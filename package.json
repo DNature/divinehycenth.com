@@ -9,7 +9,7 @@
   "author": {
     "name": "Divine Hycenth",
     "email": "divinehycenth@outlook.com",
-    "url": "https://www.divinenature.tk"
+    "url": "https://www.divinehycenth.com"
   },
   "scripts": {
     "dev": "next",
@@ -29,6 +29,7 @@
     "@theme-ui/prism": "^0.3.0",
     "@theme-ui/tailwind": "^0.3.0",
     "@zeit/next-typescript": "^1.1.1",
+    "axios": "^0.19.2",
     "glob": "^7.1.6",
     "isomorphic-unfetch": "3.0.0",
     "next": "latest",

@@ -15,7 +15,7 @@ const NextHead: NextPage<Props> = ({
   <Head>
     <meta charSet="utf-8" />
     <link rel="shortcut icon" href="/icons/favicon.ico" />
-    <link rel="canonical" href="https://divinenature.com" />
+    <link rel="canonical" href="https://divinehycenth.com" />
     <meta httpEquiv="x-ua-compatible" content="ie=edge" />
     <meta property="og:description" content={description} />
     <meta property="og:title" content={pageTitle} />
@@ -41,7 +41,7 @@ const NextHead: NextPage<Props> = ({
 
     <meta property="og:determiner" content="software" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="https://divinenature.com" />
+    <meta property="og:site_name" content="https://divinehycenth.com" />
     <meta property="og:url" content="Divine Hycenth" />
     <meta property="og:type" content="website" />
 
