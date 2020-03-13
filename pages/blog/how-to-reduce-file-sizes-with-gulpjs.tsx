@@ -17,6 +17,7 @@ const IndexPage: NextPage = () => {
         imageUrl="/images/blog/how-to-reduce-file-sizes-with-gulpjs/how-to-reduce-file-sizes-with-gulpjs.jpg"
       >
         <MD />
+        
       </BlogLayout>
     </>
   );
