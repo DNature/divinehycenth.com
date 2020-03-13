@@ -66,13 +66,10 @@ const AboutPage: NextPage = () => {
         Open Source Projects
       </h2>
       <div className="container mx-auto lg:w-4/12 md:w-5/12">
-        <ul>
-          <li>
+        
             <a href="//github.com/DNature/expo-yarn-workspace-demo">
               Yarn workspace setup
             </a>
-          </li>
-        </ul>
       </div>
     </Layout>
   );

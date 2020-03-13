@@ -3,14 +3,14 @@ module.exports = {
     "tailwindcss",
     "autoprefixer",
     "cssnano",
-    // process.env.NODE_ENV !== "production"
+    // process.env.NODE_ENV === "production"
     //   ?
     [
       "@fullhuman/postcss-purgecss",
       {
         content: [
-          "./pages/**/*.{ts,tsx,md,mdx}",
-          "./components/**/*.{ts,tsx,md,mdx}",
+          "./pages/**/*.{ts,tsx}",
+          "./components/**/*.{ts,tsx}",
           "./theme.ts",
           "./styles/tailwind.css",
           "./posts/**/*.{md,mdx}"
