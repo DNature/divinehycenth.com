@@ -17,6 +17,7 @@ const NextHead: NextPage<Props> = ({
   <Head>
     <meta charSet="utf-8" />
     <link rel="shortcut icon" href="/icons/favicon.ico" />
+    <link rel="icon" type="image/ico" href="/icons/favicon.ico" />
     <meta name="yandex-verification" content="8caa5bda2d4a0bba" />
 
     <link rel="canonical" href="https://divinehycenth.com" />
