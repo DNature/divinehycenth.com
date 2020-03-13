@@ -18,6 +18,12 @@ const NextHead: NextPage<Props> = ({
     <meta charSet="utf-8" />
     <link rel="shortcut icon" href="/icons/favicon.ico" />
     <link rel="icon" type="image/ico" href="/icons/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/>
+<link rel="manifest" href="/site.webmanifest"/>
+
+
     <meta name="yandex-verification" content="8caa5bda2d4a0bba" />
 
     <link rel="canonical" href="https://divinehycenth.com" />
