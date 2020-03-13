@@ -4,7 +4,7 @@ import Author from "../../components/author";
 
 <Author/>
 
-How to setup your Nextjs project with tailwindcss, purgecss, autoprefixer and postcss
+Learn how to automatically minify your files with gulpjs?.
 
 ![How to minify file sizes with gulpjs](/images/blog/how-to-reduce-file-sizes-with-gulpjs/how-to-reduce-file-sizes-with-gulpjs.jpg)
 
