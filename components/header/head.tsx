@@ -9,6 +9,11 @@ interface Props {
   imageUrl?: string;
 }
 
+const check = (condition: string): string =>
+  condition
+    ? `https://divinehycenth.com/${condition}`
+    : "https://divinehycenth.com/about";
+
 const NextHead: NextPage<Props> = ({
   pageTitle = "Divine Hycenth 👋 Full Stack Software Developer",
   description = "I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development.",
@@ -45,16 +50,15 @@ const NextHead: NextPage<Props> = ({
     <meta property="og:title" content={pageTitle} />
 
     {/* facebook */}
-    <meta
-      property="og:title"
-      content="Divine Hycenth 👋 Full Stack Software Developer"
-    />
-    <meta
-      property="og:description"
-      content="I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development."
-    />
+   
+    
     <meta property="og:image" content={imageUrl} />
-    <meta property="og:url" content="https://divinehycenth.com/about" />
+    <meta
+      property="og:url"
+      content={
+       check(imageUrl)
+      }
+    />
 
     <meta
       name="viewport"
@@ -98,14 +102,7 @@ const NextHead: NextPage<Props> = ({
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://divinehycenth.com/" />
-    <meta
-      property="og:title"
-      content="Divine Hycenth 👋 Full Stack Software Developer"
-    />
-    <meta
-      property="og:description"
-      content="I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development."
-    />
+   
     <meta property="og:image" content={imageUrl} />
 
     {pageTitle ? (
