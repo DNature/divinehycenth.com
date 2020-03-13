@@ -6,11 +6,13 @@ import { NextPage } from "next";
 interface Props {
   description?: string;
   pageTitle?: string;
+  imageUrl?: string;
 }
 
 const NextHead: NextPage<Props> = ({
   pageTitle = "Divine Hycenth 👋 Full Stack Software Developer",
-  description = "I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development."
+  description = "I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development.",
+  imageUrl = "/images/avatar.png"
 }) => (
   <Head>
     <meta charSet="utf-8" />
@@ -31,7 +33,7 @@ const NextHead: NextPage<Props> = ({
       property="og:description"
       content="I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development."
     />
-    <meta property="og:image" content="/images/avatar.png" />
+    <meta property="og:image" content={imageUrl} />
     <meta property="og:url" content="https://divinehycenth.com/about" />
 
     <meta
@@ -54,7 +56,7 @@ const NextHead: NextPage<Props> = ({
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://divinehycenth.com/" />
     <meta property="twitter:title" content={pageTitle} />
-    <meta property="twitter:image" content="/images/avatar.png" />
+    <meta property="twitter:image" content={imageUrl} />
 
     <meta property="og:determiner" content="software" />
     <meta property="og:locale" content="en_US" />
@@ -84,7 +86,7 @@ const NextHead: NextPage<Props> = ({
       property="og:description"
       content="I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development."
     />
-    <meta property="og:image" content="/images/avatar.png" />
+    <meta property="og:image" content={imageUrl} />
 
     {pageTitle ? (
       <title>{pageTitle}</title>
@@ -97,6 +99,7 @@ const NextHead: NextPage<Props> = ({
 NextHead.propTypes = {
   pageTitle: PropTypes.string,
   description: PropTypes.string,
+  imageUrl: PropTypes.string,
 };
 
 export default NextHead

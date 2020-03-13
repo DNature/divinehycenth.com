@@ -16,7 +16,11 @@ const IndexPage: NextPage = () => {
 
   return (
     <>
-      <BlogLayout title="Divine | Build a Progressive Web App with React.js">
+      <BlogLayout
+        title="Divine | Setup Tailwind and Purgecss in Nextjs"
+        description="How to setup your Nextjs project with tailwindcss, purgecss, autoprefixer and postcss"
+        imageUrl="/images/blog/how-to-setup-tailwind-purgecss-and-nextjs/how-to-setup-tailwind-purgecss-and-nextjs.jpg"
+      >
         <MD />
       </BlogLayout>
     </>

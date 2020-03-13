@@ -8,14 +8,15 @@ interface Props {
   children: React.ReactNode;
   title?: string;
   description?: string;
+  imageUrl?: string;
 }
 
-const BlogLayout: NextPage<Props> = ({ children, title, description }) => {
+const BlogLayout: NextPage<Props> = ({ children, title, description, imageUrl }) => {
   
 
   return (
     <>
-      <Layout title={title} description={description}>
+      <Layout title={title} description={description} imageUrl={imageUrl}>
         <div className="lg:px-32 md:px-10 mt-10">{children}</div>
       </Layout>
     </>
@@ -25,7 +26,8 @@ const BlogLayout: NextPage<Props> = ({ children, title, description }) => {
 BlogLayout.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
+  imageUrl: PropTypes.string,
 };
 
 export default BlogLayout;
