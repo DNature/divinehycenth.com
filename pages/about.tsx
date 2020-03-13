@@ -7,7 +7,7 @@ import AboutMeMDX from '../posts/about-me.md';
 const AboutPage: NextPage = () =>{
   
   return (
-    <Layout title="Divine Hycenth | About Me">
+    <Layout title="Divine Hycenth | About Me" >
       <div className="lg:mx-10 md:mx-8">
         <AboutMeMDX />
       </div>

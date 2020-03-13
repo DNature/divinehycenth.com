@@ -22,6 +22,18 @@ const NextHead: NextPage<Props> = ({
     <meta property="og:description" content={description} />
     <meta property="og:title" content={pageTitle} />
 
+    {/* facebook */}
+    <meta
+      property="og:title"
+      content="Divine Hycenth 👋 Full Stack Software Developer"
+    />
+    <meta
+      property="og:description"
+      content="I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development."
+    />
+    <meta property="og:image" content="/images/avatar.png" />
+    <meta property="og:url" content="https://divinehycenth.com/about" />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -30,8 +42,6 @@ const NextHead: NextPage<Props> = ({
     <meta name="description" content={description} />
     <meta itemProp="name" content="Divine Hycenth" />
     <meta itemProp="description" content={description} />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="divinehycenth" />
     <meta name="twitter:site" content="@DivineHycenth" />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:app:name:iphone" content="portfolio" />
@@ -41,11 +51,15 @@ const NextHead: NextPage<Props> = ({
     <meta name="twitter:app:name:googleplay" content="portfolio" />
     <meta name="twitter:app:id:googleplay" content="" />
 
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://divinehycenth.com/" />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:image" content="/images/avatar.png" />
+
     <meta property="og:determiner" content="software" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="https://divinehycenth.com" />
     <meta property="og:url" content="Divine Hycenth" />
-    <meta property="og:type" content="website" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
@@ -59,6 +73,19 @@ const NextHead: NextPage<Props> = ({
       href="https://fonts.googleapis.com/css?family=Satisfy&display=swap"
       rel="stylesheet"
     />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://divinehycenth.com/" />
+    <meta
+      property="og:title"
+      content="Divine Hycenth 👋 Full Stack Software Developer"
+    />
+    <meta
+      property="og:description"
+      content="I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development."
+    />
+    <meta property="og:image" content="/images/avatar.png" />
+
     {pageTitle ? (
       <title>{pageTitle}</title>
     ) : (

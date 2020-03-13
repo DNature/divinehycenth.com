@@ -3,6 +3,7 @@ import Layout from "../components/layouts";
 import { NextPage } from "next";
 import CustomInput from "../components/customInput";
 import SocialIcons from "../components/SocialIcons";
+import { useRouter } from "next/router";
 
 const encode = (data: any): string => {
   return Object.keys(data)
@@ -11,6 +12,7 @@ const encode = (data: any): string => {
 };
 
 const AboutPage: NextPage = () => {
+  const router = useRouter();
   const [values, setValues] = React.useState({
     name: "",
     email: "",
@@ -28,9 +30,14 @@ const AboutPage: NextPage = () => {
     fetch("/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode( { "form-name": "Contact from divinehycenth.com", ...values })
+      body: encode({ "form-name": "Contact from divinehycenth.com", ...values })
     })
-      .then(() => console.log("sent successfully"))
+      .then(() => {
+        console.log("message sent");
+        return setTimeout(() => {
+          return router.push("/sent");
+        }, 1000);
+      })
       .catch(e => console.log(e));
     // TODO: Create a success redirect page
   };
