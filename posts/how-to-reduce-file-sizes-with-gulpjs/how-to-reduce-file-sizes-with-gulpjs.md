@@ -1,4 +1,5 @@
 import Author from "../../components/author";
+import CodeWrapper from '../../components/codeWrapper'
 
 # How to Reduce file sizes with Gulpjs
 
@@ -57,11 +58,15 @@ Our project structure 👇
 
 First thing is to install [gulp-cli](https://gulpjs.com/) globally by running:
 
+<CodeWrapper lang="$~ bash"/>
+
 ```bash
 npm install gulp-cli -g
 ```
 
 Next step is to initialize our project with npm by running:
+
+<CodeWrapper lang="$~ bash"/>
 
 ```bash
 npm init -y
@@ -70,6 +75,8 @@ npm init -y
 > I'm using the _-y_ flag to skip all the prompts
 
 We will create a **gulpfile.js** by running:
+
+<CodeWrapper lang="$~ bash"/>
 
 ```bash
 npx -p touch nodetouch gulpfile.js
@@ -91,6 +98,8 @@ I am going to use an uncompressed version of my profile photo for this demo whic
 
 The first step is to install the plugins we wish to use.
 
+<CodeWrapper lang="$~ bash"/>
+
 ```bash
 npm i -D gulp-imagemin
 ```
@@ -98,6 +107,8 @@ npm i -D gulp-imagemin
 ## In Gulpfile.js
 
 Add the following code to the **gulpfile.js** file we created earlier.
+
+<CodeWrapper lang="javascript"/>
 
 ```js
 const { src, dest } = require("gulp");
@@ -121,6 +132,8 @@ You might be wondering — you’re already able to minify your files? Yes, by e
 
 We can view all available tasks we have written by executing the following command:
 
+<CodeWrapper lang="$~ bash"/>
+
 ```bash
 gulp --tasks
 ```
@@ -128,6 +141,8 @@ gulp --tasks
 ![gulp tasks](/images/blog/how-to-reduce-file-sizes-with-gulpjs/gulp-tasks.gif)
 
 The only defined task in our gulpfile is the _**minifyImages**_ task so if we execute
+
+<CodeWrapper lang="$~ bash"/>
 
 ```bash
 gulp minifyImages
@@ -145,11 +160,15 @@ The steps are pretty much the same.
 
 We will start off by installing **gulp-clean-css** plugin
 
+<CodeWrapper lang="$~ bash"/>
+
 ```bash
 npm i -D gulp-clean-css
 ```
 
 Next we will require our plugin and add a function that will minify our **CSS** files.
+
+<CodeWrapper lang="javascript"/>
 
 ```js
 const { src, dest } = require("gulp");
@@ -174,11 +193,15 @@ exports.minifyImages = minifyImages;
 
 Then we can minify our css files by running:
 
+<CodeWrapper lang="$~ bash"/>
+
 ```bash
 gulp minifyCss
 ```
 
 To minify your javascript files your code should look like:
+
+<CodeWrapper lang="javascript"/>
 
 ```js
 const { src, dest } = require("gulp");
@@ -221,6 +244,8 @@ Lets enhance our DX by applying the series method.
 
 Your code should look like:
 
+<CodeWrapper lang="javascript"/>
+
 ```js
 const { src, dest, task, series } = require("gulp");
 const imagemin = require("gulp-imagemin");
@@ -253,6 +278,8 @@ task("start", series(minifyCss, minifyImages, minifyJS));
 ```
 
 Now you can execute all your gulp tasks with one command
+
+<CodeWrapper lang="$~ bash"/>
 
 ```bash
 gulp start

@@ -17,7 +17,7 @@ const BlogLayout: NextPage<Props> = ({ children, title, description, imageUrl })
   return (
     <>
       <Layout title={title} description={description} imageUrl={imageUrl}>
-        <div className="lg:px-32 md:px-10 mt-10">{children}</div>
+        <article className="lg:px-32 md:px-10 mt-10">{children}</article>
       </Layout>
     </>
   );

@@ -1,9 +1,3 @@
-<div className="relative">
-<img src="/images/avatar.png" alt="Divine Hycenth Portrait" className="absolute top-0 right-0 h-24 md:h-40 md:-mt-16 -mt-12 lg:h-48 lg:-mt-20 rounded-full p-2 border-2 border-blue-300"/>
-</div>
-
-<br/>
-
 # About Me
 
 <br/>
