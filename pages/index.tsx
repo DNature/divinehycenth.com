@@ -13,7 +13,8 @@ const data = completeData.slice( 0, size )
 const IndexPage: NextPage = () => {
   return (
     <>
-      <Layout>
+      <Layout imageUrl="/images/avatar-small.png"
+>
         <h2 className="-mb-10 inline-block px-3 md:text-3xl text-2xl font-bold text-gray-700 mt-6">
           Recent Posts
         </h2>
