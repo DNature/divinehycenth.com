@@ -33,6 +33,15 @@ export default [
       "I cloned the homepage of transferwise.com. I attempted the design and most functionalities present on the website.",
     path: "abb"
   },
+
+  {
+    title: "Nectar 5",
+    url: "https://nectar5.com/",
+    gitUrl: "https://github.com/DNature/nectar_5_complete",
+    summary:
+      "a data technology unit that leverages on real time data to track and simplify macro-economic and human development trends in Nigeria and other African countries.",
+    path: "abb"
+  },
   {
     title: "Social Ape",
     url: "https://socialape-0.web.app/",
@@ -61,6 +70,14 @@ export default [
     title: "Unsplash Clone",
     url: "https://mini-unsplash.netlify.com/",
     gitUrl: "https://github.com/DNature/mini-unsplash-clone",
+    summary:
+      "I cloned the homepage of transferwise.com. I attempted the design and most functionalities present on the website.",
+    path: "abb"
+  },
+  {
+    title: "Dreamworks training app",
+    url: "https://mini-unsplash.netlify.com/",
+    gitUrl: "https://github.com/DNature/dreamworksWebApp",
     summary:
       "I cloned the homepage of transferwise.com. I attempted the design and most functionalities present on the website.",
     path: "abb"
