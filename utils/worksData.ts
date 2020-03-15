@@ -76,10 +76,9 @@ export default [
   },
   {
     title: "Dreamworks training app",
-    url: "https://mini-unsplash.netlify.com/",
+    url: "#",
     gitUrl: "https://github.com/DNature/dreamworksWebApp",
-    summary:
-      "I cloned the homepage of transferwise.com. I attempted the design and most functionalities present on the website.",
+    summary: "This is a training application for a company.",
     path: "abb"
   }
 ] as IWorksData[];
