@@ -172,6 +172,7 @@ button:focus {
   /* height: 70vh; */
   /* background-color: #000; */
   /* z-index: -10; */
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
 }
 .bg-image {
   position: absolute;

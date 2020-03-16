@@ -41,9 +41,8 @@ const AboutPage: NextPage = () => {
             roles like <b>full stack, back end or front end.</b>
           </p>
           <p>
-            I'm <b>self motivated</b> which makes me the best fit for a
-            <b>remote</b> job and i would love to relocate if there's a need for
-            my presence.
+            I'm <b>self motivated</b> which makes me competent and also a great fit for a
+            <b> remote</b> job and i would love to relocate if i'm required to.
           </p>
           <p>
             I started this website as a place to document everything I learned
@@ -51,7 +50,7 @@ const AboutPage: NextPage = () => {
           </p>
         </article>
         <br />
-        <p>Here are some technical skills I poses:</p>
+        <p className="text-center text-xl font-bold">Here are some technical skills I poses:</p>
         {/* Test */}
         <div className="xl:px-64 px-0">
           <SkillCard />

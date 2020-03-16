@@ -12,7 +12,7 @@ const Minimal: NextPage<{ image?: string; caption?: string }> = ({
 }) => {
   const { pathname } = useRouter();
   return (
-    <div className="relative">
+    <div className="relative bg-2 ">
       {/* <div className="custom-bg pt-5  relative top-0"> */}
       {image && (
         <>
@@ -29,7 +29,7 @@ const Minimal: NextPage<{ image?: string; caption?: string }> = ({
       <header className="container pt-5  mx-auto md:px-10 lg:px-20 p-2 z-10">
         <SocialIcons />
         {caption && (
-          <h2 className="text-6xl text-white text-center font-bold font-sans py-32">
+          <h2 className="text-6xl text-white text-center font-bold font-sans py-20 md:py-32">
             {caption}
           </h2>
         )}
