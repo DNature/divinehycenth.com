@@ -13,6 +13,14 @@ A comprehensive guide on how to upload files with Apollo-server 2.0 and Mongodb.
 Life of Pix</a> on <a href="https://www.pexels.com/@life-of-pix">Pexels</a></div>
 <br/>
 
+## Prerequisites
+
+- [Altair](https://altair.sirmuel.design/) (Recommended alternative to the default graphql playground)
+
+- You must have [nodejs](https://nodejs.org) installed on your machine.
+
+- Basic knowledge of **nodejs**
+
 File Uploads have an interesting history in the Apollo ecosystem.
 
 <br/>
