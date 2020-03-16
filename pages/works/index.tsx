@@ -10,7 +10,7 @@ import CustomButton from "../../components/CustomButton";
 
 const AboutPage: NextPage = () => {
   return (
-    <Layout title="Divine Hycenth | Projects">
+    <Layout caption="Works" image="/images/blog-main.jpg" title="Divine Hycenth | Projects">
       <h2 className="py-12 border-b font-bold text-2xl px-2 text-center">
         Recent Projects
       </h2>

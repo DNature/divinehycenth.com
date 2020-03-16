@@ -2,7 +2,7 @@ import * as React from "react";
 import { NextPage } from "next";
 import PropTypes from "prop-types";
 
-import Layout from "../../components/layouts";
+import Layout from ".";
 
 interface Props {
   children: React.ReactNode;

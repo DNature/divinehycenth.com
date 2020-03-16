@@ -3,7 +3,7 @@ import Layout from "../components/layouts";
 import { NextPage } from "next";
 //@ts-ignore
 import AboutMeMDX from "../posts/about-me.md";
-import SkillCard from '../components/skillCard';
+import SkillCard from "../components/skillCard";
 
 const AboutPage: NextPage = () => {
   return (

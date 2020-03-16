@@ -168,3 +168,18 @@ button:focus {
   background: #32c146;
   margin-left: 20px;
 }
+.bg-2 {
+  /* height: 70vh; */
+  /* background-color: #000; */
+  /* z-index: -10; */
+}
+.bg-image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0.35;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
