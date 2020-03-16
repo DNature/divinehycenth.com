@@ -2,6 +2,19 @@ import { IBlogPost } from "../interfaces";
 
 const ArticleData: IBlogPost[] = [
   {
+    title: "Handling File Uploads with Apollo Server 2.0",
+    summary:
+      "A comprehensive guide on how to upload files to Apollo-server 2.0.",
+    readTime: "8 min read",
+    fileName: "file-uploads-with-apolloserver-2",
+    tags: ["#Upload", "#Files", "#Apollo Server", "#Javascript"],
+    createdAt: "Feb 5",
+    author: {
+      name: "Divine Hycenth",
+      imageUrl: "/images/avatar.png"
+    }
+  },
+  {
     title: "How to Reduce file sizes with Gulpjs",
     summary: "Learn how to automatically minify your files with gulpjs?.",
     readTime: "5 min read",
