@@ -7,7 +7,7 @@ import CodeWrapper from '../../components/codeWrapper'
 
 A comprehensive guide on how to upload files with Apollo-server 2.0 and Mongodb.
 
-![How to minify file sizes with gulpjs](/images/blog/file-uploads-with-apolloserver-2/apollo-upload.jpg)
+![Handling file uploads with apollo server 2.0](/images/blog/file-uploads-with-apolloserver-2/apollo-upload.jpg)
 
 <div className="text-center text-sm -mt-3 mb-4 opacity-75">Photo credit: <a href="https://www.pexels.com/photo/macbook-pro-iphone-cup-desk-7974/">
 Life of Pix</a> on <a href="https://www.pexels.com/@life-of-pix">Pexels</a></div>
@@ -168,7 +168,7 @@ Lol 😅 thats just a simple **Hello world** Query.
 
 <br/>
 
-Now add the following script to your **package.json** file to enable us start up our server.
+Now add a **dev** script to your **package.json** file to enable us start up our server.
 
 You may be wondering why we've been using **ES6** syntax without configuring babel and thats because of the **[esm module](https://www.npmjs.com/package/esm)** we installed earlier.
 
@@ -186,17 +186,244 @@ You may be wondering why we've been using **ES6** syntax without configuring bab
   "name": "apollo-upload",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon -r esm src/index.js" // we are requiring the esm module with [-r] flag to transpile our code
+    "dev": "nodemon -r esm src/index.js" /* we are requiring the esm module 
+    with [-r] flag to transpile our es6 code */
   },
   "dependencies": {
     "apollo-server": "^2.11.0",
     "graphql": "^14.6.0",
     "mongoose": "^5.9.4",
+    "esm": "^3.2.25",
     "shortid": "^2.2.15"
   },
   "devDependencies": {
-    "esm": "^3.2.25",
     "nodemon": "^2.0.2"
   }
 }
 ```
+
+<br/>
+
+<CodeWrapper lang="Javascript" />
+
+```bash
+yarn dev
+```
+
+![yarn start](/images/blog/file-uploads-with-apolloserver-2/start-server.png)
+
+We can see that out server is running on **localhost:4000**. Let's test our **Hello world** query in out graphql playground.
+
+![Hello query](/images/blog/file-uploads-with-apolloserver-2/hello.png)
+
+<br/>
+
+For server integrations that support file uploads (e.g. Express, hapi, Koa), Apollo Server enables file uploads by default. To enable file uploads reference the **Upload** type in the schema passed to the Apollo Server construction.
+
+<br/>
+
+Now your **typeDefs** file should look exactly like this:
+
+<CodeWrapper lang="Javascript" />
+
+```js
+import { gql } from "apollo-server";
+
+export default gql`
+  type File {
+    id: ID!
+    filename: String!
+    mimetype: String!
+    path: String!
+  }
+
+  type Query {
+    hello: String
+    files: [File!]
+  }
+
+  type Mutation {
+    uploadFile(file: Upload!): File
+  }
+`;
+```
+
+> Note: When using typeDefs, Apollo Server adds scalar Upload to your schema, so any existing declaration of scalar Upload in the type definitions should be removed. If you create your schema with makeExecutableSchema and pass it to ApolloServer constructor using the schema param, make sure to include scalar Upload.
+
+<br/>
+
+The server is going to return a rpomise that resolves an object. The object contains the following:
+
+1. **createReadStream:** The upload stram manages straming the file(s) to a filesystemor any storage location of your choice.
+
+2. **filename:** The original name of the uploaded file(s)
+
+3. **mimetype:** The MIME type of the file(s) such as _image/jpg_, _application/json_, etc.
+
+4. **encoding:** The file encoding i.e _UTF-8_
+
+<br/>
+
+Now we are going to create a function that will process our file and pipe it into a directory.
+
+<br/>
+
+<CodeWrapper lang="Javascript" />
+
+```js
+// -> /src/resolvers.js
+import shortid from "shortid";
+import { createWriteStream, mkdir } from "fs";
+
+import File from "./fileModel";
+
+const storeUpload = async ({ stream, filename, mimetype }) => {
+  const id = shortid.generate();
+  const path = `images/${id}-${filename}`;
+
+  // (createWriteStream) writes our file to the images directory
+  return new Promise((resolve, reject) =>
+    stream
+      .pipe(createWriteStream(path))
+      .on("finish", () => resolve({ id, path, filename, mimetype }))
+      .on("error", reject)
+  );
+};
+
+const processUpload = async upload => {
+  const { createReadStream, filename, mimetype } = await upload;
+  const stream = createReadStream();
+  const file = await storeUpload({ stream, filename, mimetype });
+  return file;
+};
+
+export default {
+  Query: {
+    hello: () => "Hello world"
+  },
+  Mutation: {
+    uploadFile: async (_, { file }) => {
+      // Creates an images folder in the root directory
+      mkdir("images", { recursive: true }, err => {
+        if (err) throw err;
+      });
+      // Process upload
+      const upload = await processUpload(file);
+      return upload;
+    }
+  }
+};
+```
+
+<br/>
+
+For the demo below i'm going to use **Altair** which is a graphql playground and it's very efficient for file uploads.
+
+<br/>
+
+![file upload demo](/images/blog/file-uploads-with-apolloserver-2/upload.gif)
+
+<br/>
+
+## Saving to database(mongodb)
+
+We used **file system** to handle our file uploads because of the following reasons:
+
+- **Performance can be better than when you do it in a database**. To justify this, if you store large files in DB, then it may slow down the performance because a simple query to retrieve the list of files or filename will also load the file data if you used Select \* in your query. In a file system, accessing a file is quite simple and light weight.
+
+- **Saving the files and downloading them in the file system is much simpler** than it is in a database since a simple "Save As" function will help you out. Downloading can be done by addressing a URL with the location of the saved file.
+
+- **Migrating the data is an easy process**. You can just copy and paste the folder to your desired destination while ensuring that write permissions are provided to your destination.
+  ... [Read more](https://dzone.com/articles/which-is-better-saving-files-in-database-or-in-fil)
+
+In the future i'm going to show you how to query the files from our **images** directory through the file path specified in the database.
+
+<br/>
+
+We are going to create our database **schema** and save it in a **src/fileModel.js** file.
+
+Your code should look like:
+
+<br/>
+
+<CodeWrapper lang="Javascript" />
+
+```js
+import { Schema, model } from "mongoose";
+
+const fileSchema = new Schema({
+  filename: String,
+  mimetype: String,
+  path: String
+});
+
+export default model("File", fileSchema);
+```
+
+<br/>
+
+Next step is to make use our **file schema**.
+
+Your **src/resolvers.js** code should look like this:
+
+<CodeWrapper lang="Javascript" />
+
+```js
+import shortid from "shortid";
+import { createWriteStream, mkdir } from "fs";
+
+// import our model
+import File from "./fileModel";
+
+const storeUpload = async ({ stream, filename, mimetype }) => {
+  const id = shortid.generate();
+  const path = `images/${id}-${filename}`;
+
+  return new Promise((resolve, reject) =>
+    stream
+      .pipe(createWriteStream(path))
+      .on("finish", () => resolve({ id, path, filename, mimetype }))
+      .on("error", reject)
+  );
+};
+
+const processUpload = async upload => {
+  const { createReadStream, filename, mimetype } = await upload;
+  const stream = createReadStream();
+  const file = await storeUpload({ stream, filename, mimetype });
+  return file;
+};
+
+export default {
+  Query: {
+    hello: () => "Hello world"
+  },
+  Mutation: {
+    uploadFile: async (_, { file }) => {
+      mkdir("images", { recursive: true }, err => {
+        if (err) throw err;
+      });
+
+      const upload = await processUpload(file);
+      // save our file to the mongodb
+      await File.create(upload);
+      return upload;
+    }
+  }
+};
+```
+
+<br/>
+
+Complete code [https://github.com/DNature/apollo-upload](https://github.com/DNature/apollo-upload)
+<br/>
+
+---
+
+<br/>
+
+Now you now understand how file uploads work in **Apollo server 2.0.** I hope to see you next time 😀
+
+<br/>
+
+### Happy Codding 💯

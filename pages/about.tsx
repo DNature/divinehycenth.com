@@ -2,7 +2,6 @@ import * as React from "react";
 import Layout from "../components/layouts";
 import { NextPage } from "next";
 //@ts-ignore
-import AboutMeMDX from "../posts/about-me.md";
 import SkillCard from "../components/skillCard";
 
 const AboutPage: NextPage = () => {
@@ -15,7 +14,7 @@ const AboutPage: NextPage = () => {
       <article className="lg:mx-10 md:mx-8">
         <div className="relative">
           <img
-            src="/images/avatar.png"
+            src="/images/avatar-small.png"
             alt="Divine Hycenth Portrait"
             className="absolute top-0 right-0 h-24 md:h-40 md:-mt-16 -mt-12 lg:h-48 lg:-mt-20 rounded-full p-2 border-2 border-blue-300"
           />
@@ -30,7 +29,7 @@ const AboutPage: NextPage = () => {
             and writing about it.
           </p>
           <p>
-            I also do some <b>python, Docker(Devops)</b> stuffs when the need
+            I also do some <b>python, DevOps(Docker)</b> stuffs when the need
             arises.
           </p>
 

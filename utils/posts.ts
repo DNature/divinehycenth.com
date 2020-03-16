@@ -67,7 +67,7 @@ const ArticleData: IBlogPost[] = [
   {
     title: "Build a Progressive Web App(PWA) with React",
     summary:
-      "A comprehensive guide on how to build or transform your react application into a progressive web application (PWA) with examples.",
+      "A comprehensive guide on how to build or transform your react application into a progressive web application (PWA).",
     readTime: "12 min read",
     fileName: "react-progressive-web-app-(pwa)",
     tags: ["#PWA", "#Progressive web app", "#React app (PWA)"],
@@ -84,7 +84,7 @@ const ArticleData: IBlogPost[] = [
     readTime: "5 min read",
     fileName: "remove-all-unused-css",
     createdAt: "Dec 24",
-    tags: ["#CSS", "#Minify Files", "#Purgecss"],
+    tags: ["#CSS", "#Minify Files", "#Purgecss", "#PostCSS"],
     author: {
       name: "Divine Hycenth",
       imageUrl: "/images/avatar.png"
