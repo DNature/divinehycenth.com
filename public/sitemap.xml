@@ -9,58 +9,63 @@
 
 <url>
   <loc>https://divinehycenth.com/</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://divinehycenth.com/about</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://divinehycenth.com/blog</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://divinehycenth.com/works</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://divinehycenth.com/contact</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://divinehycenth.com/blog/file-uploads-with-apolloserver-2</loc>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://divinehycenth.com/blog/how-to-reduce-file-sizes-with-gulpjs</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://divinehycenth.com/blog/deploy-nextjs-project-to-netlify</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://divinehycenth.com/blog/yarn-workspace-monorepo</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://divinehycenth.com/blog/how-to-setup-tailwind-purgecss-and-nextjs</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://divinehycenth.com/blog/react-progressive-web-app-(pwa)</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://divinehycenth.com/blog/remove-all-unused-css</loc>
-  <lastmod>2020-03-13T10:24:14+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2020-03-16T14:53:18+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
