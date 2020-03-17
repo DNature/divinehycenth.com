@@ -17,6 +17,7 @@ const IndexPage: NextPage = () => {
   return (
     <>
       <BlogLayout
+        path="/how-to-setup-tailwind-purgecss-and-nextjs"
         title="Divine | Setup Tailwind and Purgecss in Nextjs"
         description="How to setup your Nextjs project with tailwindcss, purgecss, autoprefixer and postcss"
         imageUrl="/images/blog/how-to-setup-tailwind-purgecss-and-nextjs/how-to-setup-tailwind-purgecss-and-nextjs.jpg"

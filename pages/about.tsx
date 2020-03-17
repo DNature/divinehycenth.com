@@ -12,6 +12,7 @@ const AboutPage: NextPage = () => {
       title="Divine Hycenth | About Me"
       imageUrl="/images/avatar-small.png"
       description="I'm a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development."
+      path="/about"
     >
       <article className="lg:mx-10 md:mx-8">
         <div className="relative">

@@ -9,14 +9,15 @@ interface Props {
   title?: string;
   description?: string;
   imageUrl?: string;
+  path: string;
 }
 
-const BlogLayout: NextPage<Props> = ({ children, title, description, imageUrl }) => {
+const BlogLayout: NextPage<Props> = ({ children, title, description, imageUrl, path }) => {
   
 
   return (
     <>
-      <Layout title={title} description={description} imageUrl={imageUrl}>
+      <Layout path={path} title={title} description={description} imageUrl={imageUrl}>
         <article className="lg:px-32 md:px-10 mt-10">{children}</article>
       </Layout>
     </>
@@ -28,6 +29,7 @@ BlogLayout.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   imageUrl: PropTypes.string,
+  path: PropTypes.string.isRequired
 };
 
 export default BlogLayout;

@@ -7,17 +7,14 @@ interface Props {
   description?: string;
   pageTitle?: string;
   imageUrl?: string;
+  path?: string;
 }
-
-const check = (condition: string): string =>
-  condition
-    ? `https://divinehycenth.com/${condition}`
-    : "https://divinehycenth.com/about";
 
 const NextHead: NextPage<Props> = ({
   pageTitle = "Divine Hycenth 👋 Full Stack Software Developer",
-  description = "I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development.",
-  imageUrl = "/images/avatar.png"
+  description,
+  imageUrl,
+  path
 }) => (
   <Head>
     <meta charSet="utf-8" />
@@ -56,7 +53,7 @@ const NextHead: NextPage<Props> = ({
     <meta
       property="og:url"
       content={
-       check(imageUrl)
+        `https://divinehycenth.com${path}`
       }
     />
 
@@ -78,14 +75,13 @@ const NextHead: NextPage<Props> = ({
     <meta name="twitter:app:id:googleplay" content="" />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://divinehycenth.com/" />
+      <meta property="twitter:url" content={`https://divinehycenth.com${path}`} />
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:image" content={imageUrl} />
 
     <meta property="og:determiner" content="software" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="https://divinehycenth.com" />
-    <meta property="og:url" content="Divine Hycenth" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
@@ -101,9 +97,8 @@ const NextHead: NextPage<Props> = ({
     />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://divinehycenth.com/" />
    
-    <meta property="og:image" content={imageUrl} />
+      <meta property="og:image:secure_url" content={imageUrl} />
 
     {pageTitle ? (
       <title>{pageTitle}</title>
@@ -116,7 +111,8 @@ const NextHead: NextPage<Props> = ({
 NextHead.propTypes = {
   pageTitle: PropTypes.string,
   description: PropTypes.string,
-  imageUrl: PropTypes.string
+  imageUrl: PropTypes.string,
+  path: PropTypes.string,
 };
 
 export default NextHead;

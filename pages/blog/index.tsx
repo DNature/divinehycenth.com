@@ -11,6 +11,7 @@ const IndexPage: NextPage = () => {
   return (
     <>
       <Layout
+      path="/blog"
         image="/images/bg-works.jpg"
         caption="Blog"
         title="Divine Hycenth - Blog"

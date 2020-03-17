@@ -14,9 +14,8 @@ const IndexPage: NextPage = () => {
     <>
       <BlogLayout
         title="Divine | Build a Progressive Web App with React.js"
-        description="A guide on creating or converting your react application into a progressive web app.
-
-"
+        description="A guide on creating or converting your react application into a progressive web app."
+        path="/react-progressive-web-app-(pwa)"
 imageUrl="/images/blog/react-pwa/react-pwa.jpg"
       >
         <MD />

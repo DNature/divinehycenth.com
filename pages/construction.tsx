@@ -12,7 +12,7 @@ const data = completeData.slice(0, size);
 const Construction: NextPage = () => {
   return (
     <>
-      <Layout title="Divine Hycenth | Not Found">
+      <Layout title="Divine Hycenth | Not Found" description="This page is under construction" path="/construction">
         <div className="lg:px-64 md:px-40 sm:px-20 px-12 mx-auto text-center">
           <img src="/images/construction.svg" alt="page under construction" />
           <h2 className="text-3xl mb-10 text-gray-700">This Page is under construction!</h2>

@@ -15,6 +15,7 @@ const IndexPage: NextPage = () => {
         description="A comprehensive guide on how to upload files to Apollo-server 2.0."
         title="Handling File Uploads with Apollo Server 2.0"
         imageUrl="/images/blog/file-uploads-with-apolloserver-2/apollo-upload.jpg"
+        path="/file-uploads-with-apolloserver-2"
       >
         <MD />
       </BlogLayout>

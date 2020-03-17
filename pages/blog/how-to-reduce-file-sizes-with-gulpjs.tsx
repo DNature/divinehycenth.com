@@ -15,6 +15,7 @@ const IndexPage: NextPage = () => {
         description="Learn how to minify file sizes with gulpjs"
         title="How to reduce file sizes with gulpjs"
         imageUrl="/images/blog/how-to-reduce-file-sizes-with-gulpjs/how-to-reduce-file-sizes-with-gulpjs.jpg"
+        path="/how-to-reduce-file-sizes-with-gulpjs"
       >
         <MD />
         

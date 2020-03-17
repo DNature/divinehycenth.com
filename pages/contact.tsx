@@ -43,7 +43,7 @@ const AboutPage: NextPage = () => {
   };
 
   return (
-    <Layout title="Divine Hycenth | Contact Me">
+    <Layout description="Feel free to contact if you want to hire me or you've got any suggestions." path="/contact" title="Divine Hycenth | Contact Me">
       <div className="container rounded-lg mx-auto h-full flex justify-between">
         <div className="lg:flex hidden items-center w-full p-20 ">
           <img src="/images/contact.svg" className="w-full " alt="Contact me" />
