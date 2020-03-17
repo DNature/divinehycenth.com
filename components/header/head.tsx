@@ -28,7 +28,7 @@ const NextHead: NextPage<Props> = ({
     <meta name="description" content={description} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://divinehycenth.com/" />
+    <meta property="og:url" content={`https://divinehycenth.com${path}`} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta
@@ -37,7 +37,7 @@ const NextHead: NextPage<Props> = ({
     />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://divinehycenth.com/" />
+    <meta property="twitter:url" content={`https://divinehycenth.com${path}`} />
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:description" content={description} />
     <meta
