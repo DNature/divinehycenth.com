@@ -16,7 +16,7 @@ const IndexPage: NextPage = () => {
         caption="Blog"
         title="Divine Hycenth - Blog"
         description="Recent Blog posts"
-        imageUrl="/images/avatar.png"
+        imageUrl="/images/avatar-small.png"
       >
         <h2 className="-mb-10 px-6 md:text-3xl text-2xl font-bold text-gray-700">
           Recent Posts
