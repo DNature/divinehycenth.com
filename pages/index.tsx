@@ -13,7 +13,7 @@ const data = completeData.slice( 0, size )
 const IndexPage: NextPage = () => {
   return (
     <>
-      <Layout path="" imageUrl="/images/avatar-small.png" 
+      <Layout path="/" imageUrl="/images/avatar-small.png" 
       description="I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development."
         title="Divine Hycenth 👋 Full Stack Software Developer"
   >
