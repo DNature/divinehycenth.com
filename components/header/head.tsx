@@ -17,6 +17,12 @@ const NextHead: NextPage<Props> = ({
   path=""
 }) => (
   <Head>
+      {pageTitle ? (
+        <title>{pageTitle}</title>
+      ) : (
+          <title>Divine Hycenth | Full Stack Software Developer Blog website</title>
+        )}
+    
     <meta charSet="utf-8" />
     <link rel="shortcut icon" href="/icons/favicon.ico" />
     <link rel="icon" type="image/ico" href="/icons/favicon.ico" />
@@ -101,11 +107,7 @@ const NextHead: NextPage<Props> = ({
    
       {/* <meta property="og:image:secure_url" content={imageUrl} /> */}
 
-    {pageTitle ? (
-      <title>{pageTitle}</title>
-    ) : (
-      <title>Divine Hycenth | Full Stack Software Developer Blog website</title>
-    )}
+   
   </Head>
 );
 
