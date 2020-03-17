@@ -14,7 +14,7 @@ const NextHead: NextPage<Props> = ({
   pageTitle = "Divine Hycenth 👋 Full Stack Software Developer",
   description = "I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development.",
   imageUrl="/images/avatar-small.png",
-  path
+  path=""
 }) => (
   <Head>
     <meta charSet="utf-8" />
