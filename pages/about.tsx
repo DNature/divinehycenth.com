@@ -3,6 +3,8 @@ import Layout from "../components/layouts";
 import { NextPage } from "next";
 //@ts-ignore
 import SkillCard from "../components/skillCard";
+import CustomButton from '../components/CustomButton';
+import CustomLink from '../components/CustomLink';
 
 const AboutPage: NextPage = () => {
   return (
@@ -52,8 +54,16 @@ const AboutPage: NextPage = () => {
         <br />
         <p className="text-center text-xl font-bold">Here are some technical skills I poses:</p>
         {/* Test */}
-        <div className="xl:px-64 px-0">
-          <SkillCard />
+        <div className="xl:px-20 px-0 mt-10 lg:flex justify-between">
+          <div>
+              <CustomButton href="/cv.pdf" target="_blank">Download CV</CustomButton>
+            <CustomLink href="/images/cv.jpeg" target="_blank">
+              <img src="/images/cv.jpeg" alt="cv" />
+            </CustomLink>
+          </div>
+          <div>
+            <SkillCard />
+          </div>
         </div>
       </article>
     </Layout>

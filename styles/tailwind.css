@@ -75,9 +75,12 @@ img {
 }
 
 footer {
-  clip-path: polygon(1% 5%, 100% 1%, 100% 100%, 0% 100%);
+  /* clip-path: polygon(1% 5%, 100% 1%, 100% 100%, 0% 100%); */
+  clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 99%, 0 34%);
   background: #32bfbd;
   background: linear-gradient(114deg, rgba(50, 191, 189, 1) 0%, #2d54fd 100%);
+  /* padding: 1rem 0; */
+  font-family: sans-serif;
 }
 
 em {
@@ -183,4 +186,12 @@ button:focus {
   z-index: -1;
   background-size: cover;
   background-position: center;
+}
+
+.card-height {
+  height: 19rem;
+}
+
+.card-height:hover {
+  margin-top: -6px;
 }

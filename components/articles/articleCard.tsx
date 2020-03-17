@@ -14,7 +14,7 @@ const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
           as={`/blog/${d.fileName}`}
           key={d.title + i}
         >
-          <div className="max-w-sm rounded-md hover mx-auto overflow-hidden border-2 border-gray-200 shadow-md hover:shadow-xl sm:m-4 m-4 cursor-pointer bg-white">
+          <div className="max-w-sm card-height hove:transition ease-out duration-100 rounded-md hover mx-auto overflow-hidden border-2 border-gray-200 shadow-md hover:shadow-xl sm:m-4 m-4 cursor-pointer bg-white">
             <div className="px-6 py-4">
               <h2 className="font-bold text-base md:text-lg lg:text-xl hover:text-link">
                 {d.title}
