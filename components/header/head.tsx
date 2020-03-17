@@ -12,7 +12,7 @@ interface Props {
 
 const NextHead: NextPage<Props> = ({
   pageTitle = "Divine Hycenth 👋 Full Stack Software Developer",
-  description,
+  description = "I'm Divine Hycenth a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development.",
   imageUrl="/images/avatar-small.png",
   path
 }) => (
@@ -62,7 +62,8 @@ const NextHead: NextPage<Props> = ({
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     {/* <meta name="theme-color" content="#15202b" /> */}
-    <meta name="description" content={description} />
+      <meta name="description" content={description} />
+      <meta name="title" content={pageTitle} />
     <meta itemProp="name" content="Divine Hycenth" />
     <meta itemProp="description" content={description} />
     <meta property="twitter:card" content="summary" />
