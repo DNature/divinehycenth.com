@@ -49,13 +49,10 @@ const NextHead: NextPage<Props> = ({
 
     <link rel="canonical" href="https://divinehycenth.com" />
     <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-    <meta property="og:description" content={description} />
-    <meta property="og:title" content={pageTitle} />
-
     {/* facebook */}
    
     
-    <meta property="og:image" content={imageUrl} />
+      <meta property="og:image" content={`https://divinehycenth.com${imageUrl}`} />
     <meta
       property="og:url"
       content={
@@ -72,23 +69,31 @@ const NextHead: NextPage<Props> = ({
       <meta name="title" content={pageTitle} />
     <meta itemProp="name" content="Divine Hycenth" />
     <meta itemProp="description" content={description} />
-    <meta property="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@DivineHycenth" />
-    <meta name="twitter:description" content={description} />
-    {/* <meta name="twitter:app:name:iphone" content="portfolio" />
-    <meta name="twitter:app:id:iphone" content="" />
-    <meta name="twitter:app:name:ipad" content="portfolio" />
-    <meta name="twitter:app:id:ipad" content="" />
-    <meta name="twitter:app:name:googleplay" content="portfolio" />
-    <meta name="twitter:app:id:googleplay" content="" /> */}
-
-      <meta property="twitter:url" content={`https://divinehycenth.com${path}`} />
     <meta property="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta property="twitter:url" content={`https://divinehycenth.com${path}`} />
+      <meta name="twitter:site" content="https://twitter.com/DivineHycenth" />
+      <meta name="twitter:creator" content="@DivineHycenth" />
+      <meta property="twitter:card" content="summary_large_image" />
+   
     <meta property="twitter:image" content={imageUrl} />
 
-    <meta property="og:determiner" content="software" />
+    {/* <meta property="og:determiner" content="software" /> */}
+      <meta property="og:image" content={`https://divinehycenth.com${imageUrl}`}/>
     <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="https://divinehycenth.com" />
+      <meta property="og:image:width" content="1000" />
+      <meta property="og:image:height" content="532" />
+    <meta property="og:site_name" content="Divine Hycenth" />
+    <meta property="og:type" content="website" />
+
+      <meta property="og:description" content={description} />
+      <meta property="og:title" content={pageTitle} />
+
+   
+      {/* <meta property="og:image:secure_url" content={imageUrl} /> */}
+      <meta property="og:image:secure_url" content={`https://www.divinehycenth.com${imageUrl}`} />
+      <meta property="og:image:alt" content={description} />
+   
 
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
@@ -103,11 +108,6 @@ const NextHead: NextPage<Props> = ({
       rel="stylesheet"
     />
 
-    <meta property="og:type" content="website" />
-   
-      {/* <meta property="og:image:secure_url" content={imageUrl} /> */}
-
-   
   </Head>
 );
 
