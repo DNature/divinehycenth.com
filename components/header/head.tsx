@@ -76,7 +76,7 @@ const NextHead: NextPage<Props> = ({
       <meta name="twitter:creator" content="@DivineHycenth" />
       <meta property="twitter:card" content="summary_large_image" />
    
-    <meta property="twitter:image" content={imageUrl} />
+      <meta property="twitter:image" content={`https://divinehycenth.com${imageUrl}`} />
 
     {/* <meta property="og:determiner" content="software" /> */}
       <meta property="og:image" content={`https://divinehycenth.com${imageUrl}`}/>
