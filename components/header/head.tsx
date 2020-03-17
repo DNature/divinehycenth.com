@@ -13,7 +13,7 @@ interface Props {
 const NextHead: NextPage<Props> = ({
   pageTitle = "Divine Hycenth 👋 Full Stack Software Developer",
   description,
-  imageUrl,
+  imageUrl="/images/avatar-small.png",
   path
 }) => (
   <Head>
@@ -98,7 +98,7 @@ const NextHead: NextPage<Props> = ({
 
     <meta property="og:type" content="website" />
    
-      <meta property="og:image:secure_url" content={imageUrl} />
+      {/* <meta property="og:image:secure_url" content={imageUrl} /> */}
 
     {pageTitle ? (
       <title>{pageTitle}</title>
