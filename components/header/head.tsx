@@ -65,16 +65,16 @@ const NextHead: NextPage<Props> = ({
     <meta name="description" content={description} />
     <meta itemProp="name" content="Divine Hycenth" />
     <meta itemProp="description" content={description} />
+    <meta property="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@DivineHycenth" />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:app:name:iphone" content="portfolio" />
+    {/* <meta name="twitter:app:name:iphone" content="portfolio" />
     <meta name="twitter:app:id:iphone" content="" />
     <meta name="twitter:app:name:ipad" content="portfolio" />
     <meta name="twitter:app:id:ipad" content="" />
     <meta name="twitter:app:name:googleplay" content="portfolio" />
-    <meta name="twitter:app:id:googleplay" content="" />
+    <meta name="twitter:app:id:googleplay" content="" /> */}
 
-    <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={`https://divinehycenth.com${path}`} />
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:image" content={imageUrl} />
