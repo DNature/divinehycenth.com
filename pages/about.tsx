@@ -4,13 +4,13 @@ import { NextPage } from "next";
 //@ts-ignore
 import SkillCard from "../components/skillCard";
 import CustomButton from '../components/CustomButton';
-import CustomLink from '../components/CustomLink';
+// import CustomLink from '../components/CustomLink';
 
 const AboutPage: NextPage = () => {
   return (
     <Layout
       title="Divine Hycenth | About Me"
-      imageUrl="/images/avatar-small.png"
+      imageUrl="/images/thumbnail.png"
       description="I'm a full stack software developer creating open source projects and writing about modern JavaScript, Typescript, Graphql, Python, Node.js, and development."
       path="/about"
     >
@@ -55,14 +55,14 @@ const AboutPage: NextPage = () => {
         <br />
         <p className="text-center text-xl font-bold">Here are some technical skills I poses:</p>
         {/* Test */}
-        <div className="xl:px-20 px-0 mt-10 lg:flex justify-between">
-          <div>
-              <CustomButton href="/cv.pdf" target="_blank">Download CV</CustomButton>
+        <div className="xl:px-20 px-0 mt-10">
+          {/* <div>
             <CustomLink href="/images/cv.jpeg" target="_blank">
               <img src="/images/cv.jpeg" alt="cv" />
             </CustomLink>
-          </div>
+          </div> */}
           <div>
+              <CustomButton href="/cv.pdf" target="_blank">Download CV</CustomButton>
             <SkillCard />
           </div>
         </div>
