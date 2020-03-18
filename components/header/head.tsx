@@ -1,3 +1,5 @@
+// @ts-nocheck
+/* eslint-disable react/no-unknown-property */
 import * as React from "react";
 import Head from "next/head";
 import PropTypes from "prop-types";
@@ -17,20 +19,30 @@ const NextHead: NextPage<Props> = ({
   path = ""
 }) => (
   <Head>
+    <meta charSet="utf-8" />
     {pageTitle ? (
       <title>{pageTitle}</title>
     ) : (
-      <title>Divine Hycenth | Full Stack Software Developer Blog website</title>
+      <title>Divine Hycenth 👋 Full Stack Software Developer</title>
     )}
 
-    <title>Divine Hycenth 👋 Full Stack Software Developer</title>
+    <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+
     <meta name="title" content={pageTitle} />
     <meta name="description" content={description} />
+
+    <meta itemprop="name" ccontent={pageTitle} />
+    <meta itemprop="description" content={description} />
+    <meta itemprop="image" content={`https://divinehycenth.com${imageUrl}`} />
+    <meta property="og:locale" content="en_US" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://divinehycenth.com${path}`} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
+    <meta name="og:site_name" content="Divine Hycenth - Blog Website" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="532" />
     <meta
       property="og:image"
       content={`https://divinehycenth.com${imageUrl}`}
@@ -41,9 +53,14 @@ const NextHead: NextPage<Props> = ({
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:description" content={description} />
     <meta
-      property="twitter:image"
+      property="twitter:image:src"
       content={`https://divinehycenth.com${imageUrl}`}
     />
+    <meta name="twitter:site" content="https://twitter.com/DivineHycenth" />
+    <meta name="twitter:creator" content="@DivineHycenth" />
+
+    <meta name="fb:admins" content="https://facebook.com/divine.hycenth.7" />
+    <meta name="fb:app_id" content="https://facebook.com/divine.hycenth.7" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
@@ -57,20 +74,7 @@ const NextHead: NextPage<Props> = ({
       href="https://fonts.googleapis.com/css?family=Satisfy&display=swap"
       rel="stylesheet"
     />
-  </Head>
-);
 
-NextHead.propTypes = {
-  pageTitle: PropTypes.string,
-  description: PropTypes.string,
-  imageUrl: PropTypes.string,
-  path: PropTypes.string
-};
-
-export default NextHead;
-
-/*
-<meta charSet="utf-8" />
     <link rel="shortcut icon" href="/icons/favicon.ico" />
     <link rel="icon" type="image/ico" href="/icons/favicon.ico" />
     <link
@@ -95,8 +99,20 @@ export default NextHead;
     <meta name="yandex-verification" content="8caa5bda2d4a0bba" />
 
     <link rel="canonical" href="https://divinehycenth.com" />
-    <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+  </Head>
+);
 
+NextHead.propTypes = {
+  pageTitle: PropTypes.string,
+  description: PropTypes.string,
+  imageUrl: PropTypes.string,
+  path: PropTypes.string
+};
+
+export default NextHead;
+
+/*
+    
 
 <meta property="og:image" content={`https://divinehycenth.com${imageUrl}`} />
   <meta
@@ -127,7 +143,6 @@ export default NextHead;
   <meta property="og:locale" content="en_US" />
   <meta property="og:image:width" content="1000" />
   <meta property="og:image:height" content="532" />
-  <meta property="og:site_name" content="Divine Hycenth" />
   <meta property="og:type" content="website" />
 
   <meta property="og:description" content={description} />
