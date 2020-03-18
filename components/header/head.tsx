@@ -25,7 +25,12 @@ const NextHead: NextPage<Props> = ({
     ) : (
       <title>Divine Hycenth 👋 Full Stack Software Developer</title>
     )}
-
+    <meta
+      property="twitter:image:src"
+      content={`https://divinehycenth.com${imageUrl}`}
+    />
+    <meta name="yandex-verification" content="8caa5bda2d4a0bba" />
+    <link rel="canonical" href="https://divinehycenth.com" />
     <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
     <meta name="title" content={pageTitle} />
@@ -52,10 +57,7 @@ const NextHead: NextPage<Props> = ({
     <meta property="twitter:url" content={`https://divinehycenth.com${path}`} />
     <meta property="twitter:title" content={pageTitle} />
     <meta property="twitter:description" content={description} />
-    <meta
-      property="twitter:image:src"
-      content={`https://divinehycenth.com${imageUrl}`}
-    />
+
     <meta name="twitter:site" content="https://twitter.com/DivineHycenth" />
     <meta name="twitter:creator" content="@DivineHycenth" />
 
@@ -95,10 +97,6 @@ const NextHead: NextPage<Props> = ({
       href="/icons/favicon-16x16.png"
     />
     <link rel="manifest" href="/icons/site.webmanifest" />
-
-    <meta name="yandex-verification" content="8caa5bda2d4a0bba" />
-
-    <link rel="canonical" href="https://divinehycenth.com" />
   </Head>
 );
 
