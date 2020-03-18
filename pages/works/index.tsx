@@ -10,7 +10,14 @@ import CustomButton from "../../components/CustomButton";
 
 const AboutPage: NextPage = () => {
   return (
-    <Layout path="/works" description="Some of my recent projects." caption="Works" image="/images/blog-main.jpg" title="Divine Hycenth | Projects">
+    <Layout
+      path="/works"
+      description="Some of my recent projects."
+      caption="Works"
+      image="/images/blog-main.jpg"
+      imageUrl="/images/blog-main.jpg"
+      title="Divine Hycenth | Projects"
+    >
       <h2 className="py-12 border-b font-bold text-2xl px-2 text-center">
         Recent Projects
       </h2>
@@ -66,10 +73,9 @@ const AboutPage: NextPage = () => {
         Open Source Projects
       </h2>
       <div className="container mx-auto lg:w-4/12 md:w-5/12">
-        
-            <a href="//github.com/DNature/expo-yarn-workspace-demo">
-              Yarn workspace setup
-            </a>
+        <a href="//github.com/DNature/expo-yarn-workspace-demo">
+          Yarn workspace setup
+        </a>
       </div>
     </Layout>
   );

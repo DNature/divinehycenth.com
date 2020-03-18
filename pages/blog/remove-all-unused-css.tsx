@@ -14,7 +14,7 @@ const IndexPage: NextPage = () => {
       <BlogLayout
         description="A reference guide on how to remove unused CSS selectors, Minify CSS files to reduce your website's loading time"
         title="Divine | Remove all unused css"
-        path="/remove-all-unused-css"
+        path="/blog/remove-all-unused-css"
         imageUrl="/images/blog/remove-unused-css/remove-unused.jpg"
       >
         <MD />

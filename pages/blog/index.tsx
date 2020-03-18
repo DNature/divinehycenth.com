@@ -11,12 +11,12 @@ const IndexPage: NextPage = () => {
   return (
     <>
       <Layout
-      path="/blog"
+        path="/blog"
         image="/images/bg-works.jpg"
         caption="Blog"
         title="Divine Hycenth - Blog"
         description="Recent Blog posts"
-        imageUrl="/images/avatar-small.png"
+        imageUrl="/images/bg-works.jpg"
       >
         <h2 className="-mb-10 px-6 md:text-3xl text-2xl font-bold text-gray-700">
           Recent Posts
