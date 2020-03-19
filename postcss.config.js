@@ -5,20 +5,20 @@ module.exports = {
     "cssnano",
     // process.env.NODE_ENV === "production"
     //   ?
-    [
-      "@fullhuman/postcss-purgecss",
-      {
-        content: [
-          "./pages/**/*.{ts,tsx}",
-          "./components/**/*.{ts,tsx}",
-          "./theme.ts",
-          "./styles/tailwind.css",
-          "./posts/**/*.{md,mdx}"
-          // "./**/*.{tsx,ts}"
-        ],
-        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-      }
-    ],
+    // [
+    //   "@fullhuman/postcss-purgecss",
+    //   {
+    //     content: [
+    //       "./pages/**/*.{ts,tsx}",
+    //       "./components/**/*.{ts,tsx}",
+    //       "./theme.ts",
+    //       "./styles/tailwind.css",
+    //       "./posts/**/*.{md,mdx}"
+    //       // "./**/*.{tsx,ts}"
+    //     ],
+    //     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+    //   }
+    // ],
     // : undefined,
     "postcss-preset-env"
   ]

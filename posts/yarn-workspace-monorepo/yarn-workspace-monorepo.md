@@ -1,14 +1,13 @@
-import Author from "../../components/author";
 import CustomLink from "../../components/CustomLink.tsx";
 import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
 # Monorepo Typescript setup with Yarn workspaces in 2020
 
-<Author/>
-
 How to setup Yarn workspace for React web, and React-Native(expo) with Typescript
+<br/>
 
 ![https://www.pexels.com/photo/macbook-pro-on-white-table-3740745/](/images/blog/yarn-workspace/yarn-workspace.jpg)
+<br/>
 
 <div className="text-center text-sm -mt-3 mb-4 opacity-75">Photo credit: <a href="https://www.pexels.com/@bongkarn-thanyakij-683719">Bongkarn thanyakij</a> on <a href="https://www.pexels.com/photo/macbook-pro-on-white-table-3740745/">Pexels</a></div>
 
@@ -115,8 +114,10 @@ expo init app
 ```
 
 Use your arrow key to select **blank (Typescript)** for a typescript project and complete the steps you're prompted with.
+<br/>
 
 ![expo init app](/images/blog/yarn-workspace/expo-init.png)
+<br/>
 
 If you follow the above steps correctly its going to create an **/packages/app** folder in the packages directory and install all the necessary dependencies.
 
@@ -150,7 +151,14 @@ Add the following piece of code in the root **package.json** file.
   "devDependencies": {
     "lerna": "^3.20.2"
   },
-  "nohoist": ["**/react-native", "**/react-native/**", "**/expo", "**/expo/**", "**/@babel/core", "**/@babel/core/**"]
+  "nohoist": [
+    "**/react-native",
+    "**/react-native/**",
+    "**/expo",
+    "**/expo/**",
+    "**/@babel/core",
+    "**/@babel/core/**"
+  ]
 }
 ```
 
@@ -163,7 +171,15 @@ The root **tsconfig.json** should look like:
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "lib": ["dom", "ES2015", "dom.iterable", "ES6", "ES2017", "ESNext.AsyncIterable", "ESNext"],
+    "lib": [
+      "dom",
+      "ES2015",
+      "dom.iterable",
+      "ES6",
+      "ES2017",
+      "ESNext.AsyncIterable",
+      "ESNext"
+    ],
     "sourceMap": true,
     "removeComments": true,
     "strict": true,
@@ -337,7 +353,12 @@ const App = () => {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Learn React
         </a>
       </header>

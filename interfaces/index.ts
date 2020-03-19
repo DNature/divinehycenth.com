@@ -15,10 +15,11 @@ export interface IBlogPost {
   fileName: string;
   tags: string[];
   createdAt: string;
-  author: {
-    name: string;
-    imageUrl: string;
-  };
+  imageUrl: string;
+  // author: {
+  //   name: string;
+  //   imageUrl: string;
+  // };
 }
 
 export type IArticleCardProps = {

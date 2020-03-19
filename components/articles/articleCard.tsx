@@ -14,9 +14,38 @@ const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
           as={`/blog/${d.fileName}`}
           key={d.title + i}
         >
-          <div className="max-w-sm card-height hove:transition ease-out duration-100 rounded-md hover mx-auto overflow-hidden border-2 border-gray-200 shadow-md hover:shadow-xl sm:m-4 m-4 cursor-pointer bg-white">
+          <div className="max-w-sm card-height hover:transition ease-out duration-200 rounded-large hover mx-auto overflow-hidden shadow-md hover:shadow-xl cursor-pointer bg-white">
+            <div className="h-56 bg-black">
+              <div
+                className="card-bg"
+                style={{ background: `url(${d.imageUrl})` }}
+              />
+            </div>
+
+            <h2 className="p-4 font-bold text-base md:text-md lg:text-lg hover:text-link">
+              {d.title}
+            </h2>
+
+            <p className="px-4 text-gray-600 text-base">{d.summary}</p>
+          </div>
+        </CustomLink>
+      ))}
+    </>
+  );
+};
+
+ArticleCard.propTypes = {
+  data: PropTypes.array.isRequired
+};
+
+export default ArticleCard;
+
+/*
+
+ <img src={d.author.imageUrl} alt={d.title}/> 
             <div className="px-6 py-4">
-              <h2 className="font-bold text-base md:text-lg lg:text-xl hover:text-link">
+              
+              <h2 className="font-bold text-base md:text-md lg:text-lg hover:text-link">
                 {d.title}
               </h2>
               <p className="text-gray-700 text-sm">{d.summary}</p>
@@ -31,15 +60,4 @@ const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
                 </span>
               ))}
             </div>
-          </div>
-        </CustomLink>
-      ))}
-    </>
-  );
-};
-
-ArticleCard.propTypes = {
-  data: PropTypes.array.isRequired
-};
-
-export default ArticleCard;
+            */

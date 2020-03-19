@@ -1,10 +1,9 @@
-import Author from "../../components/author";
-
 # Deploy Next.js project to Netlify
 
-<Author/>
+<br/>
 
 ![https://www.pexels.com/photo/photo-of-man-pushing-hay-bale-2600312/](/images/blog/deploy-to-netlify/deploy-nextjs-netlify.jpg)
+<br/>
 
 <div className="text-center text-sm -mt-3 mb-4 opacity-75">Photo credit: <a href="https://www.pexels.com/photo/photo-of-man-pushing-hay-bale-2600312/">Bongkarn thanyakij</a> on <a href="https://www.pexels.com/@chetanvlad">Pexels</a></div>
 
@@ -59,6 +58,7 @@ The project i am using is from [an article i wrote earlier](/blog/how-to-setup-t
 [First create an account with netlify.com](https://app.netlify.com/signup?_ga=2.58798317.1351806053.1583669087-991025437.1583669087)
 
 Next Click on [New site from git](https://app.netlify.com/start)
+<br/>
 
 ![Select a new site from git](/images/blog/deploy-to-netlify/create.gif)
 
@@ -79,6 +79,8 @@ npm run deploy
 <br/>
 
 Our output directory is the default _out_ folder that nextjs provides when we run `npm run export`
+
+<br/>
 
 ![Deploy nextjs to netlify](/images/blog/deploy-to-netlify/deploy.gif)
 

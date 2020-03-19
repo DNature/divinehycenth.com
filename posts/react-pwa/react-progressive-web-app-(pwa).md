@@ -1,4 +1,3 @@
-import Author from "../../components/author";
 import CustomLink from "../../components/CustomLink.tsx";
 import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
@@ -6,13 +5,12 @@ import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
 A guide on creating or converting your react application into a progressive web app.
 
-<Author />
+<br/>
 
 ![Progressive web app with react.js](/images/blog/react-pwa/react-pwa.jpg)
+<br/>
 
 ## What is a Progressive Web Application (PWA)
-
-<br/>
 
 > A progressive web app (PWA) is the set of mobile web application development techniques that entails building apps that feel and look like native ones. Using a web stack (JS, HTML, and CSS), progressive web apps combine a rich functionality and smooth user experience associated with native apps. Simply put, PWA is the web app with the native-app flavor: After the installation, a user clicks on its icon on a device home screen and gets straight to the website.
 
@@ -52,15 +50,20 @@ npx create-react-app react-pwa
 
 Next we will change directory into our working project folder by running `cd react-pwa` in the terminal and I'm going to open the project on _VS Code_ using the `code .` command.
 
+<br/>
+
 ![Initialized Project](/images/blog/react-pwa/init-app.png/)
+<br/>
 
 As you can see there's a bunch of files and folders that _create-react-app_ comes with but i am not going to go through everything in this tutorial.
 
 <br/>
 
 There is an important file called _manifest.json_ in the _/public_ directory which contains information(metadata) that defines your applications appearance in different devices.
+<br/>
 
 ![Manifest Project](/images/blog/react-pwa/manifest.png)
+<br/>
 
 - **short_name**: The name of your app when added to your home screen.
 
@@ -124,8 +127,10 @@ yarn build
 > Note: we are able to use this command because its present in our _package.json_ file.
 
 The build script generates some files and stores it in a _build_ directory.
+<br/>
 
 ![Manifest Project](/images/blog/react-pwa/build.png)
+<br/>
 
 The static folder holds all the js and css files. The _index.html_ is our main page that loads all our React files stored in the _static/js_ folder and also our CSS that is stored in the _static/css_ folder. We can the _service-worker.js_ file, that’s where all service worker code is stored. The _precache-manifest.\*.js_ file holds all the files the service worker caches in an array. We see the manifest.json file, as we already know it tells the browser how our _PWA_ will behave.
 
@@ -146,8 +151,10 @@ After installing _live-server_ we can add a script in our package.json to start 
 ```
 
 Now run `npm run serve` in your terminal and navigate to [http://localhost:8080/](http://localhost:8080/?target=_blank) in your browser.
+<br/>
 
 ![Manifest Project](/images/blog/react-pwa/build-serve.png)
+<br/>
 
 ### 😎 Our app is live.
 
@@ -186,7 +193,10 @@ and when you reload your browser you can see the _service-worker.js_ file in the
 
 > Also note that the browser cached our static files in the CacheStorage
 
+<br/>
+
 ![service-worker.js](/images/blog/react-pwa/service-worker.png)![Cached files](/images/blog/react-pwa/cache.png)
+<br/>
 
 To test if our application is now a PWA we shutdown our server by holding `ctrl + c` in the terminal then Refresh the browser and everything still works the same way and no errors even though our server is down.
 

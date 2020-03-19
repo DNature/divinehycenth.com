@@ -36,9 +36,9 @@ const NextHead: NextPage<Props> = ({
     <meta name="title" content={pageTitle} />
     <meta name="description" content={description} />
 
-    <meta itemprop="name" ccontent={pageTitle} />
-    <meta itemprop="description" content={description} />
-    <meta itemprop="image" content={`https://divinehycenth.com${imageUrl}`} />
+    <meta itemProp="name" ccontent={pageTitle} />
+    <meta itemProp="description" content={description} />
+    <meta itemProp="image" content={`https://divinehycenth.com${imageUrl}`} />
     <meta property="og:locale" content="en_US" />
 
     <meta property="og:type" content="website" />
@@ -68,12 +68,20 @@ const NextHead: NextPage<Props> = ({
       href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
       rel="stylesheet"
     />
-    <link
+    {/* <link
       href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap"
       rel="stylesheet"
-    />
+    /> */}
     <link
       href="https://fonts.googleapis.com/css?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    {/* <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&display=swap"
+      rel="stylesheet"
+    /> */}
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 

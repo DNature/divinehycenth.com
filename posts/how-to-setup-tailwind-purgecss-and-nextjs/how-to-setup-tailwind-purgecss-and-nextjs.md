@@ -1,12 +1,11 @@
-import Author from "../../components/author";
-
 # Setup Tailwind, and PurgeCSS in Nextjs
 
-<Author/>
+How to setup your Nextjs project with tailwindcss, purgecss, autoprefixer and postcss
 
-> How to setup your Nextjs project with tailwindcss, purgecss, autoprefixer and postcss
+<br/>
 
 ![how-to-setup-tailwind-purgecss-and-nextjs](/images/blog/how-to-setup-tailwind-purgecss-and-nextjs/how-to-setup-tailwind-purgecss-and-nextjs.jpg)
+<br/>
 
 ## Prerequisites
 
@@ -37,8 +36,10 @@ npm install
 ```
 
 Next i will open the project in my favorite text editor by running `code .`. _VS Code_
+<br/>
 
 ![Hello next](/images/blog/how-to-setup-tailwind-purgecss-and-nextjs/hello-next.png)
+<br/>
 
 Now we are going to install tailwind css through the following command:
 
@@ -116,8 +117,10 @@ export default function About() {
 ```
 
 <span className="text-4xl">😲</span> With just few lines of css selectors we got our app to look great
+<br/>
 
 ![example gif](/images/blog/how-to-setup-tailwind-purgecss-and-nextjs/tailwind-next.gif)
+<br/>
 
 You may notice that the default tailwind bundle is up to _4mb_ but we can get rid of unused css selectors by adding some modules.
 

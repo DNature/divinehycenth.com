@@ -1,13 +1,13 @@
-import Author from "../../components/author";
 import CodeWrapper from '../../components/codeWrapper'
 
 # Handling File Uploads with Apollo Server 2.0
 
-<Author/>
-
 A comprehensive guide on how to upload files with Apollo-server 2.0 and Mongodb.
 
+<br/>
+
 ![Handling file uploads with apollo server 2.0](/images/blog/file-uploads-with-apolloserver-2/apollo-upload.jpg)
+<br/>
 
 <div className="text-center text-sm -mt-3 mb-4 opacity-75">Photo credit: <a href="https://www.pexels.com/photo/macbook-pro-iphone-cup-desk-7974/">
 Life of Pix</a> on <a href="https://www.pexels.com/@life-of-pix">Pexels</a></div>
@@ -218,9 +218,13 @@ You may be wondering why we've been using **ES6** syntax without configuring bab
 yarn dev
 ```
 
+<br/>
+
 ![yarn start](/images/blog/file-uploads-with-apolloserver-2/start-server.png)
+<br/>
 
 We can see that out server is running on **localhost:4000**. Let's test our **Hello world** query in out graphql playground.
+<br/>
 
 ![Hello query](/images/blog/file-uploads-with-apolloserver-2/hello.png)
 

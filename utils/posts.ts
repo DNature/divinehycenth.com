@@ -9,10 +9,7 @@ const ArticleData: IBlogPost[] = [
     fileName: "file-uploads-with-apolloserver-2",
     tags: ["#Upload", "#Files", "#Apollo Server", "#Javascript"],
     createdAt: "Feb 5",
-    author: {
-      name: "Divine Hycenth",
-      imageUrl: "/images/avatar.png"
-    }
+    imageUrl: "/images/blog/file-uploads-with-apolloserver-2/apollo-upload.jpg"
   },
   {
     title: "How to Reduce file sizes with Gulpjs",
@@ -21,10 +18,8 @@ const ArticleData: IBlogPost[] = [
     fileName: "how-to-reduce-file-sizes-with-gulpjs",
     tags: ["#Gulpjs", "#Minify", "#Optimize"],
     createdAt: "Feb 5",
-    author: {
-      name: "Divine Hycenth",
-      imageUrl: "/images/avatar.png"
-    }
+    imageUrl:
+      "/images/blog/how-to-reduce-file-sizes-with-gulpjs/how-to-reduce-file-sizes-with-gulpjs.jpg"
   },
   {
     title: "How to deploy nextjs project to netlify",
@@ -34,10 +29,7 @@ const ArticleData: IBlogPost[] = [
     fileName: "deploy-nextjs-project-to-netlify",
     tags: ["#Deploy", "#netlify", "#nextjs", "#devops"],
     createdAt: "Jan 20",
-    author: {
-      name: "Divine Hycenth",
-      imageUrl: "/images/avatar.png"
-    }
+    imageUrl: "/images/blog/deploy-to-netlify/deploy-nextjs-netlify.jpg"
   },
   {
     title: "Monorepo setup with Yarn workspaces in 2020",
@@ -46,10 +38,7 @@ const ArticleData: IBlogPost[] = [
     fileName: "yarn-workspace-monorepo",
     tags: ["#Monorepo", "#YarnWorkspace", "#React", "#React-Native", "#expo"],
     createdAt: "Jan 18",
-    author: {
-      name: "Divine Hycenth",
-      imageUrl: "/images/avatar.png"
-    }
+    imageUrl: "/images/blog/yarn-workspace/yarn-workspace.jpg"
   },
   {
     title: "Setup Tailwind, and PurgeCSS in Nextjs",
@@ -59,10 +48,8 @@ const ArticleData: IBlogPost[] = [
     fileName: "how-to-setup-tailwind-purgecss-and-nextjs",
     tags: ["#Tailwind", "#Purgecss", "#Nextjs"],
     createdAt: "Jan 9",
-    author: {
-      name: "Divine Hycenth",
-      imageUrl: "/images/avatar.png"
-    }
+    imageUrl:
+      "/images/blog/how-to-setup-tailwind-purgecss-and-nextjs/how-to-setup-tailwind-purgecss-and-nextjs.jpg"
   },
   {
     title: "Build a Progressive Web App(PWA) with React",
@@ -72,10 +59,7 @@ const ArticleData: IBlogPost[] = [
     fileName: "react-progressive-web-app-(pwa)",
     tags: ["#PWA", "#Progressive web app", "#React app (PWA)"],
     createdAt: "Jan 6",
-    author: {
-      name: "Divine Hycenth",
-      imageUrl: "/images/avatar.png"
-    }
+    imageUrl: "/images/blog/react-pwa/react-pwa.jpg"
   },
   {
     title: "Remove all unused CSS",
@@ -85,10 +69,7 @@ const ArticleData: IBlogPost[] = [
     fileName: "remove-all-unused-css",
     createdAt: "Dec 24",
     tags: ["#CSS", "#Minify Files", "#Purgecss", "#PostCSS"],
-    author: {
-      name: "Divine Hycenth",
-      imageUrl: "/images/avatar.png"
-    }
+    imageUrl: "/images/blog/remove-unused-css/remove-unused.jpg"
   }
 ];
 export default ArticleData;

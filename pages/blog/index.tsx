@@ -21,7 +21,7 @@ const IndexPage: NextPage = () => {
         <h2 className="-mb-10 px-6 md:text-3xl text-2xl font-bold text-gray-700">
           Recent Posts
         </h2>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 mt-12 mx-4 md:mx-0 lg:mx-0">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 mt-12 mx-4 md:mx-0 lg:mx-0 gap-8">
           <ArticleCard data={completeData} />
         </div>
       </Layout>

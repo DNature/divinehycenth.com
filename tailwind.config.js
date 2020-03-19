@@ -18,6 +18,15 @@ module.exports = {
         900: "#1a202c"
       }
     },
+    borderRadius: {
+      none: "0",
+      sm: "0.5rem",
+      default: "1rem",
+      md: "25px",
+      lg: "30px",
+      full: "50%",
+      large: "40px"
+    },
     extend: {}
   },
   variants: {

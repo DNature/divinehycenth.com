@@ -1,14 +1,13 @@
-import Author from "../../components/author";
 import CustomLink from "../../components/CustomLink.tsx";
 import RelatedArticles from "../../components/articles/relatedArticles.tsx";
 
 # Remove all unused CSS Selectors
 
-<Author />
-
 A reference guide on how to remove unused CSS selectors, Minify CSS files to reduce your website's loading time
+<br/>
 
 ![Minify Css files](/images/blog/remove-unused-css/remove-unused.jpg)
+<br/>
 
 Sometimes you wonder why your website takes a longer time 😞 to completely load content but takes shorter time on other websites.
 There are different [**factors**](/blog/optimize-your-website-speed) that can cause this issue like Image sizes and or file sizes.
@@ -23,7 +22,10 @@ Now you know what and why we should remove unused css so **Lets hit the ground r
 
 ## [Purge CSS](https://purgecss.com/)
 
+<br/>
+
 ![Purge CSS](/images/blog/remove-unused-css/purgecss.webp)
+<br/>
 
 This is one of the best tool i've come across while trying to remove _Unused CSS_ and its very easy to implement into your existing application.
 

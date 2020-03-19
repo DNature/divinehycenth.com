@@ -25,7 +25,7 @@ const MainLayout: NextPage<Props> = ({ path,children, title, description, imageU
       <NextHead pageTitle={title} path={path} description={description} imageUrl={imageUrl}/>
       <div className="flex flex-col h-full" style={{ height: "100vh" }}>
         <Header image={image} caption={caption} />
-        <main className={pathname !== "/works" ? "container mx-auto h-auto md:px-10 p-2 flex-1 bg-white rounded-md" : undefined}>
+        <main className={pathname !== "/works" ? "container mx-auto h-auto md:px-10 p-2 flex-1" : undefined}>
           {children}
         </main>
         <Footer />

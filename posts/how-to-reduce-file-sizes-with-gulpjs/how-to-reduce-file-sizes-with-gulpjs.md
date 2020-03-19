@@ -1,13 +1,12 @@
-import Author from "../../components/author";
 import CodeWrapper from '../../components/codeWrapper'
 
 # How to Reduce file sizes with Gulpjs
 
-<Author/>
-
 Learn how to automatically minify your files with gulpjs?.
+<br/>
 
 ![How to minify file sizes with gulpjs](/images/blog/how-to-reduce-file-sizes-with-gulpjs/how-to-reduce-file-sizes-with-gulpjs.jpg)
+<br/>
 
 <div className="text-center text-sm -mt-3 mb-4 opacity-75">Photo credit: <a href="https://www.pexels.com/photo/person-holding-green-cup-2969312/">
 Isaac Taylor</a> on <a href="https://www.pexels.com/@yungsaac">Pexels</a></div>
@@ -138,7 +137,10 @@ We can view all available tasks we have written by executing the following comma
 gulp --tasks
 ```
 
+<br/>
+
 ![gulp tasks](/images/blog/how-to-reduce-file-sizes-with-gulpjs/gulp-tasks.gif)
+<br/>
 
 The only defined task in our gulpfile is the _**minifyImages**_ task so if we execute
 
