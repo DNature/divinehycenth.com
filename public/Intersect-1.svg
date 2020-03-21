@@ -1,0 +1,9 @@
+<svg width="540" height="352" viewBox="0 0 540 352" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Intersect" fill-rule="evenodd" clip-rule="evenodd" d="M510.929 0C547.18 69.5256 550.904 155.754 511.357 240.908L501.855 261.368L348.046 328.046C233.564 377.675 90.6977 346.984 28.9446 259.494C-32.8084 172.005 9.93678 60.8487 124.419 11.2194L150.299 0L510.929 0Z" fill="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="327.741" y1="112.096" x2="25.9929" y2="272.947" gradientUnits="userSpaceOnUse">
+<stop offset="0.010926" stop-color="#8EBBF0" stop-opacity="0"/>
+<stop offset="1" stop-color="#35CFFF" stop-opacity="0.72"/>
+</linearGradient>
+</defs>
+</svg>

@@ -11,18 +11,19 @@ const Main: NextPage = () => {
   return (
     <>
       <div className="pt-3 bg-gray-300 relative custom-bg pb-10">
+        {/* <img src="/images/home-bg.svg" className="" alt=""/> */}
         <header className="container z-10 mx-auto md:px-6 lg:px-12 p-2">
           <>
             <SocialIcons />
             <div className="h-full lg:mt-10 md:mt-10 text-center md:px-12 lg:px-20 px-0 lg:flex justify-between">
               <div>
-                <h2 className="lg:text-5xl md:text-4xl text-2xl text-gray-200 custom-text">
+                <h2 className="lg:text-5xl md:text-4xl text-2xl text-white custom-text">
                   Hey, I'm Divine.
               </h2>
                 <h2 className="lg:text-2xl md:text-xl text-base text-white">
                   I'm a full stack software developer creating open source
                   projects and writing about modern JavaScript, Typescript,
-                  Graphql, Python, Node.js, and development.
+                  Graphql, and development.
               </h2>
                 <div className=" my-6 ">
                   <CustomLink
@@ -42,26 +43,26 @@ const Main: NextPage = () => {
             <div className="mt-12 h-auto">
               <CustomLink
                 href={pathname === "/about" ? "/" : "/about"}
-                className="px-2 text-base text-gray-300 hover:text-gray-100  font-sans pl-0"
+                className="px-2 text-base text-white hover:text-primary-25 font-sans pl-0"
               >
                 {pathname === "/about" ? "Home" : "About"}
               </CustomLink>
 
               <CustomLink
-                className="px-2 text-base text-gray-300 hover:text-gray-100  font-sans"
+                className="px-2 text-base text-white hover:text-primary-25 font-sans"
                 href="/blog"
               >
                 Articles
               </CustomLink>
               <CustomLink
-                className="px-2 text-base text-gray-300 hover:text-gray-100  font-sans"
+                className="px-2 text-base text-white hover:text-primary-25 font-sans"
                 href="/works"
               >
                 Works
               </CustomLink>
 
               <CustomLink
-                className="px-2 text-base text-gray-300 hover:text-gray-100  font-sans"
+                className="px-2 text-base text-white hover:text-primary-25 font-sans"
                 href="/contact"
               >
                 Contact

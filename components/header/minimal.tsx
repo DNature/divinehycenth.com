@@ -37,26 +37,26 @@ const Minimal: NextPage<{ image?: string; caption?: string }> = ({
           <div className="py-5">
             <CustomLink
               href={pathname === "/about" ? "/" : "/about"}
-              className="px-2 text-gray-300 text-base hover:text-gray-100 pl-0"
+              className="px-2 text-white text-base hover:text-white pl-0"
             >
               {pathname === "/about" ? "Home" : "About"}
             </CustomLink>
 
             <CustomLink
-              className="px-2 text-gray-300 text-base hover:text-gray-100"
+              className="px-2 text-white text-base hover:text-white"
               href="/blog"
             >
               Articles
             </CustomLink>
             <CustomLink
-              className="px-2 text-gray-300 text-base hover:text-gray-100"
+              className="px-2 text-white text-base hover:text-white"
               href="/works"
             >
               Works
             </CustomLink>
 
             <CustomLink
-              className="px-2 text-gray-300 text-base hover:text-gray-100"
+              className="px-2 text-white text-base hover:text-white"
               href="/contact"
             >
               Contact

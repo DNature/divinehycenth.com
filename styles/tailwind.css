@@ -33,7 +33,11 @@ code::-webkit-scrollbar {
 .custom-bg {
   background: #5c6ac4;
   background: linear-gradient(to right, #5c6ac4, #67eed5);
-  clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%);
+  /* background-image: url(/images/home-bg.svg); */
+  /* clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .custom-bg2 {
@@ -74,11 +78,10 @@ blockquote {
 
 footer {
   /* clip-path: polygon(1% 5%, 100% 1%, 100% 100%, 0% 100%); */
-  clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 99%, 0 34%);
+  /* clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 99%, 0 34%); */
   background: #32bfbd;
   background: linear-gradient(114deg, rgba(50, 191, 189, 1) 0%, #2d54fd 100%);
   /* padding: 1rem 0; */
-  font-family: sans-serif;
 }
 
 em {
@@ -192,7 +195,7 @@ button:focus {
 }
 
 .card-bg {
-  transition: 0.5s ease-in-out;
+  transition: 0.3 s ease-in-out;
   /* height: 220px; */
   height: 100%;
   background-position: center !important;
@@ -201,4 +204,10 @@ button:focus {
 }
 .card-height:hover .card-bg {
   opacity: 0.5 !important;
+}
+
+/* Refactoring ui */
+
+.bg-gradient {
+  background: linear-gradient(99.9deg, #0763ce 3.39%, #26d9d9 114.72%);
 }

@@ -4,18 +4,26 @@ module.exports = {
       transparent: "transparent",
       white: "#fff",
       black: "#000",
-      primary: "#454f5b",
-      link: "#5c6ac4",
+      primary: {
+        100: "#0763CE",
+        75: "#3E83D3",
+        50: "#75A3D9",
+        25: "#AEC5DF"
+      },
+      accent: {
+        100: "#26D9D9",
+        75: "#60DDDD",
+        50: "#85DEDE",
+        25: "#B5E2E2"
+      },
       gray: {
-        100: "#f7fafc",
-        200: "#edf2f7",
-        300: "#e2e8f0",
-        400: "#cbd5e0",
-        500: "#a0aec0",
-        600: "#718096",
-        700: "#4a5568",
-        800: "#2d3748",
-        900: "#1a202c"
+        100: "#1D2734",
+        75: "#4F5660",
+        50: "#80858C",
+        25: "#C7C9CB"
+      },
+      gradient: {
+        100: "linear-gradient(99.77deg, #0763CE 3.3%, #26D9D9 95.3%)"
       }
     },
     borderRadius: {

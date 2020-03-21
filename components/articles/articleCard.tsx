@@ -14,8 +14,8 @@ const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
           as={`/blog/${d.fileName}`}
           key={d.title + i}
         >
-          <div className="max-w-sm card-height hover:transition ease-out duration-200 rounded-large hover mx-auto overflow-hidden shadow-md hover:shadow-xl cursor-pointer bg-white">
-            <div className="h-56 bg-black">
+          <div className="max-w-sm card-height hover:transition ease-out duration-100 rounded-md hover mx-auto overflow-hidden shadow-md hover:shadow-xl cursor-pointer bg-white">
+            <div className="h-48 bg-black">
               <div
                 className="card-bg"
                 style={{ background: `url(${d.imageUrl})` }}
@@ -26,7 +26,11 @@ const ArticleCard: NextPage<IArticleCardProps> = ({ data }) => {
               {d.title}
             </h2>
 
-            <p className="px-4 text-gray-600 text-base">{d.summary}</p>
+            <p className="px-4 text-gray-50 hover:text-gray-50 text-base">
+              {d.summary}
+            </p>
+
+            <p className="px-4 text-primary-100 pt-4 hover:text-primary-50">Read More →</p>
           </div>
         </CustomLink>
       ))}

@@ -20,7 +20,7 @@ const CustomInput = ({
 }: Props): JSX.Element => {
   return (
     <input
-      className="bg-white my-4 focus:outline-none bg-gray-200 focus:bg-white focus:shadow-xl rounded-full py-2 px-4 block w-full appearance-none leading-normal"
+      className="bg-white my-4 focus:outline-none bg-gray-200 focus:bg-white focus:shadow-xl rounded-sm py-2 px-4 block w-full appearance-none leading-normal"
       type={type}
       name={name}
       id={id}

@@ -82,7 +82,7 @@ const AboutPage: NextPage = () => {
             </div>
             <div>
               <textarea
-                className="bg-white focus:outline-none bg-gray-200 h-24 focus:bg-white focus:shadow-xl rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+                className="bg-white focus:outline-none bg-gray-200 h-24 focus:bg-white focus:shadow-xl rounded-sm py-2 px-4 block w-full appearance-none leading-normal"
                 placeholder="Message"
                 rows={5}
                 id="message"
@@ -95,7 +95,7 @@ const AboutPage: NextPage = () => {
             <div>
               <button
                 type="submit"
-                className="w-full border-white text-white border-2 hover:text-black  hover:bg-white my-4 rounded-full px-7 font-sans hover:shadow-lg"
+                className="w-full border-white text-white border-2 hover:text-black  hover:bg-white my-4 rounded-sm px-7 font-sans hover:shadow-lg"
               >
                 Send Message ➻
               </button>
