@@ -18,14 +18,14 @@ const AboutPage: NextPage = () => {
       imageUrl="/images/blog-main.jpg"
       title="Divine Hycenth | Projects"
     >
-      <h2 className="py-12 border-b font-bold text-2xl px-2 text-center">
+      <h2 className="py-12 border-b border-gray-25 font-bold text-2xl px-2 text-center">
         Recent Projects
       </h2>
       <div>
         {workData.map((data, i) => (
           <div
             key={i}
-            className="mx-auto hover:shadow-lg px-4 w-full py-5 border-b"
+            className="mx-auto hover:shadow-lg px-4 w-full py-5 border-gray-25 border-b"
           >
             <div className="container lg:w-4/12 md:w-5/12 mx-auto">
               <h2 className="text-sm md:text-lg font-sans font-semibold text-black">
@@ -69,7 +69,7 @@ const AboutPage: NextPage = () => {
       <CustomButton href="//github.com/dnature">LOAD MORE</CustomButton>
       <br />
 
-      <h2 className="py-12 border-b font-bold text-2xl px-2 text-center">
+      <h2 className="py-12 border-b border-gray-25 font-bold text-2xl px-2 text-center">
         Open Source Projects
       </h2>
       <div className="container mx-auto lg:w-4/12 md:w-5/12">

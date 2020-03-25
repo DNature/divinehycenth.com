@@ -38,6 +38,14 @@ module.exports = {
     extend: {}
   },
   variants: {
+    borderStyle: ["responsive", "hover", "focus"],
+    borderColor: theme => ({
+      ...theme("colors"),
+      default: theme("colors.red.300", "currentColor"),
+      primary: "#C7C9CB",
+      secondary: "#ffed4a",
+      danger: "#e3342f"
+    }),
     maxHeight: {
       "0": "0",
       "1/4": "25%",
