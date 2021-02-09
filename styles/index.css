@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  line-height: 1.5;
+  @apply bg-gray-100;
+  @apply text-gray-600;
+  /* overflow-x: hidden; */
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply text-gray-700;
+}
+
+blockquote * p {
+  margin-top: 0 !important;
+}
+
+pre {
+  scrollbar-width: 0;
+  overflow-x: scroll;
+}
+
+pre::-webkit-scrollbar,
+code::-webkit-scrollbar {
+  display: none;
+}
+
+.shadow-text {
+  text-shadow: 3.92149px 3.92149px 13.0716px rgba(227, 141, 12, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(123.91deg, #ffcd1b -5.26%, #e35a0c 102.43%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
