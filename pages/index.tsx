@@ -1,18 +1,21 @@
 /** ** */
 import * as React from 'react';
-import { Container, Button, Box } from '@nature-ui/core';
+import { Container, Box, Stack } from '@nature-ui/core';
 import { MdAccessibility, MdGrain, MdPalette } from 'react-icons/md';
 import { AiFillThunderbolt } from 'react-icons/ai';
 import { IoLogoGithub } from 'react-icons/io';
 import Link from 'next/link';
 
 import Header from 'components/header';
-import { Feature } from 'components/feature';
 import SEO from 'components/seo';
 import Footer from 'components/footer';
-import siteConfig from 'configs/site-config';
+import { Styled } from 'components/nature-jsx-elements';
+import { BlurLeft, BlurRight } from 'components/BlurEffect';
+import { Button } from 'components/custom/Button';
+import { getBlogPosts } from 'utils/get-blog-posts';
 
-const Index = () => {
+const Index = ({ posts }) => {
+  console.log({ posts });
   return (
     <>
       <SEO
@@ -20,8 +23,10 @@ const Index = () => {
         description='Simple, Modular and Accessible UI Components based on Tailwindcss for your React Applications.'
       />
       <Header />
-      <main className='grid place-items-center w-full bg-white md:pb-32 pb-12 px-4 md:px-0'>
-        <Container size='sm' className='text-center mt-32 md:mt-48 mb-16'>
+      <main className='grid place-items-center w-full bg-white md:pb-32 pb-12 px-4 md:px-0 relative mb-60'>
+        <BlurLeft className='absolute bottom-0 -mb-32 left-0 lg:left-64 xl:left-80 2xl:left-96' />
+        <BlurRight className='absolute bottom-0 -mb-32 right-0 lg:right-64 xl:right-80 2xl:right-96' />
+        <Container size='sm' className='z-10 text-center mt-32 md:mt-48 mb-16'>
           <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-gray-1000 leading-normal mb-3'>
             Hi 👋, I’m{' '}
             <span className='text-gradient shadow-text'>Divine Hycenth.</span>
@@ -31,75 +36,119 @@ const Index = () => {
             Designer.
           </h2>
         </Container>
-      </main>
-      <Box
-        className='bg-no-repeat mb-6 bg-cover bg-top'
-        css={{
-          backgroundImage: "url('curves.svg')",
-          height: '174.69px',
-        }}
-      />
-      <Container
-        className='py-24  px-4 md:px-0'
-        centered
-        size='lg'
-        as='section'
-      >
-        <Box className='grid md:grid-cols-2 gap-8'>
-          <Feature icon={MdAccessibility} title='Accessible'>
-            Nature UI strictly follows WAI-ARIA standards for all components.
-          </Feature>
-          <Feature icon={MdGrain} title='Composable'>
-            Designed with composition in mind. Compose new components with ease.
-          </Feature>
-          <Feature icon={MdPalette} title='Themeable'>
-            Built upon tailwind css theming design system standard.
-          </Feature>
-          <Feature icon={AiFillThunderbolt} title='Developer Experience'>
-            Guaranteed to boost your productivity when building your app or
-            website.
-          </Feature>
-        </Box>
-      </Container>
+        <Container size='sm' className='mt-20 z-10 -mb-40 w-full'>
+          <Box
+            css={{
+              background: 'rgba(255,255,255,0.3)',
+            }}
+            className='shadow-lg p-10 rounded-2xl block border-2 border-white'
+          >
+            <Styled.h3>Popular Posts</Styled.h3>
 
-      <Box className='bg-white py-32' as='section'>
-        <Container size='lg' centered>
-          <Box className='mb-12'>
-            <h2 className='text-3xl md:text-6xl font-bold text-center text-gray-1000'>
-              Less code. More speed
-            </h2>
-            <p className='opacity-70 text-lg mt-3 md:mt-6 max-w-lg mx-auto text-center'>
-              Spend less time writing UI code and more time building a great
-              experience for your customers.
-            </p>
+            <Stack direction='row' className='justify-between mt-4'>
+              <Box
+                css={{
+                  background:
+                    'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF) no-repeat bottom/cover;',
+                }}
+                className='pt-24 pb-10 text-center rounded-xl max-w-xs px-5'
+              >
+                <h3 className='text-white font-semibold text-xl'>
+                  Handling file uploads with Apollo-server 2.0
+                </h3>
+              </Box>
+              <Box
+                css={{
+                  background:
+                    'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF);',
+                }}
+                className='pt-24 pb-10 text-center rounded-xl max-w-xs px-5'
+              >
+                <h3 className='text-white font-semibold text-xl'>
+                  Handling file uploads with Apollo-server 2.0
+                </h3>
+              </Box>
+            </Stack>
           </Box>
         </Container>
-        <Box className='relative mx-auto px-4 max-w-7xl'>
-          <Box
-            as='iframe'
-            tabIndex={-1}
-            src='https://codesandbox.io/embed/nature-ui-0eolr?fontsize=11&hidenavigation=1&theme=dark'
-            css={{
-              width: '100%',
-              background: 'white',
-              height: '600px',
-              border: '0',
-              borderRadius: 8,
-              overflow: 'hidden',
-              position: 'static',
-              zIndex: 0,
-            }}
-            className='shadow-2xl'
-            title='Nature Playground'
-            allow='accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'
-            sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
-          />
-        </Box>
-      </Box>
-
+        <Box
+          className='absolute bottom-2 shadow-lg rounded-full'
+          css={{
+            width: '3478px',
+            height: '3501.28px',
+          }}
+        />
+      </main>
+      <Container as='section' size='sm' className='my-28 mx-auto'>
+        <div className='flex mb-12'>
+          <Styled.h3>Recent Posts</Styled.h3>
+          <Button color='gradient' className='ml-3 rounded-md'>
+            See all
+          </Button>
+        </div>
+        <Stack direction='row' spacing='3rem' className='justify-between'>
+          <Stack spacing='3rem'>
+            <Box
+              css={{
+                background:
+                  'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF) no-repeat bottom/cover;',
+              }}
+              className='pt-24 pb-10 text-center rounded-xl px-5'
+            >
+              <h3 className='text-white font-semibold text-xl'>
+                Handling file uploads with Apollo-server 2.0
+              </h3>
+            </Box>
+            <Box
+              css={{
+                background:
+                  'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF);',
+              }}
+              className='pt-24 pb-10 text-center rounded-xl px-5'
+            >
+              <h3 className='text-white font-semibold text-xl'>
+                Handling file uploads with Apollo-server 2.0
+              </h3>
+            </Box>
+          </Stack>
+          <Stack spacing='3rem'>
+            <Box
+              css={{
+                background:
+                  'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF) no-repeat bottom/cover;',
+              }}
+              className='pt-24 pb-10 text-center rounded-xl px-5'
+            >
+              <h3 className='text-white font-semibold text-xl'>
+                Handling file uploads with Apollo-server 2.0
+              </h3>
+            </Box>
+            <Box
+              css={{
+                background:
+                  'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF);',
+              }}
+              className='pt-24 pb-10 text-center rounded-xl px-5'
+            >
+              <h3 className='text-white font-semibold text-xl'>
+                Handling file uploads with Apollo-server 2.0
+              </h3>
+            </Box>
+          </Stack>
+        </Stack>
+      </Container>
       <Footer />
     </>
   );
 };
+
+export async function getStaticProps() {
+  const posts = await getBlogPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
+}
 
 export default Index;

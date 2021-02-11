@@ -1,4 +1,4 @@
-import { nature } from '@nature-ui/core';
+import { nature, clsx } from '@nature-ui/core';
 
 export const El = {
   h1: nature('h1'),
@@ -23,4 +23,22 @@ export const El = {
   ol: nature('ol'),
   li: nature('li'),
   blockquote: nature('blockquote'),
+};
+
+export const Styled = {
+  h1: ({ className = '', ...props }) => (
+    <El.h2 className={clsx(className, 'text-4xl leading-5')} {...props} />
+  ),
+  h2: ({ className = '', ...props }) => (
+    <El.h2
+      className={clsx(className, 'text-3xl mb-2 font-semibold leading-5')}
+      {...props}
+    />
+  ),
+  h3: ({ className = '', ...props }) => (
+    <El.h3 className={clsx(className, 'text-2xl font-semibold')} {...props} />
+  ),
+  p: ({ className = '', ...props }) => (
+    <El.p className={clsx(className, 'leading-7')} {...props} />
+  ),
 };

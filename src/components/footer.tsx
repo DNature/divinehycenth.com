@@ -69,7 +69,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({
 
 const Footer = () => {
   return (
-    <Box as='footer' className='border-t bg-white text-center py-16'>
+    <Box as='footer' className='border-t bg-white text-center py-16 z-20'>
       <Container size='xs' centered>
         <p className='text-sm'>
           <span>

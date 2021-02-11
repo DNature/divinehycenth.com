@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { Alert, Box, PropsOf, Divider, clsx } from '@nature-ui/core';
 import CodeBlock from './codeblock/codeblock';
-import { El } from './nature-jsx-elements';
+import { El, Styled } from './nature-jsx-elements';
 
 const Pre = ({ className, ...props }) => {
   return (
@@ -84,7 +84,7 @@ const InlineCode = (props: any) => (
 );
 
 const MDXComponents = {
-  h1: (props) => <El.h1 className='text-3xl leading-5' {...props} />,
+  h1: (props) => <Styled.h1 className='text-3xl leading-5' {...props} />,
   h2: (props) => (
     <LinkedHeading
       className='text-2xl mt-16 mb-2 font-medium leading-5'
