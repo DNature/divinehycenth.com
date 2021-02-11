@@ -13,6 +13,7 @@ const fileToPath = (str) => {
 
 const getGithubUserData = async (username) => {
   const { data } = await octokit.users.getByUsername({ username });
+
   const {
     avatar_url: avatarUrl,
     html_url: githubUrl,
@@ -40,11 +41,12 @@ const getGithubUserData = async (username) => {
 const getTimestampAndAuthor = (str) => {
   if (!str) return null;
 
+  
   const GIT_COMMIT_TIMESTAMP_AUTHOR_REGEX = /^(\d+), (.+)$/;
-
+  
   const temp = str.match(GIT_COMMIT_TIMESTAMP_AUTHOR_REGEX);
   if (!temp || temp.length < 3) return null;
-
+  
   const [, timestamp, author] = temp;
   const dateStr = fromUnixTime(+timestamp);
 
@@ -70,7 +72,7 @@ const getLastEdited = async (filePath) => {
       '--format=%ct, %an',
       filePath,
     ]);
-
+    
     return getTimestampAndAuthor(stdout);
   } catch (err) {
     console.error(err);
@@ -82,9 +84,9 @@ const processFrontMatter = async (options) => {
 
   // read the file path
   const filePath = path.join(process.cwd(), 'pages', mdxPath);
-
+  
   // Get the last edited author and date
-  const lastEdited = getLastEdited(filePath) || null;
+  const lastEdited = (await getLastEdited(filePath)) || null;
 
   // Get the edit url
   const editUrl = getEditUrl(path.join(mdxPath), baseEditUrl);
@@ -93,7 +95,7 @@ const processFrontMatter = async (options) => {
   const slug = fileToPath(mdxPath);
 
   // If frontMatter includes author, add the authors data
-  const authorData = author ? await getGithubUserData(author) : undefined;
+  const authorData = author ? await getGithubUserData(author) : lastEdited.author;
 
   return {
     ...rest,

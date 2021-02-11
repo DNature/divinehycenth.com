@@ -13,9 +13,9 @@ import { Styled } from 'components/nature-jsx-elements';
 import { BlurLeft, BlurRight } from 'components/BlurEffect';
 import { Button } from 'components/custom/Button';
 import { getBlogPosts } from 'utils/get-blog-posts';
+import { HomePostCards } from 'components/cards/home-post-cards';
 
 const Index = ({ posts }) => {
-  console.log({ posts });
   return (
     <>
       <SEO
@@ -87,53 +87,13 @@ const Index = ({ posts }) => {
           </Button>
         </div>
         <Stack direction='row' spacing='3rem' className='justify-between'>
-          <Stack spacing='3rem'>
-            <Box
-              css={{
-                background:
-                  'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF) no-repeat bottom/cover;',
-              }}
-              className='pt-24 pb-10 text-center rounded-xl px-5'
-            >
-              <h3 className='text-white font-semibold text-xl'>
-                Handling file uploads with Apollo-server 2.0
-              </h3>
-            </Box>
-            <Box
-              css={{
-                background:
-                  'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF);',
-              }}
-              className='pt-24 pb-10 text-center rounded-xl px-5'
-            >
-              <h3 className='text-white font-semibold text-xl'>
-                Handling file uploads with Apollo-server 2.0
-              </h3>
-            </Box>
+          <Stack spacing='2.5rem'>
+            <HomePostCards post={posts[0]} />
+            <HomePostCards post={posts[1]} />
           </Stack>
-          <Stack spacing='3rem'>
-            <Box
-              css={{
-                background:
-                  'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF) no-repeat bottom/cover;',
-              }}
-              className='pt-24 pb-10 text-center rounded-xl px-5'
-            >
-              <h3 className='text-white font-semibold text-xl'>
-                Handling file uploads with Apollo-server 2.0
-              </h3>
-            </Box>
-            <Box
-              css={{
-                background:
-                  'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF);',
-              }}
-              className='pt-24 pb-10 text-center rounded-xl px-5'
-            >
-              <h3 className='text-white font-semibold text-xl'>
-                Handling file uploads with Apollo-server 2.0
-              </h3>
-            </Box>
+          <Stack spacing='2.5rem'>
+            <HomePostCards post={posts[2]} />
+            <HomePostCards post={posts[3]} />
           </Stack>
         </Stack>
       </Container>

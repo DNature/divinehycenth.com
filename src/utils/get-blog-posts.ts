@@ -23,7 +23,7 @@ export const getBlogPosts = async () => {
       ...blogPostData,
       slug: blogPostData.slug.replace(/\/index$/, ''),
       author: blogPostData.author ?? null,
-      date: new Date(blogPostData.date).toISOString(),
+      date: new Date(blogPostData.lastEdited.date).toISOString(),
       tags: Array.isArray(blogPostData.tags) ? blogPostData.tags : [],
     }))
     .sort(byDateDesc);
