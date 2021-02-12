@@ -1,11 +1,16 @@
+import Link from 'next/link';
 import { Button as ButtonComp, clsx } from '@nature-ui/core';
 
-export const Button = ({ className, ...rest }) => {
+export const Button = ({ className, to = '#', ...rest }) => {
   return (
-    <ButtonComp
-      color='gradient'
-      className={clsx(className, 'rounded-lg')}
-      {...rest}
-    />
+    <Link href={to}>
+      <a>
+        <ButtonComp
+          color='gradient'
+          className={clsx(className, 'rounded-lg')}
+          {...rest}
+        />
+      </a>
+    </Link>
   );
 };

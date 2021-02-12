@@ -4,7 +4,6 @@ import { Container, Box, Stack } from '@nature-ui/core';
 import { MdAccessibility, MdGrain, MdPalette } from 'react-icons/md';
 import { AiFillThunderbolt } from 'react-icons/ai';
 import { IoLogoGithub } from 'react-icons/io';
-import Link from 'next/link';
 
 import Header from 'components/header';
 import SEO from 'components/seo';
@@ -82,7 +81,7 @@ const Index = ({ posts }) => {
       <Container as='section' size='sm' className='my-28 mx-auto'>
         <div className='flex mb-12'>
           <Styled.h3>Recent Posts</Styled.h3>
-          <Button color='gradient' className='ml-3 rounded-md'>
+          <Button to='/blog' color='gradient' className='ml-3 rounded-md'>
             See all
           </Button>
         </div>
