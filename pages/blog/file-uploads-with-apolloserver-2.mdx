@@ -1,5 +1,4 @@
 ---
-layout: 'bloglayout'
 title: 'Handling File Uploads with Apollo Server 2.0.'
 description:
   'A comprehensive guide on how to upload files with Apollo-server 2.0 and
@@ -7,9 +6,6 @@ description:
 imageUrl: '/images/blog/file-uploads-with-apolloserver-2/thumbnail.png'
 tags: ['graphql', 'nodejs', 'upload']
 ---
-
-import CustomLink from '../../components/CustomLink.tsx';
-import CodeWrapper from '../../components/codeWrapper';
 
 ![Handling file uploads with apollo server 2.0](/images/blog/file-uploads-with-apolloserver-2/thumbnail.png)
 
@@ -81,8 +77,6 @@ packages and configure our server.
 
 <br />
 
-<CodeWrapper lang='$~ bash' />
-
 ```bash
 npm init -y
 
@@ -98,10 +92,6 @@ I'm going to explain what each package will handle shortly.
 The next step is to setup our server with apollo and mongoose. Create a
 **db.js** file in your **/src** directory and add the following configuration
 code to connect to your **mongodb** database:
-
-<br />
-
-<CodeWrapper lang='src/db.js' />
 
 ```js
 import mongoose from 'mongoose';
@@ -124,10 +114,6 @@ export default (async function connect() {
 Now create an **index.js** file in your **/src** directory and paste the
 following code start off your server on
 [http://localhost:4000](http://localhost:4000):
-
-<br />
-
-<CodeWrapper lang='src/index.js' />
 
 ```js
 import { ApolloServer } from 'apollo-server';
@@ -162,10 +148,6 @@ export default (async function () {
 Next we'll create our **resolvers** and **typeDefs** and put it in a separate
 file:
 
-<br />
-
-<CodeWrapper lang='src/typeDefs.js' />
-
 ```js
 import { gql } from 'apollo-server';
 
@@ -175,8 +157,6 @@ export default gql`
   }
 `;
 ```
-
-<CodeWrapper lang='/src/resolvers.js' />
 
 ```js
 export default {
@@ -203,10 +183,6 @@ babel and thats because of the
 > production ready, zero dependency loader is all you need to support ECMAScript
 > modules in Node 6+.
 
-<br />
-
-<CodeWrapper lang='package.json' />
-
 ```json
 {
   "name": "apollo-upload",
@@ -227,10 +203,6 @@ babel and thats because of the
   }
 }
 ```
-
-<br />
-
-<CodeWrapper lang='bash' />
 
 ```bash
 yarn dev
@@ -258,8 +230,6 @@ the **Upload** type in the schema passed to the Apollo Server construction.
 <br />
 
 Now your **typeDefs** file should look exactly like this:
-
-<CodeWrapper lang='src/typeDefs.js' />
 
 ```js
 import { gql } from 'apollo-server';
@@ -308,10 +278,6 @@ contains the following:
 
 Now we are going to create a function that will process our file and pipe it
 into a directory.
-
-<br />
-
-<CodeWrapper lang='src/resolvers.js' />
 
 ```js
 import shortid from 'shortid';
@@ -399,10 +365,6 @@ We are going to create our database **schema** and save it in a
 
 Your code should look like:
 
-<br />
-
-<CodeWrapper lang='src/fileModel.js' />
-
 ```js
 import { Schema, model } from 'mongoose';
 
@@ -420,8 +382,6 @@ export default model('File', fileSchema);
 Next step is to make use our **file schema**.
 
 Your **src/resolvers.js** code should look like this:
-
-<CodeWrapper lang='src/resolvers.js' />
 
 ```js
 import shortid from 'shortid';
