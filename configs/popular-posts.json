@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Handling file uploads with Apollo-Server 2.0",
+    "imageUrl": "/images/blog/file-uploads-with-apolloserver-2/thumbnail.png",
+    "href": "/blog/file-uploads-with-apolloserver"
+  },
+  {
+    "title": "Web Scraping — Scrape data from your instagram page with Nodejs, Playwright and Firebase.",
+    "imageUrl": "/images/blog/web-scrapping/thumbnail.png",
+    "href": "/blog/web-scrapping"
+  }
+]

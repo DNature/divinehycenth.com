@@ -12,7 +12,8 @@ const fileToPath = (str) => {
 };
 
 const getGithubUserData = async (username) => {
-  const { data } = await octokit.users.getByUsername({ username });
+  try {
+    const { data } = await octokit.users.getByUsername({ username });
 
   const {
     avatar_url: avatarUrl,
@@ -32,6 +33,9 @@ const getGithubUserData = async (username) => {
     name,
     twitterUsername,
   };
+  } catch (err) {
+    console.error(err)
+  }
 };
 
 /**
