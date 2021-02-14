@@ -14,7 +14,7 @@ const Pre = ({ className, ...props }) => {
           tabSize: '2',
           fontFamily: '"Ubuntu Mono", "SF Mono", Menlo, monospace',
           color: '#fff',
-          background: '#011627',
+          background: '#000000',
           hyphens: 'none',
         }}
         {...props}
@@ -31,7 +31,7 @@ const Table = (props) => (
 
 const THead = (props) => (
   <El.th
-    className='bg-gray-25 bg-opacity-10 p-2 font-semibold text-sm '
+    className='bg-dark-200 bg-opacity-10 p-2 font-semibold text-sm '
     {...props}
   />
 );

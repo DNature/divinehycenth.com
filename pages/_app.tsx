@@ -7,6 +7,7 @@ import siteConfig from 'configs/site-config';
 
 import '../styles/index.css';
 import '../styles/night-owl.css';
+import { ColorModeProvider } from 'components/color-mode/provider';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -20,7 +21,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name='theme-color' content='#319795' />
       </Head>
       <DefaultSeo {...siteConfig.seo} />
-      <Component {...pageProps} />
+      <ColorModeProvider
+        options={{
+          initialColorMode: 'system',
+        }}
+      >
+        <Component {...pageProps} />
+      </ColorModeProvider>
     </>
   );
 }

@@ -8,16 +8,18 @@ import {
   Button,
   clsx,
   nature,
+  IconButton,
 } from '@nature-ui/core';
 
 import siteConfig from 'configs/site-config';
 
 import { SearchButton } from './algolia-search';
-import VersionSwitcher from './VersionSwitcher';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import { Logo } from './Logo';
 import { MobileNaveContent, MobileNavButton } from './mobile-nav';
 import { DiscordIcon, GithubIcon } from './CustomIcons';
 import { useRouter } from 'next/router';
+import { useColorMode, useColorModeValue } from './color-mode/color-mode';
 
 const NavLink = ({ children, href, ...props }) => {
   const { pathname } = useRouter();
@@ -41,6 +43,10 @@ const HeaderContent = () => {
 
   const mobileNav = useDisclosure();
 
+  const { toggleColorMode: toggleMode } = useColorMode();
+  const text = useColorModeValue('dark', 'light');
+  const SwitchIcon = useColorModeValue(FaMoon, FaSun);
+
   useUpdateEffect(() => {
     mobileNavBtnRef.current?.focus();
   }, [mobileNav.isOpen]);
@@ -48,48 +54,31 @@ const HeaderContent = () => {
     <nature.header
       css={{
         backdropFilter: 'blur(10px)',
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
       }}
-      className='sticky top-0 left-0 w-full z-50'
+      className='sticky top-0 left-0 w-full z-50 bg-glass'
     >
       <div className='w-full bg-gradient-line h-2 absolute top-0 left-0' />
 
       <nav className='w-full max-w-screen-lg px-4 md:px-0 md:mx-auto py-3'>
         <div className='flex items-center justify-between'>
-          <Stack direction='row' spacing='36px'>
+          <Stack row spacing='6'>
             <Logo />
             <NavLink href='/blog'>Blog</NavLink>
             <NavLink href='#'>About</NavLink>
             <NavLink href='#'>Works</NavLink>
             <NavLink href='#'>Contact</NavLink>
           </Stack>
-          <div className='hidden md:w-4/6 md:flex items-center justify-end'>
+          <div className='hidden md:w-2/5 md:flex items-center justify-end'>
             <SearchButton />
-            <VersionSwitcher />
-            <Link
-              aria-label='Go to Nature UI GitHub page'
-              href={siteConfig.repo.url}
-            >
-              <a target='_blank'>
-                <Icon
-                  className='mr-5 text-gray-50 hover:text-gray-75 transition-colors duration-150'
-                  size='lg'
-                  as={GithubIcon}
-                />
-              </a>
-            </Link>
-            <Link
-              aria-label='Go to Nature UI Discord page'
-              href={siteConfig.discord.url}
-            >
-              <a target='_blank'>
-                <Icon
-                  className='text-gray-50 hover:text-gray-75 transition-colors duration-150'
-                  size='lg'
-                  as={DiscordIcon}
-                />
-              </a>
-            </Link>
+            <IconButton
+              size='md'
+              className='text-lg sm:ml-3'
+              text='current'
+              aria-label={`Switch to ${text} mode`}
+              variant='ghost'
+              onClick={toggleMode}
+              icon={<SwitchIcon />}
+            />
           </div>
 
           <MobileNavButton

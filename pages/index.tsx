@@ -1,9 +1,6 @@
 /** ** */
 import * as React from 'react';
 import { Container, Box, Stack } from '@nature-ui/core';
-import { MdAccessibility, MdGrain, MdPalette } from 'react-icons/md';
-import { AiFillThunderbolt } from 'react-icons/ai';
-import { IoLogoGithub } from 'react-icons/io';
 
 import Header from 'components/header';
 import SEO from 'components/seo';
@@ -13,6 +10,8 @@ import { BlurLeft, BlurRight } from 'components/BlurEffect';
 import { Button } from 'components/custom/Button';
 import { getBlogPosts } from 'utils/get-blog-posts';
 import { HomePostCards } from 'components/cards/home-post-cards';
+import { WorksCard } from 'components/cards/works-card';
+import works from 'configs/works.json';
 
 const Index = ({ posts }) => {
   return (
@@ -22,11 +21,11 @@ const Index = ({ posts }) => {
         description='Simple, Modular and Accessible UI Components based on Tailwindcss for your React Applications.'
       />
       <Header />
-      <main className='grid place-items-center w-full bg-white md:pb-32 pb-12 px-4 md:px-0 relative mb-60'>
+      <main className='grid place-items-center w-full md:pb-32 pb-12 px-4 md:px-0 relative mb-60'>
         <BlurLeft className='absolute bottom-0 -mb-32 left-0 lg:left-64 xl:left-80 2xl:left-96' />
         <BlurRight className='absolute bottom-0 -mb-32 right-0 lg:right-64 xl:right-80 2xl:right-96' />
         <Container size='sm' className='z-10 text-center mt-32 md:mt-48 mb-16'>
-          <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-gray-1000 leading-normal mb-3'>
+          <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-dark-700 leading-normal mb-3'>
             Hi 👋, I’m{' '}
             <span className='text-gradient shadow-text'>Divine Hycenth.</span>
           </h1>
@@ -36,21 +35,16 @@ const Index = ({ posts }) => {
           </h2>
         </Container>
         <Container size='sm' className='mt-20 z-10 -mb-40 w-full'>
-          <Box
-            css={{
-              background: 'rgba(255,255,255,0.3)',
-            }}
-            className='shadow-lg p-10 rounded-2xl block border-2 border-white'
-          >
+          <Box className='shadow-lg p-10 rounded-2xl block bg-glass'>
             <Styled.h3>Popular Posts</Styled.h3>
 
-            <Stack direction='row' className='justify-between mt-4'>
+            <Stack row spacing='10' className='justify-between mt-4' responsive>
               <Box
                 css={{
                   background:
                     'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF) no-repeat bottom/cover;',
                 }}
-                className='pt-24 pb-10 text-center rounded-xl max-w-xs px-5'
+                className='pt-24 pb-10 text-center rounded-xl px-5'
               >
                 <h3 className='text-white font-semibold text-xl'>
                   Handling file uploads with Apollo-server 2.0
@@ -61,7 +55,7 @@ const Index = ({ posts }) => {
                   background:
                     'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF);',
                 }}
-                className='pt-24 pb-10 text-center rounded-xl max-w-xs px-5'
+                className='pt-24 pb-10 text-center rounded-xl px-5'
               >
                 <h3 className='text-white font-semibold text-xl'>
                   Handling file uploads with Apollo-server 2.0
@@ -78,22 +72,38 @@ const Index = ({ posts }) => {
           }}
         />
       </main>
-      <Container as='section' size='sm' className='my-28 mx-auto'>
+      <Container as='section' size='sm' className='my-28 mx-auto p-6 md:p-0'>
         <div className='flex mb-12'>
           <Styled.h3>Recent Posts</Styled.h3>
           <Button to='/blog' color='gradient' className='ml-3 rounded-md'>
             See all
           </Button>
         </div>
-        <Stack direction='row' spacing='3rem' className='justify-between'>
-          <Stack spacing='2.5rem'>
+        <Stack row spacing='12' responsive className='justify-between'>
+          <Stack spacing='12' col>
             <HomePostCards post={posts[0]} />
             <HomePostCards post={posts[1]} />
           </Stack>
-          <Stack spacing='2.5rem'>
+          <Stack spacing='12' col>
             <HomePostCards post={posts[2]} />
             <HomePostCards post={posts[3]} />
           </Stack>
+        </Stack>
+      </Container>
+      <Container
+        as='aside'
+        size='sm'
+        className='my-28 mx-auto p-6 md:p-0 z-10 relative'
+      >
+        <div className='flex mb-12'>
+          <Styled.h3>Recent Projects</Styled.h3>
+          <Button to='/works' color='gradient' className='ml-3 rounded-md'>
+            See all
+          </Button>
+        </div>
+        <Stack spacing='12' col>
+          <WorksCard work={works[0]} />
+          <WorksCard work={works[1]} />
         </Stack>
       </Container>
       <Footer />

@@ -90,7 +90,7 @@ const MainNavLink = ({ href, icon, children }) => {
         className={clsx(
           'flex items-center text-sm font-bold transition-colors duration-200 text-gray-50 hover:text-gray-75',
           {
-            'text-gray-1000': active,
+            'text-gray-800': active,
           },
         )}
       >
@@ -128,7 +128,7 @@ const mainNavLinks = [
 
 const MainNavLinkGroup = (props: BoxProps) => {
   return (
-    <Stack direction='col' className='items-stretch' spacing='1rem' {...props}>
+    <Stack col className='items-stretch' spacing='1rem' {...props}>
       {mainNavLinks.map((item) => (
         <El.li className='list-none' key={item.label}>
           <MainNavLink icon={item.icon} href={item.href}>

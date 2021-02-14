@@ -10,6 +10,7 @@ import {
   IoLogoTwitter,
 } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
+import { BlurLeft, BlurRight } from './BlurEffect';
 import { NigeriaFlag } from './nigeriaFlag';
 
 // 🇳🇬
@@ -61,7 +62,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({
   <Box as='span' {...rest}>
     <Link href={href} aria-label={label}>
       <a target='_blank'>
-        <Icon as={icon} size='lg' className='text-gray-50' />
+        <Icon as={icon} size='lg' className='text-gray-400' />
       </a>
     </Link>
   </Box>
@@ -69,21 +70,25 @@ const FooterLink: React.FC<FooterLinkProps> = ({
 
 const Footer = () => {
   return (
-    <Box as='footer' className='border-t bg-white text-center py-16 z-20'>
-      <Container size='xs' centered>
-        <p className='text-sm'>
-          <span>
-            Proudly made in
-            <NigeriaFlag />
-          </span>
-          <span>by Divine Hycenth</span>
-        </p>
-        <Stack direction='row' spacing='1rem' className='justify-center mt-3'>
-          {links.map((link) => (
-            <FooterLink key={link.href} {...link} />
-          ))}
-        </Stack>
-      </Container>
+    <Box as='footer' className='relative'>
+      <BlurLeft className='absolute -top-44 left-0 lg:left-64 xl:left-80 2xl:left-96' />
+      <BlurRight className='absolute -top-44 right-0 lg:right-64 xl:right-80 2xl:right-96' />
+      <Box className='text-center py-16 relative bg-glass'>
+        <Container size='xs' centered>
+          <p className='text-sm'>
+            <span>
+              Proudly made in
+              <NigeriaFlag />
+            </span>
+            <span>by Divine Hycenth</span>
+          </p>
+          <Stack row className='justify-center mt-3'>
+            {links.map((link) => (
+              <FooterLink key={link.href} {...link} />
+            ))}
+          </Stack>
+        </Container>
+      </Box>
     </Box>
   );
 };

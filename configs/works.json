@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Nature UI",
+    "description": "Nature UI is a Modular, Composable and Extensible React based component library built upon tailwindcss and emotion",
+    "imageUrl": "/images/works/nature-ui.png",
+    "githubUrl": "https://github.com/nature-ui/nature-ui",
+    "websiteUrl": "https://nature-ui.com",
+    "tags": ["#open-source", "#react", "#typescript"]
+  },
+  {
+    "title": "Hardocs",
+    "description": "Hardocs is a cross Platform desktop app for project documentation Designed with hardware documentation in mind.",
+    "imageUrl": "/images/works/hardocs.png",
+    "githubUrl": "https://github.com/hardocs/desktop-app",
+    "websiteUrl": "https://hardocs.github.io",
+    "tags": ["#open-source", "#electron", "#vue"]
+  }
+]
