@@ -1,14 +1,15 @@
 /** ** */
 import * as React from 'react';
-import { Badge, Box } from '@nature-ui/core';
+import { Image, Box } from '@nature-ui/core';
 import { useRouter } from 'next/router';
 
-import SEO from 'components/seo';
-import { EditPageLink } from 'components/edit-page-button';
+import SEO from './seo';
+import { EditPageLink } from './edit-page-button';
 import Footer from './footer';
 import Header from './header';
 import PageTransition from './page-transition';
-
+import { Styled } from './nature-jsx-elements';
+import Comments from './comments';
 function useHeadingFocusOnRouteChange() {
   const router = useRouter();
 
@@ -30,18 +31,31 @@ interface PageContainerProps {
     title: string;
     description?: string;
     editUrl?: string;
-    version?: string;
+    imageUrl?: string;
+    auth?: {
+      avatarUrl?: string;
+      githubUrl?: string;
+      name?: string;
+      websiteUrl?: string;
+      twitterUsername?: string;
+    };
+    lastEdited?: string;
   };
   children: React.ReactNode;
-  sidebar?: any;
-  pagination?: any;
 }
 
 function PageContainer(props: PageContainerProps) {
-  const { frontMatter, children, sidebar, pagination } = props;
+  const { frontMatter, children } = props;
   useHeadingFocusOnRouteChange();
 
-  const { title, description, editUrl, version } = frontMatter;
+  const {
+    title,
+    description,
+    editUrl,
+    imageUrl,
+    lastEdited,
+    auth,
+  } = frontMatter;
 
   return (
     <>
@@ -58,16 +72,21 @@ function PageContainer(props: PageContainerProps) {
               }}
             >
               <PageTransition>
-                <h1 className='outline-none text-3xl font-bold mt-8 mb-1'>
+                <Styled.h1 className='outline-none text-6xl font-bold mb-1'>
                   {title}
-                </h1>
-                {version && <Badge color='teal-500'>v{version}</Badge>}
+                </Styled.h1>
+                {lastEdited && (
+                  <Styled.p className='opacity-60'>
+                    Last edited: {lastEdited}
+                  </Styled.p>
+                )}
+                <Image src={imageUrl} className='mt-12' alt={title} />
                 {children}
               </PageTransition>
-              <Box className='mt-14'>
+              <Box className='my-14'>
                 {editUrl && <EditPageLink href={editUrl} />}
               </Box>
-              {pagination || null}
+              <Comments className='relative z-10 my-36' />
             </Box>
             <Footer />
           </Box>

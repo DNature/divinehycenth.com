@@ -1,7 +1,6 @@
 /** ** */
 import * as React from 'react';
-import { Alert, Box, PropsOf, Divider, clsx } from '@nature-ui/core';
-import CodeBlock from './codeblock/codeblock';
+import { Alert, Box, PropsOf, Divider, clsx, Image } from '@nature-ui/core';
 import { El, Styled } from './nature-jsx-elements';
 
 const Pre = ({ className, ...props }) => {
@@ -80,41 +79,39 @@ const LinkedHeading = (props: PropsOf<typeof El.h2>) => {
 };
 
 const InlineCode = (props: any) => (
-  <El.code className='text-accent-600 text-sm' {...props} />
+  <El.code className='text-primary-600 text-sm' {...props} />
 );
 
 const MDXComponents = {
-  h1: (props) => <Styled.h1 className='text-3xl leading-5' {...props} />,
+  h1: (props) => <Styled.h1 className='text-4xl' {...props} />,
   h2: (props) => (
-    <LinkedHeading
-      className='text-2xl mt-16 mb-2 font-medium leading-5'
-      {...props}
-    />
+    <LinkedHeading className='text-3xl mt-16 mb-2 font-medium' {...props} />
   ),
   h3: (props) => (
-    <LinkedHeading className='text-xl font-medium mt-6' as='h3' {...props} />
+    <LinkedHeading className='text-2xl font-medium mt-6' as='h3' {...props} />
   ),
   h4: (props) => <LinkedHeading as='h4' {...props} />,
-  hr: (props) => <Divider {...props} />,
+  hr: (props) => <Divider className='my-12' {...props} />,
   strong: (props) => <Box as='strong' className='font-medium ' {...props} />,
   inlineCode: InlineCode,
   // code: CodeBlock,
   pre: Pre,
   // kbd: Kbd,
   br: (props) => <Box height='24px' {...props} />,
+  img: (props) => <Image className='mt-16' {...props} />,
   table: Table,
   th: THead,
   td: TData,
   a: (props) => (
     <El.a className='text-primary-100 hover:underline' {...props} />
   ),
-  p: (props) => <El.p className='mt-5 leading-7' {...props} />,
+  p: (props) => <El.p className='text-lg mt-5' {...props} />,
   ul: (props) => <El.ul className='mt-7 ml-7' {...props} />,
   ol: (props) => <El.ol {...props} />,
-  li: (props) => <El.li className='pb-1 list-disc' {...props} />,
+  li: (props) => <El.li className='ml-8 pb-1 list-disc' {...props} />,
   blockquote: (props) => (
     <Alert
-      className='mt-4 rounded-md my-6'
+      className='mt-4 rounded-md my-6 text-dark-800'
       role='none'
       status='warning'
       variant='left-accent'
@@ -122,10 +119,6 @@ const MDXComponents = {
       {...props}
     />
   ),
-  // 'carbon-ad': CarbonAd,
-  // ComponentLinks,
-  // IconsList,
-  // PropsTable,
 };
 
 export default MDXComponents;

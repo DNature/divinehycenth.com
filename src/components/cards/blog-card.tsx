@@ -1,27 +1,13 @@
 import React from 'react';
 
 import Link from 'next/link';
-import { Box, Image, Avatar, Badge, Stack, clsx } from '@nature-ui/core';
-import format from 'date-fns/format';
-import parseISO from 'date-fns/parseISO';
+import { Box, Image, Badge, Stack, clsx } from '@nature-ui/core';
 
 import { Styled } from 'components/nature-jsx-elements';
 import { getNChars } from 'utils/getNChars';
 
 export const BlogCard = ({ className = '', post, ...rest }) => {
-  const {
-    slug,
-    tags,
-    title,
-    description,
-    imageUrl,
-    date,
-    author: { githubUrl, websiteUrl, avatarUrl, name },
-  } = post;
-  const readableDate = format(parseISO(date), 'MMMM dd, yyyy');
-
-  const authorProfile =
-    name === 'Divine Hycenth' ? '/about' : websiteUrl || githubUrl || '#';
+  const { slug, tags, title, description, imageUrl } = post;
 
   return (
     <>

@@ -20,14 +20,14 @@ const Index = ({ posts }) => {
         <BlurLeft className='absolute bottom-0 -mb-32 left-0 lg:left-64 xl:left-80 2xl:left-96' />
         <BlurRight className='absolute bottom-0 -mb-32 right-0 lg:right-64 xl:right-80 2xl:right-96' />
         <Container size='sm' className='z-10 text-center mt-32 md:mt-48 mb-16'>
-          <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-dark-700 leading-normal mb-3'>
+          <Styled.h1 className='mb-3'>
             Hi 👋, I’m{' '}
             <span className='text-gradient shadow-text'>Divine Hycenth.</span>
-          </h1>
-          <h2 className='text-3xl md:text-4xl font-semibold leading-relaxed'>
+          </Styled.h1>
+          <Styled.h2>
             I’m a full stack software developer, technical writer, and UI/UX
             Designer.
-          </h2>
+          </Styled.h2>
 
           <div className='mt-12 mx-auto px-6 md:hidden'>
             <Search />

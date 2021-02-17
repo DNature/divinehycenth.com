@@ -17,7 +17,6 @@ import { RemoveScroll } from 'react-remove-scroll';
 import { AnimatePresence, motion, useElementScroll } from 'framer-motion';
 
 import { useRouteChanged } from 'hooks/use-route-change';
-import { getRoutes } from 'layouts/mdx';
 
 import { AiOutlineMenu } from 'react-icons/ai';
 import { FaMoon, FaSun } from 'react-icons/fa';
@@ -129,17 +128,6 @@ export const MobileNaveContent = (props: MobileNavContentProps) => {
                   </Stack>
                 </Box>
               </Box>
-
-              <ScrollView
-                onScroll={(scrolled) => {
-                  setShadow(scrolled ? 'md' : undefined);
-                }}
-              >
-                <SidebarContent
-                  pathname={pathname}
-                  routes={getRoutes(pathname)}
-                />
-              </ScrollView>
             </Box>
           </motion.nav>
         </RemoveScroll>

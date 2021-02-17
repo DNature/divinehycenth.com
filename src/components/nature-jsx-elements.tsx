@@ -27,11 +27,20 @@ export const El = {
 
 export const Styled = {
   h1: ({ className = '', ...props }) => (
-    <El.h2 className={clsx(className, 'text-4xl leading-5')} {...props} />
+    <El.h1
+      className={clsx(
+        className,
+        'text-4xl md:text-6xl lg:text-7xl leading-normal font-bold',
+      )}
+      {...props}
+    />
   ),
   h2: ({ className = '', ...props }) => (
     <El.h2
-      className={clsx(className, 'text-3xl mb-2 font-semibold leading-5')}
+      className={clsx(
+        className,
+        'md:text-4xl mb-2 font-semibold leading-relaxed',
+      )}
       {...props}
     />
   ),
@@ -39,6 +48,6 @@ export const Styled = {
     <El.h3 className={clsx(className, 'text-2xl font-semibold')} {...props} />
   ),
   p: ({ className = '', ...props }) => (
-    <El.p className={clsx(className, 'leading-7')} {...props} />
+    <El.p className={clsx(className)} {...props} />
   ),
 };

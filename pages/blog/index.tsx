@@ -18,7 +18,7 @@ const Blog = ({ posts }) => {
         <Styled.h1 className='text-6xl font-bold'>Blog</Styled.h1>
       </Box>
 
-      <Container size='xs' className='pt-16 relative px-6' centered>
+      <Container className='pt-16 relative px-6 md:hidden' centered>
         <Search />
       </Container>
 

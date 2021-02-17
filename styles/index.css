@@ -33,26 +33,6 @@
   );
 }
 
-html,
-body {
-  @apply text-dark-600;
-  @apply bg-white;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  @apply text-dark-800;
-}
-
-.nature-ui-dark > h1,
-h2,
-h3,
-h4 {
-  @apply text-dark-700;
-}
-
 .nature-ui-dark {
   --dark-100: #e6e6e6;
   --dark-200: #dddddd;
@@ -97,6 +77,28 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+html,
+body {
+  @apply text-dark-600;
+  @apply bg-white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply text-dark-700;
+}
+
+a {
+  @apply hover:opacity-70;
+}
+
+p > a {
+  @apply underline;
+  @apply text-primary-500;
 }
 
 blockquote * p {
