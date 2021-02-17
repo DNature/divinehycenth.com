@@ -11,6 +11,7 @@ import { Button } from 'components/custom/Button';
 import { getBlogPosts } from 'utils/get-blog-posts';
 import { HomePostCards } from 'components/cards/home-post-cards';
 import { WorksCard } from 'components/cards/works-card';
+import { Search } from 'components/algolia-search';
 import works from 'configs/works.json';
 
 const Index = ({ posts }) => {
@@ -33,6 +34,10 @@ const Index = ({ posts }) => {
             I’m a full stack software developer, technical writer, and UI/UX
             Designer.
           </h2>
+
+          <div className='mt-12 mx-auto px-6 md:hidden'>
+            <Search />
+          </div>
         </Container>
         <Container size='sm' className='mt-20 z-10 -mb-40 w-full'>
           <Box className='shadow-lg p-10 rounded-2xl block bg-glass'>
@@ -46,7 +51,7 @@ const Index = ({ posts }) => {
                 }}
                 className='pt-24 pb-10 text-center rounded-xl px-5'
               >
-                <h3 className='text-white font-semibold text-xl'>
+                <h3 className='text-gray-100 font-semibold text-xl'>
                   Handling file uploads with Apollo-server 2.0
                 </h3>
               </Box>
@@ -57,7 +62,7 @@ const Index = ({ posts }) => {
                 }}
                 className='pt-24 pb-10 text-center rounded-xl px-5'
               >
-                <h3 className='text-white font-semibold text-xl'>
+                <h3 className='text-gray-100 font-semibold text-xl'>
                   Handling file uploads with Apollo-server 2.0
                 </h3>
               </Box>

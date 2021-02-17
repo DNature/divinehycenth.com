@@ -9,43 +9,44 @@ import {
   IconButtonProps,
   Stack,
   useUpdateEffect,
+  nature,
 } from '@nature-ui/core';
-import { Icon } from '@nature-ui/icons';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RemoveScroll } from 'react-remove-scroll';
 import { AnimatePresence, motion, useElementScroll } from 'framer-motion';
 
-import siteConfig from 'configs/site-config';
 import { useRouteChanged } from 'hooks/use-route-change';
 import { getRoutes } from 'layouts/mdx';
 
 import { AiOutlineMenu } from 'react-icons/ai';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import { Logo } from './Logo';
 import { SidebarContent } from './sidebar/sidebar';
-import { GithubIcon } from './CustomIcons';
+import { useColorMode, useColorModeValue } from './color-mode';
 
-const NavLink = ({ href, children, ...rest }) => {
+const NavLink = ({ href, children, className = '', ...rest }) => {
   const { pathname } = useRouter();
 
   const [, group] = href.split('/');
   const isActive = pathname.includes(group);
 
+  console.log({ isActive, group });
+
   return (
     <Link href={href}>
-      <Button
-        className={clsx('transition-all duration-200', {
-          'font-semibold flex-1': isActive,
+      <nature.h2
+        className={clsx(className, {
+          'font-semibold text-gradient': isActive,
+          'text-dark-600': !isActive,
         })}
         css={{
           flex: '1 1 0%',
         }}
-        color={isActive ? 'gradient-button' : 'gray-50'}
-        variant={isActive ? 'solid' : 'outline'}
         {...rest}
       >
         {children}
-      </Button>
+      </nature.h2>
     </Link>
   );
 };
@@ -105,7 +106,7 @@ export const MobileNaveContent = (props: MobileNavContentProps) => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
           >
-            <Box className='h-screen absolute top-0 left-0 w-full mt-3 bg-white z-10 flex flex-col overflow-auto pb-8'>
+            <Box className='h-screen absolute top-0 left-0 w-full pt-3 bg-white z-10 flex flex-col overflow-auto pb-8'>
               <Box>
                 <Box className='px-4'>
                   <Stack row className='items-center'>
@@ -117,9 +118,12 @@ export const MobileNaveContent = (props: MobileNavContentProps) => {
                     />
                   </Stack>
                 </Box>
-                <Box className={`px-6 mt-6 pb-4 shadow-${shadow}`}>
-                  <Stack row spacing='3'>
-                    <NavLink href='/docs/getting-started'>Docs</NavLink>
+                <Box className={`px-6 mt-6 pb-4`}>
+                  <Stack col spacing='3' className='mb-3'>
+                    <NavLink href='/blog'>Blog</NavLink>
+                    <NavLink href='/about'>About</NavLink>
+                    <NavLink href='/works'>Works</NavLink>
+                    <NavLink href='/contact'>contact</NavLink>
                   </Stack>
                 </Box>
               </Box>
@@ -144,20 +148,20 @@ export const MobileNaveContent = (props: MobileNavContentProps) => {
 
 export const MobileNavButton = React.forwardRef(
   (props: IconButtonProps, ref: React.Ref<any>) => {
+    const { toggleColorMode: toggleMode } = useColorMode();
+    const text = useColorModeValue('dark', 'light');
+    const SwitchIcon = useColorModeValue(FaMoon, FaSun);
     return (
       <div className='md:hidden justify-end flex items-center'>
-        <Link
-          aria-label='Go to Nature UI GitHub page'
-          href={siteConfig.repo.url}
-        >
-          <a target='_blank'>
-            <Icon
-              className='md:hidden text-gray-50 hover:text-gray-75 transition-colors duration-150'
-              size='lg'
-              as={GithubIcon}
-            />
-          </a>
-        </Link>
+        <IconButton
+          size='md'
+          className='text-lg sm:ml-3'
+          text='current'
+          aria-label={`Switch to ${text} mode`}
+          variant='ghost'
+          onClick={toggleMode}
+          icon={<SwitchIcon />}
+        />
         <IconButton
           className='md:hidden text-xl  ml-3'
           ref={ref}
@@ -166,7 +170,7 @@ export const MobileNavButton = React.forwardRef(
             paddingRight: '5px !important',
           }}
           aria-label='Open menu'
-          color='gray-800'
+          text='current'
           variant='ghost'
           icon={<AiOutlineMenu />}
           {...props}

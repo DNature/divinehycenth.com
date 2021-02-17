@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --white: #fff;
   --dark-100: #dddddd;
   --dark-200: #d1d2d2;
   --dark-300: #c8caca;
@@ -61,6 +62,8 @@ h4 {
   --dark-600: #dddddd;
   --dark-700: #eeeeee;
   --dark-800: #151818;
+
+  --white: var(--dark-800);
 
   --primary-300: #e4c1af;
   --primary-400: #e4a079;

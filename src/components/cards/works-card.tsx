@@ -15,7 +15,7 @@ export const WorksCard = ({ work, className = '', ...rest }) => {
         {...rest}
         className={clsx(className, 'p-6 rounded-2xl bg-glass-card')}
       >
-        <Box className='grid grid-cols-2 gap-4'>
+        <Box className='md:grid grid-cols-2 gap-4'>
           <Box className='h-full'>
             <Image
               loading='lazy'

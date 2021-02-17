@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Icon,
   useUpdateEffect,
   useDisclosure,
   Stack,
@@ -11,13 +10,10 @@ import {
   IconButton,
 } from '@nature-ui/core';
 
-import siteConfig from 'configs/site-config';
-
-import { SearchButton } from './algolia-search';
+import { Search } from './algolia-search';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { Logo } from './Logo';
 import { MobileNaveContent, MobileNavButton } from './mobile-nav';
-import { DiscordIcon, GithubIcon } from './CustomIcons';
 import { useRouter } from 'next/router';
 import { useColorMode, useColorModeValue } from './color-mode/color-mode';
 
@@ -27,7 +23,7 @@ const NavLink = ({ children, href, ...props }) => {
     <Button variant='none' {...props}>
       <Link href={href}>
         <a
-          className={clsx('font-medium', {
+          className={clsx('font-medium hidden sm:block', {
             [`text-gradient`]: pathname.includes(href),
           })}
         >
@@ -69,7 +65,7 @@ const HeaderContent = () => {
             <NavLink href='#'>Contact</NavLink>
           </Stack>
           <div className='hidden md:w-2/5 md:flex items-center justify-end'>
-            <SearchButton />
+            <Search />
             <IconButton
               size='md'
               className='text-lg sm:ml-3'

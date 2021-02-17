@@ -28,6 +28,7 @@ module.exports = {
           700: 'var(--accent-700)',
         },
         glass: "var(--glass)",
+        white: 'var(--white)'
       },
       spacing: {
         28: '7rem',
