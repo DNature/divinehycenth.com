@@ -31,6 +31,7 @@ export const HomePostCards = ({ post, ...rest }) => {
             <Image
               src={imageUrl}
               alt={title}
+              loading='lazy'
               className='rounded-2xl cursor-pointer'
             />
             {tags && (

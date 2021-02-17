@@ -17,7 +17,12 @@ export const WorksCard = ({ work, className = '', ...rest }) => {
       >
         <Box className='grid grid-cols-2 gap-4'>
           <Box className='h-full'>
-            <Image src={imageUrl} alt={title} className='rounded-2xl' />
+            <Image
+              loading='lazy'
+              src={imageUrl}
+              alt={title}
+              className='rounded-2xl'
+            />
           </Box>
           <Box>
             <Styled.h3 className='font-semibold mb-2'>{title}</Styled.h3>

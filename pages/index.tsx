@@ -79,7 +79,7 @@ const Index = ({ posts }) => {
             See all
           </Button>
         </div>
-        <Stack row spacing='12' responsive className='justify-between'>
+        <div className='grid md:grid-cols-2 gap-12'>
           <Stack spacing='12' col>
             <HomePostCards post={posts[0]} />
             <HomePostCards post={posts[1]} />
@@ -88,7 +88,7 @@ const Index = ({ posts }) => {
             <HomePostCards post={posts[2]} />
             <HomePostCards post={posts[3]} />
           </Stack>
-        </Stack>
+        </div>
       </Container>
       <Container
         as='aside'
