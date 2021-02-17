@@ -31,22 +31,24 @@ const NavLink = ({ href, children, className = '', ...rest }) => {
   const [, group] = href.split('/');
   const isActive = pathname.includes(group);
 
-  console.log({ isActive, group });
-
   return (
     <Link href={href}>
-      <nature.h2
-        className={clsx(className, {
-          'font-semibold text-gradient': isActive,
-          'text-dark-600': !isActive,
-        })}
+      <nature.a
+        className={clsx(
+          className,
+          'p-2 hover:bg-accent-400 hover:opacity-70 rounded-xl',
+          {
+            'font-semibold bg-gradient text-white': isActive,
+            'text-dark-600': !isActive,
+          },
+        )}
         css={{
           flex: '1 1 0%',
         }}
         {...rest}
       >
         {children}
-      </nature.h2>
+      </nature.a>
     </Link>
   );
 };

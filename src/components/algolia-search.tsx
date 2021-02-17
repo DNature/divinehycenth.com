@@ -137,7 +137,7 @@ export function Search() {
       {/* <SearchStyle /> */}
       <SearchButton onClick={onOpen} ref={searchButtonRef} />
       {isOpen && (
-        <Modal isOpen={isOpen} onClose={onClose} size='xl'>
+        <Modal isOpen={isOpen} onClose={onClose} size='md'>
           <ModalOverlay className='z-50'>
             <ModalContent className='mx-4'>
               <SearchInput />
