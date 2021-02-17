@@ -2,8 +2,7 @@
 import * as React from 'react';
 import { Container, Box, Stack } from '@nature-ui/core';
 
-import Header from 'components/header';
-import SEO from 'components/seo';
+import MainLayout from 'layouts/main';
 import Footer from 'components/footer';
 import { Styled } from 'components/nature-jsx-elements';
 import { BlurLeft, BlurRight } from 'components/BlurEffect';
@@ -16,12 +15,7 @@ import works from 'configs/works.json';
 
 const Index = ({ posts }) => {
   return (
-    <>
-      <SEO
-        title='Nature UI - A simple, modular, extensible and accessible component library based on tailwindcss that gives you the building blocks you need to build your React applications.'
-        description='Simple, Modular and Accessible UI Components based on Tailwindcss for your React Applications.'
-      />
-      <Header />
+    <MainLayout>
       <main className='grid place-items-center w-full md:pb-32 pb-12 px-4 md:px-0 relative mb-60'>
         <BlurLeft className='absolute bottom-0 -mb-32 left-0 lg:left-64 xl:left-80 2xl:left-96' />
         <BlurRight className='absolute bottom-0 -mb-32 right-0 lg:right-64 xl:right-80 2xl:right-96' />
@@ -112,7 +106,7 @@ const Index = ({ posts }) => {
         </Stack>
       </Container>
       <Footer />
-    </>
+    </MainLayout>
   );
 };
 

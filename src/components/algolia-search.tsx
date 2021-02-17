@@ -58,7 +58,7 @@ export const SearchButton = React.forwardRef(
       >
         <Stack row className='items-center'>
           <SearchIcon className='text-dark-200' />
-          <p className='text-dark-400'>Search the docs</p>
+          <p className='text-dark-400'>Search</p>
         </Stack>
       </Button>
     );
