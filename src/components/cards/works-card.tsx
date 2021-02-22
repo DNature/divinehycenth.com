@@ -39,11 +39,24 @@ const BottomVariants = {
 export const HomeWorksCard = ({ work, className = '', ...rest }) => {
   const { title, tags, description, githubUrl, websiteUrl, imageUrl } = work;
 
+  const [ref, inView] = useInView();
+  const controls = useAnimation();
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else controls.start('hidden');
+  }, [controls, inView]);
+
   return (
     <>
-      <Box
-        {...rest}
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial='hidden'
+        variants={BottomVariants}
         className={clsx(className, 'p-6 rounded-2xl bg-glass-card')}
+        {...rest}
       >
         <Box className='md:grid grid-cols-2 gap-4 items-center'>
           <Box className='h-full'>
@@ -76,7 +89,7 @@ export const HomeWorksCard = ({ work, className = '', ...rest }) => {
             </Stack>
           </Box>
         </Box>
-      </Box>
+      </motion.div>
     </>
   );
 };
@@ -87,7 +100,6 @@ export const WorksCard = ({
   description,
   websiteUrl,
   githubUrl,
-  className = '',
   tags = [],
   ...rest
 }) => {
@@ -106,7 +118,6 @@ export const WorksCard = ({
       animate={controls}
       initial='hidden'
       variants={LeftVariants}
-      className={clsx(className, '')}
       {...rest}
     >
       <Box className='relative' css={{ height: '70vh' }}>
