@@ -39,7 +39,7 @@ export const Styled = {
     <El.h2
       className={clsx(
         className,
-        'md:text-4xl mb-2 font-semibold leading-relaxed',
+        'text-3xl md:text-4xl mb-2 font-semibold leading-relaxed',
       )}
       {...props}
     />

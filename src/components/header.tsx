@@ -34,7 +34,7 @@ const NavLink = ({ children, href, ...props }) => {
   );
 };
 
-const HeaderContent = () => {
+const Header = () => {
   const mobileNavBtnRef = React.useRef<HTMLButtonElement>();
 
   const mobileNav = useDisclosure();
@@ -90,10 +90,6 @@ const HeaderContent = () => {
       />
     </nature.header>
   );
-};
-
-const Header = () => {
-  return <HeaderContent />;
 };
 
 export default Header;

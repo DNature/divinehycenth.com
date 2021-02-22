@@ -14,7 +14,8 @@ const Main = ({
     <>
       <SEO title={title} description={description} />
       <Header />
-      <span className='relative z-10'>{children}</span>
+      {/* <div className='w-screen overflow-x-hidden'>{children}</div> */}
+      {children}
       <Footer />
     </>
   );

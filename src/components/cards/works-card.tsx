@@ -1,6 +1,18 @@
 import React from 'react';
 
-import { Box, Image, Badge, Stack, clsx, useDisclosure } from '@nature-ui/core';
+import {
+  Box,
+  Badge,
+  Stack,
+  clsx,
+  Modal,
+  ModalOverlay,
+  ModalBody,
+  ModalContent,
+  ModalCloseButton,
+  Image,
+  useDisclosure,
+} from '@nature-ui/core';
 
 import { Styled } from 'components/nature-jsx-elements';
 import { getNChars } from 'utils/getNChars';
@@ -17,6 +29,11 @@ const LeftVariants = {
 const RightVariants = {
   visible: { opacity: 1, scale: 1, x: 1, transition: { duration: 1 } },
   hidden: { opacity: 0, scale: 0.6, x: 1000 },
+};
+
+const BottomVariants = {
+  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, scale: 0.6, y: 50 },
 };
 
 export const HomeWorksCard = ({ work, className = '', ...rest }) => {
@@ -71,19 +88,16 @@ export const WorksCard = ({
   websiteUrl,
   githubUrl,
   className = '',
+  tags = [],
   ...rest
 }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const [ref, inView] = useInView();
   const controls = useAnimation();
 
   React.useEffect(() => {
     if (inView) {
       controls.start('visible');
-    }
-    if (!inView) {
-      controls.start('hidden');
-    }
+    } else controls.start('hidden');
   }, [controls, inView]);
 
   return (
@@ -112,6 +126,15 @@ export const WorksCard = ({
           >
             <div>
               <Styled.h2>{title}</Styled.h2>
+              {tags && (
+                <Stack row spacing='2' className='my-2'>
+                  {tags.map((tag, i) => (
+                    <Badge color='primary-600' variant='solid' key={tag + i}>
+                      {tag}
+                    </Badge>
+                  ))}
+                </Stack>
+              )}
               <Styled.p className='text-xl mb-6'>{description}</Styled.p>
               <Stack row>
                 <Button
@@ -139,38 +162,77 @@ export const WorksCard = ({
   );
 };
 
-/**
- * 
- * <Box
-      {...rest}
-      className={clsx(className, 'relative rounded-2xl overflow-hidden')}
-      css={{
-        minHeight: '65vh',
-      }}
-    >
-      <Image
-        src={imageUrl}
-        alt=''
-        className={clsx('absolute top-0 h-full w-full object-cover')}
-        onMouseOver={onOpen}
-        onMouseOut={onClose}
-      />
-      <SlideFade in={isOpen}>
-        {(styles) => (
-          <Box
-            style={{
-              ...styles,
-              backdropFilter: 'blur(5px)',
-              background: 'rgba(31, 45, 45, 0.5)',
-            }}
-            className='p-10 shadow-md tot-0 right-0 absolute w-2/4 h-full flex items-center'
-            onMouseOver={onOpen}
-          >
-            <div>
-              <Styled.h2 className='text-shadow'>{title}</Styled.h2>
+export const MobileCard = ({
+  imageUrl,
+  title,
+  description,
+  websiteUrl,
+  githubUrl,
+  className = '',
+  tags = [],
+  ...rest
+}) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-              <Styled.h3 className='text-shadow mb-6'>{description}</Styled.h3>
-              <Stack row>
+  const [ref, inView] = useInView();
+  const controls = useAnimation();
+
+  React.useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  return (
+    <>
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial='hidden'
+        variants={BottomVariants}
+        className={clsx(className, 'relative rounded-xl overflow-hidden')}
+        style={{
+          height: '350px',
+        }}
+        onClick={onOpen}
+        {...rest}
+      >
+        <Image
+          src={imageUrl}
+          alt={title}
+          className='absolute top-0 w-full h-full object-cover object-left'
+        />
+        <div className='absolute top-0 w-full h-full bg-gradient-to-t from-gray-900' />
+
+        <h2 className='text-3xl font-semibold absolute bottom-4 left-4 text-gray-100'>
+          {title}
+        </h2>
+      </motion.div>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay className='z-50'>
+          <ModalContent>
+            <ModalCloseButton />
+            <Image
+              src={imageUrl}
+              alt={title}
+              className='w-full h-72 object-cover object-left'
+            />
+            <ModalBody>
+              <Styled.h2>{title}</Styled.h2>
+              {tags && (
+                <Stack row spacing='2' className='my-2'>
+                  {tags.map((tag, i) => (
+                    <Badge color='primary-600' variant='solid' key={tag + i}>
+                      {tag}
+                    </Badge>
+                  ))}
+                </Stack>
+              )}
+              <Styled.p>{description}</Styled.p>
+              <Stack row className='my-4'>
                 <Button
                   target='_blank'
                   size='sm'
@@ -188,9 +250,10 @@ export const WorksCard = ({
                   View source
                 </Button>
               </Stack>
-            </div>
-          </Box>
-        )}
-      </SlideFade>
-    </Box>
- */
+            </ModalBody>
+          </ModalContent>
+        </ModalOverlay>
+      </Modal>
+    </>
+  );
+};

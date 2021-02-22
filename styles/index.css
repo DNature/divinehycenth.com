@@ -11,7 +11,9 @@
   --dark-500: #828989;
   --dark-600: #505b5b;
   --dark-700: #1f2d2d;
-  --dark-800: #151818;
+  /* --dark-800: #151818; */
+  /* --dark-800: #010e15; */
+  --dark-800: #111516;
 
   --primary-300: #e4c1af;
   --primary-400: #e4a079;
@@ -27,9 +29,9 @@
 
   --glass: rgba(255, 255, 255, 0.3);
   --glass-card: linear-gradient(
-    94.74deg,
-    rgba(130, 137, 137, 0.1) 6.27%,
-    rgba(80, 91, 91, 0.2) 105.99%
+    95.57deg,
+    rgba(2, 43, 65, 0.1) 6.86%,
+    rgba(2, 33, 50, 0.2) 96.38%
   );
 }
 
@@ -41,7 +43,9 @@
   --dark-500: #dddddd;
   --dark-600: #dddddd;
   --dark-700: #eeeeee;
-  --dark-800: #151818;
+  /* --dark-800: #151818; */
+  /* --dark-800: #010e15; */
+  --dark-800: #111516;
 
   --white: var(--dark-800);
 
@@ -71,13 +75,15 @@
 body,
 html {
   width: 100%;
-  height: 100%;
   box-sizing: border-box;
   line-height: 1.5;
-  /* overflow-x: hidden; */
   font-family: 'Ubuntu', Consolas, Monaco, 'Andale Mono', monospace !important;
-  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
   scroll-behavior: smooth;
+  transition: background 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+* {
+  transition: background 500ms ease-in-out, color 300ms ease-in-out;
 }
 
 html,

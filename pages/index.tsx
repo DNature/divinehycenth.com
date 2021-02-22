@@ -16,7 +16,7 @@ import MainLayout from 'layouts/main';
 const Index = ({ posts }) => {
   return (
     <MainLayout>
-      <main className='grid place-items-center w-full md:pb-32 pb-12 px-4 md:px-0 relative mb-60'>
+      <main className='grid place-items-center md:pb-32 pb-12 px-4 md:px-0 relative mb-60'>
         <BlurLeft className='absolute bottom-0 -mb-32 left-0 lg:left-64 xl:left-80 2xl:left-96' />
         <BlurRight className='absolute bottom-0 -mb-32 right-0 lg:right-64 xl:right-80 2xl:right-96' />
         <Container size='sm' className='z-10 text-center mt-32 md:mt-48 mb-16'>
@@ -33,7 +33,7 @@ const Index = ({ posts }) => {
             <Search />
           </div>
         </Container>
-        <Container size='sm' className='mt-20 z-10 -mb-40 w-full'>
+        <Container size='sm' className='mt-20 z-10 -mb-40'>
           <Box className='shadow-lg p-10 rounded-2xl block bg-glass'>
             <Styled.h3>Popular Posts</Styled.h3>
 
@@ -63,13 +63,13 @@ const Index = ({ posts }) => {
             </Stack>
           </Box>
         </Container>
-        <Box
+        {/* <Box
           className='absolute bottom-2 shadow-lg rounded-full'
           css={{
             width: '3478px',
             height: '3501.28px',
           }}
-        />
+        /> */}
       </main>
       <Container as='section' size='sm' className='my-28 mx-auto p-6 md:p-0'>
         <div className='flex mb-12'>

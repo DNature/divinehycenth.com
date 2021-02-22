@@ -8,11 +8,35 @@
     "tags": ["#open-source", "#react", "#typescript"]
   },
   {
+    "title": "CombatCovid",
+    "description": "Combat covid with hardware Search for well documented designs 🔍 and document new solutions.",
+    "imageUrl": "/images/works/combat-covid.png",
+    "githubUrl": "http://github.com/CombatCovid",
+    "websiteUrl": "http://combatcovid.equipment/",
+    "tags": ["#open-source", "#vue"]
+  },
+  {
     "title": "Hardocs",
     "description": "Hardocs is a cross Platform desktop app for project documentation Designed with hardware documentation in mind.",
     "imageUrl": "/images/works/hardocs.png",
     "githubUrl": "https://github.com/hardocs/desktop-app",
     "websiteUrl": "https://hardocs.github.io",
     "tags": ["#open-source", "#electron", "#vue"]
+  },
+  {
+    "title": "CRWN Clothing",
+    "description": "CRWN clothing is an imaginary e-commerce clothing store. Some features includes payment with stripe, redux for global state management, firebase and lots more.",
+    "imageUrl": "/images/works/crwn-clothing.png",
+    "githubUrl": "http://github.com/DNature/crwn-clothing-e-commerce",
+    "websiteUrl": "http://crwn-clothing-navy-ten.now.sh/",
+    "tags": ["#react", "#e-commerce", "#firebase"]
+  },
+  {
+    "title": "Transferwise Clone",
+    "description": "I cloned the homepage of transferwise.com just for fun. I attempted the design and most functionalities present on the website.",
+    "imageUrl": "/images/works/transferwise.png",
+    "githubUrl": "http://github.com/DNature/transferwise",
+    "websiteUrl": "https://transferwise.netlify.app/",
+    "tags": ["#react", "#ui"]
   }
 ]
