@@ -34,7 +34,10 @@ function Hit(props) {
 }
 
 export const SearchButton = React.forwardRef(
-  (props: PropsOf<typeof nature.button>, ref: React.Ref<HTMLButtonElement>) => {
+  (
+    { className = '', ...props }: PropsOf<typeof nature.button>,
+    ref: React.Ref<HTMLButtonElement>,
+  ) => {
     const [actionKey, setActionKey] = React.useState<string[]>(
       ACTION_KEY_APPLE,
     );
@@ -54,7 +57,10 @@ export const SearchButton = React.forwardRef(
         ref={ref}
         {...props}
         variant='none'
-        className='w-full px-4 py-3 focus:ring focus:outline-none rounded-xl duration-200 border border-dark-200 focus:border-transparent'
+        className={clsx(
+          className,
+          'w-full px-4 py-3 focus:ring focus:outline-none rounded-xl duration-200 border border-dark-200 focus:border-transparent',
+        )}
       >
         <Stack row className='items-center'>
           <SearchIcon className='text-dark-200' />
@@ -95,7 +101,7 @@ export const SearchInput = ({ className = '', ...props }) => {
   );
 };
 
-export function Search() {
+export function Search(props) {
   // const router = useRouter();
   const [isOpen, setIsOpen] = React.useState(false);
   const searchButtonRef = React.useRef();
@@ -135,7 +141,7 @@ export function Search() {
         />
       </Head>
       {/* <SearchStyle /> */}
-      <SearchButton onClick={onOpen} ref={searchButtonRef} />
+      <SearchButton onClick={onOpen} {...props} ref={searchButtonRef} />
       {isOpen && (
         <Modal isOpen={isOpen} onClose={onClose} size='md'>
           <ModalOverlay className='z-50'>

@@ -56,7 +56,7 @@ const HeaderContent = () => {
       <div className='w-full bg-gradient-line h-2 absolute top-0 left-0' />
 
       <nav className='w-full max-w-screen-lg px-4 md:px-0 md:mx-auto py-3'>
-        <div className='flex items-center justify-between px-4 xl:px-0'>
+        <div className='flex items-center justify-between xl:px-0'>
           <Stack row spacing='6'>
             <Logo />
             <NavLink href='/blog'>Blog</NavLink>
@@ -64,8 +64,8 @@ const HeaderContent = () => {
             <NavLink href='/works'>Works</NavLink>
             <NavLink href='/contact'>Contact</NavLink>
           </Stack>
-          <div className='hidden md:w-2/5 md:flex items-center justify-end'>
-            <Search />
+          <div className='md:w-2/5 flex items-center justify-end'>
+            <Search className='hidden md:block' />
             <IconButton
               size='md'
               className='text-lg sm:ml-3'
@@ -75,13 +75,12 @@ const HeaderContent = () => {
               onClick={toggleMode}
               icon={<SwitchIcon />}
             />
+            <MobileNavButton
+              ref={mobileNavBtnRef}
+              aria-label='Open Menu'
+              onClick={mobileNav.onOpen}
+            />
           </div>
-
-          <MobileNavButton
-            ref={mobileNavBtnRef}
-            aria-label='Open Menu'
-            onClick={mobileNav.onOpen}
-          />
         </div>
       </nav>
 

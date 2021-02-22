@@ -1,7 +1,8 @@
 import { Box, Image, Container, Stack } from '@nature-ui/core';
 
-import MainLayout from 'layouts/main';
 import { Styled } from 'components/nature-jsx-elements';
+
+import MainLayout from 'layouts/main';
 
 const About = ({}) => {
   return (
@@ -21,8 +22,8 @@ const About = ({}) => {
             Hello there 👋, I’m Divine Hycenth.
           </Styled.h1>
           <Styled.p className='mt-5 text-xl'>
-            I’m a Full-stack Software Engineer with 4years of experience, UI/UX
-            Designer, and Technical Writer.
+            I’m a Full-stack Software Engineer with 4years of experience
+            building applications, UI/UX Designer.
           </Styled.p>
           <Styled.p className='mt-5 text-xl'>
             I spend most of my free time improving{' '}

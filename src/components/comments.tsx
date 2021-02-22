@@ -11,7 +11,7 @@ const Comments = ({ ...props }) => {
     const commentScript = document.createElement('script');
     commentScript.async = true;
     commentScript.src = 'https://utteranc.es/client.js';
-    commentScript.setAttribute('repo', 'dnature/divinehycenth.com');
+    commentScript.setAttribute('repo', 'DNature/divinehycenth.com');
     commentScript.setAttribute('issue-term', 'pathname');
     commentScript.setAttribute('label', 'discuss');
     commentScript.setAttribute('theme', 'preferred-color-scheme');

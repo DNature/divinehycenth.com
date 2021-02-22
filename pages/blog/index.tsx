@@ -1,10 +1,10 @@
 import { Box, Container, Stack } from '@nature-ui/core';
 
 import MainLayout from 'layouts/main';
-import { Styled } from 'components/nature-jsx-elements';
 import { Search } from 'components/algolia-search';
 import { BlogCard } from 'components/cards/blog-card';
 import { getBlogPosts } from 'utils/get-blog-posts';
+import { Zigzag } from 'components/zigzag';
 
 const Blog = ({ posts }) => {
   return (
@@ -15,7 +15,7 @@ const Blog = ({ posts }) => {
         }}
         className='grid place-content-center'
       >
-        <Styled.h1 className='text-6xl font-bold'>Blog</Styled.h1>
+        <Zigzag>Blog</Zigzag>
       </Box>
 
       <Container className='pt-16 relative px-6 md:hidden' centered>

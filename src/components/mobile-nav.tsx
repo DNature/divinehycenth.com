@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Box,
   BoxProps,
-  Button,
   CloseButton,
   clsx,
   IconButton,
@@ -19,10 +18,7 @@ import { AnimatePresence, motion, useElementScroll } from 'framer-motion';
 import { useRouteChanged } from 'hooks/use-route-change';
 
 import { AiOutlineMenu } from 'react-icons/ai';
-import { FaMoon, FaSun } from 'react-icons/fa';
 import { Logo } from './Logo';
-import { SidebarContent } from './sidebar/sidebar';
-import { useColorMode, useColorModeValue } from './color-mode';
 
 const NavLink = ({ href, children, className = '', ...rest }) => {
   const { pathname } = useRouter();
@@ -102,31 +98,30 @@ export const MobileNaveContent = (props: MobileNavContentProps) => {
       {isOpen && (
         <RemoveScroll forwardProps>
           <motion.nav
-            transition={{ duration: 0.08 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
+            className='h-screen absolute top-0 left-0 w-full pt-3 bg-white z-10 flex flex-col overflow-auto pb-8'
+            transition={{ duration: 0.2 }}
+            initial={{ opacity: 0, x: -500 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -500 }}
           >
-            <Box className='h-screen absolute top-0 left-0 w-full pt-3 bg-white z-10 flex flex-col overflow-auto pb-8'>
-              <Box>
-                <Box className='px-4'>
-                  <Stack row className='items-center'>
-                    <Logo />
-                    <CloseButton
-                      ref={closeBtnRef}
-                      className='ml-auto'
-                      onClick={onClose}
-                    />
-                  </Stack>
-                </Box>
-                <Box className={`px-6 mt-6 pb-4`}>
-                  <Stack col spacing='3' className='mb-3'>
-                    <NavLink href='/blog'>Blog</NavLink>
-                    <NavLink href='/about'>About</NavLink>
-                    <NavLink href='/works'>Works</NavLink>
-                    <NavLink href='/contact'>contact</NavLink>
-                  </Stack>
-                </Box>
+            <Box className=''>
+              <Box className='px-4'>
+                <Stack row className='items-center'>
+                  <Logo />
+                  <CloseButton
+                    ref={closeBtnRef}
+                    className='ml-auto'
+                    onClick={onClose}
+                  />
+                </Stack>
+              </Box>
+              <Box className={`px-6 mt-6 pb-4`}>
+                <Stack col spacing='3' className='mb-3'>
+                  <NavLink href='/blog'>Blog</NavLink>
+                  <NavLink href='/about'>About</NavLink>
+                  <NavLink href='/works'>Works</NavLink>
+                  <NavLink href='/contact'>contact</NavLink>
+                </Stack>
               </Box>
             </Box>
           </motion.nav>
@@ -138,20 +133,8 @@ export const MobileNaveContent = (props: MobileNavContentProps) => {
 
 export const MobileNavButton = React.forwardRef(
   (props: IconButtonProps, ref: React.Ref<any>) => {
-    const { toggleColorMode: toggleMode } = useColorMode();
-    const text = useColorModeValue('dark', 'light');
-    const SwitchIcon = useColorModeValue(FaMoon, FaSun);
     return (
       <div className='md:hidden justify-end flex items-center'>
-        <IconButton
-          size='md'
-          className='text-lg sm:ml-3'
-          text='current'
-          aria-label={`Switch to ${text} mode`}
-          variant='ghost'
-          onClick={toggleMode}
-          icon={<SwitchIcon />}
-        />
         <IconButton
           className='md:hidden text-xl  ml-3'
           ref={ref}

@@ -2,16 +2,16 @@
 import * as React from 'react';
 import { Container, Box, Stack } from '@nature-ui/core';
 
-import MainLayout from 'layouts/main';
-import Footer from 'components/footer';
 import { Styled } from 'components/nature-jsx-elements';
 import { BlurLeft, BlurRight } from 'components/BlurEffect';
 import { Button } from 'components/custom/Button';
 import { getBlogPosts } from 'utils/get-blog-posts';
 import { HomePostCards } from 'components/cards/home-post-cards';
-import { WorksCard } from 'components/cards/works-card';
+import { HomeWorksCard } from 'components/cards/works-card';
 import { Search } from 'components/algolia-search';
 import works from 'configs/works.json';
+
+import MainLayout from 'layouts/main';
 
 const Index = ({ posts }) => {
   return (
@@ -101,11 +101,10 @@ const Index = ({ posts }) => {
           </Button>
         </div>
         <Stack spacing='12' col>
-          <WorksCard work={works[0]} />
-          <WorksCard work={works[1]} />
+          <HomeWorksCard work={works[0]} />
+          <HomeWorksCard work={works[1]} />
         </Stack>
       </Container>
-      <Footer />
     </MainLayout>
   );
 };

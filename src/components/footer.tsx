@@ -70,7 +70,7 @@ const FooterLink: React.FC<FooterLinkProps> = ({
 
 const Footer = () => {
   return (
-    <Box as='footer' className='relative'>
+    <Box as='footer' className='relative' css={{ justifySelf: 'flex-start' }}>
       <BlurLeft className='absolute -top-44 left-0 lg:left-64 xl:left-80 2xl:left-96' />
       <BlurRight className='absolute -top-44 right-0 lg:right-64 xl:right-80 2xl:right-96' />
       <Box className='text-center py-16 relative bg-glass'>

@@ -14,7 +14,7 @@ const Main = ({
     <>
       <SEO title={title} description={description} />
       <Header />
-      {children}
+      <span className='relative z-10'>{children}</span>
       <Footer />
     </>
   );

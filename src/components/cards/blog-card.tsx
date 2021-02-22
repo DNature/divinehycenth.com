@@ -20,7 +20,7 @@ export const BlogCard = ({ className = '', post, ...rest }) => {
         )}
       >
         <Link href={slug}>
-          <Box className='md:grid grid-cols-2 gap-4'>
+          <Box className='md:grid grid-cols-2 gap-4 items-center'>
             <Box className='h-full'>
               <Image
                 loading='lazy'
