@@ -86,9 +86,9 @@ const Image = ({ src, ...props }) => {
   let fallbackSrc = src.split('.');
 
   if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
-    fallbackSrc = fallbackSrc.join('.').replace('/c_scale/', '/w_50/');
+    fallbackSrc = fallbackSrc.join('.').replace(/\/c_scale.*?\//gis, '/w_50/');
   } else {
-    fallbackSrc = src.replace('c_scale,w_0.8', 'c_scale,w_0.05');
+    fallbackSrc = src.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.05/');
   }
 
   return (
