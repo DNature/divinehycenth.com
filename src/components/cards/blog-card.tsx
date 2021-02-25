@@ -9,9 +9,9 @@ import { getNChars } from 'utils/getNChars';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const BottomVariants = {
-  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 1 } },
-  hidden: { opacity: 0, y: 100 },
+const LeftVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 1 } },
 };
 
 export const BlogCard = ({ className = '', post, ...rest }) => {
@@ -38,7 +38,7 @@ export const BlogCard = ({ className = '', post, ...rest }) => {
       ref={ref}
       animate={controls}
       initial='hidden'
-      variants={BottomVariants}
+      variants={LeftVariants}
       className={clsx(
         className,
         'p-6 rounded-2xl bg-glass-card cursor-pointer hover:opacity-80 group',
