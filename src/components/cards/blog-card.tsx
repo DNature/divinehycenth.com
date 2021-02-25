@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Link from 'next/link';
-import { Box, Image, Badge, Stack, clsx } from '@nature-ui/core';
+import { Box, LazyImage, Badge, Stack, clsx } from '@nature-ui/core';
 
 import { Styled } from 'components/nature-jsx-elements';
 import { getNChars } from 'utils/getNChars';
@@ -16,6 +16,8 @@ const BottomVariants = {
 
 export const BlogCard = ({ className = '', post, ...rest }) => {
   const { slug, tags, title, description, imageUrl } = post;
+
+  const fallbackSrc = imageUrl.replace('c_scale,w_0.8', 'c_scale,w_0.01');
 
   const [ref, inView] = useInView();
   const controls = useAnimation();
@@ -41,11 +43,12 @@ export const BlogCard = ({ className = '', post, ...rest }) => {
       <Link href={slug}>
         <Box className='md:grid grid-cols-2 gap-4 items-center'>
           <Box className='h-full'>
-            <Image
+            <LazyImage
               loading='lazy'
               src={imageUrl}
+              fallbackSrc={fallbackSrc}
               alt={title}
-              className='rounded-2xl'
+              className='rounded-2xl object-cover w-full h-full'
             />
           </Box>
           <Box>

@@ -1,6 +1,6 @@
 /** ** */
 import * as React from 'react';
-import { Image, Box } from '@nature-ui/core';
+import { LazyImage, Box } from '@nature-ui/core';
 import { useRouter } from 'next/router';
 
 import SEO from './seo';
@@ -48,14 +48,15 @@ function PageContainer(props: PageContainerProps) {
   const { frontMatter, children } = props;
   useHeadingFocusOnRouteChange();
 
-  const {
-    title,
-    description,
-    editUrl,
-    imageUrl,
-    lastEdited,
-    auth,
-  } = frontMatter;
+  const { title, description, editUrl, imageUrl, lastEdited } = frontMatter;
+
+  let fallbackSrc: any = imageUrl.split('.');
+
+  if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
+    fallbackSrc = fallbackSrc.join('.').replace('/c_scale/', '/w_50/');
+  } else {
+    fallbackSrc = imageUrl.replace('c_scale,w_0.8', 'c_scale,w_0.05');
+  }
 
   return (
     <>
@@ -80,7 +81,14 @@ function PageContainer(props: PageContainerProps) {
                     Last edited: {lastEdited}
                   </Styled.p>
                 )}
-                <Image src={imageUrl} className='mt-12' alt={title} />
+                <div className='mt-12 grid'>
+                  <LazyImage
+                    src={imageUrl}
+                    fallbackSrc={fallbackSrc}
+                    className='w-full h-full object-cover'
+                    alt={title}
+                  />
+                </div>
                 {children}
               </PageTransition>
               <Box className='my-14'>

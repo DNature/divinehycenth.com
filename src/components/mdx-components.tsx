@@ -1,6 +1,6 @@
 /** ** */
 import * as React from 'react';
-import { Alert, Box, PropsOf, Divider, clsx, Image } from '@nature-ui/core';
+import { Alert, Box, PropsOf, Divider, clsx, LazyImage } from '@nature-ui/core';
 import { El, Styled } from './nature-jsx-elements';
 
 const Pre = ({ className, ...props }) => {
@@ -82,6 +82,27 @@ const InlineCode = (props: any) => (
   <El.code className='text-primary-600 text-sm' {...props} />
 );
 
+const Image = ({ src, ...props }) => {
+  let fallbackSrc = src.split('.');
+
+  if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
+    fallbackSrc = fallbackSrc.join('.').replace('/c_scale/', '/w_50/');
+  } else {
+    fallbackSrc = src.replace('c_scale,w_0.8', 'c_scale,w_0.05');
+  }
+
+  return (
+    <div className='mt-16 grid'>
+      <LazyImage
+        fallbackSrc={fallbackSrc}
+        src={src}
+        className='h-full w-full object-cover'
+        {...props}
+      />
+    </div>
+  );
+};
+
 const MDXComponents = {
   h1: (props) => <Styled.h1 className='text-4xl' {...props} />,
   h2: (props) => (
@@ -98,7 +119,7 @@ const MDXComponents = {
   pre: Pre,
   // kbd: Kbd,
   br: (props) => <Box height='24px' {...props} />,
-  img: (props) => <Image className='mt-16' {...props} />,
+  img: (props) => <Image {...props} />,
   table: Table,
   th: THead,
   td: TData,
