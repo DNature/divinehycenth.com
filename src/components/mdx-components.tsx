@@ -144,6 +144,7 @@ const MDXComponents = {
       {...props}
     />
   ),
+  dot: () => <div className='font-bold text-xl text-center my-4'>. . .</div>,
 };
 
 export default MDXComponents;

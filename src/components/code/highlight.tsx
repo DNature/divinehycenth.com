@@ -67,7 +67,7 @@ const Highlight = ({
               return (
                 <nature.div
                   className={clsx(className, {
-                    'bg-green-200 bg-opacity-20 -mx-3 px-3': shouldHighlightLine(
+                    'bg-green-200 bg-opacity-20 -mx-4 px-4': shouldHighlightLine(
                       i,
                     ),
                   })}

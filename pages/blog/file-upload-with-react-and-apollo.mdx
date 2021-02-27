@@ -207,7 +207,7 @@ const UploadMutation = gql`
 
 First we imported **gql** from graphql-tag then we create our Upload mutation
 which has a parameter **file** (in graphql, variables are written with a dollar
-sign prefix followed by the name \$file) and its value is a graphql scaler type
+sign prefix followed by the name) and its value is a graphql scaler type
 **Upload.**
 
 ```js
@@ -308,9 +308,9 @@ However, You are going to run into issues when trying to display files like
 images on the client side of your application but don't worry because that's
 what we are going to work on next.
 
-<div className='font-bold text-xl text-center'>. . .</div>
+<dot />
 
-## BONUS 🙂
+## BONUS 💃
 
 Henceforth, i'm just going to give you a brief walk through on how these code
 works and you can find the complete source code for both the server and client
@@ -321,7 +321,7 @@ on github.
 - client
   [https://github.com/DNature/apollo-upload-client](https://github.com/DNature/apollo-upload-client)
 
-<div className='font-bold text-xl text-center'>. . .</div>
+<dot />
 
 ### Server
 
@@ -345,8 +345,8 @@ I think this funny image explains **cors** better:
 
 Add the following piece of code to make your server look like this
 
-```js
-import { ApolloServer } from 'apollo-server-express'; // switched from apollo-server to apollo-server-express
+```js {1,4,5,6,24,26,28,30}
+import { ApolloServer } from 'apollo-server-express';
 import typeDefs from './typeDefs';
 import resolvers from './resolvers';
 import express from 'express';
@@ -386,7 +386,7 @@ export default (async function () {
 })();
 ```
 
-<div className='font-bold text-xl text-center'>. . .</div>
+<dot />
 
 ## Client
 
@@ -397,7 +397,7 @@ We are going to do two things on the client.
 
 Add a proxy that points to your server's domain in your _package.json_ file.
 
-```json
+```json {4}
 {
   ...
 
@@ -411,7 +411,7 @@ to add that to our **createUploadLink** uri.
 
 Now your `src/index.js` should look like this
 
-```js
+```js {12}
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -423,7 +423,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const httpLink = createUploadLink({
-  uri: 'http://localhost:4000/graphql', // changed
+  uri: 'http://localhost:4000/graphql',
 });
 
 const client = new ApolloClient({
