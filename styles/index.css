@@ -79,11 +79,11 @@ html {
   line-height: 1.5;
   font-family: 'Ubuntu', Consolas, Monaco, 'Andale Mono', monospace !important;
   scroll-behavior: smooth;
-  transition: background 300ms ease-in-out, color 300ms ease-in-out;
+  transition: background 300ms ease-in-out, color 100ms ease-in-out;
 }
 
 * {
-  transition: background 500ms ease-in-out, color 300ms ease-in-out;
+  transition: background 500ms ease-in-out, color 50ms ease-in-out;
 }
 
 html,
@@ -117,11 +117,6 @@ blockquote * p {
   margin-top: 0 !important;
 }
 
-pre {
-  scrollbar-width: 0;
-  overflow-x: scroll;
-}
-
 pre::-webkit-scrollbar,
 code::-webkit-scrollbar {
   display: none;
@@ -145,4 +140,13 @@ code::-webkit-scrollbar {
 
 .bg-gradient:hover {
   box-shadow: none;
+}
+
+.code_container::-webkit-scrollbar {
+  display: none;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  font-family: 'Ubuntu Mono', Consolas, Monaco, 'Andale Mono', monospace;
 }

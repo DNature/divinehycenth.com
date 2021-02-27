@@ -113,7 +113,7 @@ const mdxConfig = {
     require('remark-slug'),
     require('remark-toc'),
     require('remark-unwrap-images'),
-    require('remark-prism'),
+    // require('remark-prism'),
   ],
   extendFrontMatter: {
     process: async (_, matter) => {

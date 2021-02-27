@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Link from 'next/link';
-import { Box, Image, Avatar, Badge, Stack } from '@nature-ui/core';
+import { Box, LazyImage, Avatar, Badge, Stack } from '@nature-ui/core';
 import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 
@@ -12,8 +12,8 @@ import { Styled } from 'components/nature-jsx-elements';
 import { getNChars } from 'utils/getNChars';
 
 const BottomVariants = {
-  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 1 } },
-  hidden: { opacity: 0, y: 100 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+  hidden: { opacity: 0 },
 };
 
 export const HomePostCards = ({ post, ...rest }) => {
@@ -27,6 +27,14 @@ export const HomePostCards = ({ post, ...rest }) => {
     author: { githubUrl, websiteUrl, avatarUrl, name },
   } = post;
   const readableDate = format(parseISO(date), 'MMMM dd, yyyy');
+
+  let fallbackSrc: any = imageUrl.split('.');
+
+  if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
+    fallbackSrc = fallbackSrc.join('.').replace(/\/c_scale.*?\//gis, '/w_50/');
+  } else {
+    fallbackSrc = imageUrl.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.05/');
+  }
 
   const authorProfile =
     name === 'Divine Hycenth' ? '/about' : websiteUrl || githubUrl || '#';
@@ -42,20 +50,22 @@ export const HomePostCards = ({ post, ...rest }) => {
 
   return (
     <motion.article
-      ref={ref}
-      animate={controls}
-      initial='hidden'
-      variants={BottomVariants}
+      // ref={ref}
+      // animate={controls}
+      // initial='hidden'
+      // variants={BottomVariants}
       {...rest}
     >
       <Link href={slug}>
         <a>
-          <Image
-            src={imageUrl}
-            alt={title}
-            loading='lazy'
-            className='rounded-2xl cursor-pointer'
-          />
+          <div className='grid'>
+            <LazyImage
+              fallbackSrc={fallbackSrc}
+              src={imageUrl}
+              alt={title}
+              className='rounded-2xl cursor-pointer w-full h-full object-cover'
+            />
+          </div>
           {tags && (
             <Stack row spacing='2' className='mt-4'>
               {tags.map((tag, i) => (

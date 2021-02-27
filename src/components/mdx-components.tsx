@@ -3,22 +3,26 @@ import * as React from 'react';
 import { Alert, Box, PropsOf, Divider, clsx, LazyImage } from '@nature-ui/core';
 import { El, Styled } from './nature-jsx-elements';
 
-const Pre = ({ className, ...props }) => {
+import CodeBlock from './code/code-block';
+
+const Pre = ({ ...props }) => {
   return (
-    <El.div className={'py-8'}>
-      <El.pre
-        className={clsx('rounded-lg p-4 ')}
-        css={{
-          lineHeight: '1.2',
-          tabSize: '2',
-          fontFamily: '"Ubuntu Mono", "SF Mono", Menlo, monospace',
-          color: '#fff',
-          background: '#000000',
-          hyphens: 'none',
-        }}
-        {...props}
-      />
-    </El.div>
+    // <El.div className={'py-8'}>
+    //   <El.pre
+    //     className={clsx('rounded-lg p-4 ')}
+    //     css={{
+    //       lineHeight: '1.2',
+    //       tabSize: '2',
+    //       fontFamily: '"Ubuntu Mono", "SF Mono", Menlo, monospace',
+    //       color: '#fff',
+    //       background: '#000000',
+    //       hyphens: 'none',
+    //     }}
+    //     {...props}
+    //   />
+    // </El.div>
+
+    <El.div className={clsx('rounded-lg my-8 ')} {...props} />
   );
 };
 
@@ -115,7 +119,7 @@ const MDXComponents = {
   hr: (props) => <Divider className='my-12' {...props} />,
   strong: (props) => <Box as='strong' className='font-medium ' {...props} />,
   inlineCode: InlineCode,
-  // code: CodeBlock,
+  code: CodeBlock,
   pre: Pre,
   // kbd: Kbd,
   br: (props) => <Box height='24px' {...props} />,
