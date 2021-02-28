@@ -1,5 +1,11 @@
 module.exports = {
-  purge: [],
+  purge: [
+    "src/components/**/*.tsx",
+    "pages/**/*.{mdx,tsx}",
+    "layouts/**/*.tsx",
+    'node_modules/@nature-ui/**/*.js',
+    'node_modules/@nature-ui/layout/*.js'
+  ],
   theme: {
     extend: {
       colors: {
@@ -41,9 +47,6 @@ module.exports = {
         glass: "var(--glass)",
         white: 'var(--white)'
       },
-      spacing: {
-        28: '7rem',
-      },
       letterSpacing: {
         tighter: '-.04em',
       },
@@ -69,5 +72,5 @@ module.exports = {
   },
 
   variants: {},
-  plugins: ['../node_modules/@nature-ui/**/*.js*'],
+  plugins: ['node_modules/@nature-ui/**/*.js*'],
 };

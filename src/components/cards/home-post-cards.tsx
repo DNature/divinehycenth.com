@@ -2,18 +2,17 @@ import React from 'react';
 
 import Link from 'next/link';
 import { Box, LazyImage, Avatar, Badge, Stack } from '@nature-ui/core';
-import format from 'date-fns/format';
-import parseISO from 'date-fns/parseISO';
 
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import readableDate from 'utils/readable-date';
 
 import { Styled } from 'components/nature-jsx-elements';
 import { getNChars } from 'utils/getNChars';
 
 const BottomVariants = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-  hidden: { opacity: 0 },
+  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, y: 100 },
 };
 
 export const HomePostCards = ({ post, ...rest }) => {
@@ -26,14 +25,13 @@ export const HomePostCards = ({ post, ...rest }) => {
     date,
     author: { githubUrl, websiteUrl, avatarUrl, name },
   } = post;
-  const readableDate = format(parseISO(date), 'MMMM dd, yyyy');
 
   let fallbackSrc: any = imageUrl.split('.');
 
   if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
     fallbackSrc = fallbackSrc.join('.').replace(/\/c_scale.*?\//gis, '/w_50/');
   } else {
-    fallbackSrc = imageUrl.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.05/');
+    fallbackSrc = imageUrl.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.01/');
   }
 
   const authorProfile =
@@ -50,10 +48,10 @@ export const HomePostCards = ({ post, ...rest }) => {
 
   return (
     <motion.article
-      // ref={ref}
-      // animate={controls}
-      // initial='hidden'
-      // variants={BottomVariants}
+      ref={ref}
+      animate={controls}
+      initial='hidden'
+      variants={BottomVariants}
       {...rest}
     >
       <Link href={slug}>
@@ -85,7 +83,7 @@ export const HomePostCards = ({ post, ...rest }) => {
             <Avatar src={avatarUrl} alt={name} />
             <Box>
               <p className='font-medium'>{name}</p>
-              <p className='opacity-60 text-sm'>{readableDate}</p>
+              <p className='opacity-60 text-sm'>{readableDate(date)}</p>
             </Box>
           </Stack>
         </a>

@@ -10,7 +10,7 @@ import {
   ModalBody,
   ModalContent,
   ModalCloseButton,
-  Image,
+  LazyImage,
   useDisclosure,
 } from '@nature-ui/core';
 
@@ -21,14 +21,20 @@ import { Button } from 'components/custom/Button';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const LeftVariants = {
-  visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 1 } },
-  hidden: { opacity: 0, scale: 0.6, x: -300 },
-};
-
 const RightVariants = {
-  visible: { opacity: 1, scale: 1, x: 1, transition: { duration: 1 } },
-  hidden: { opacity: 0, scale: 0.6, x: 1000 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    x: 0,
+    // display: 'block',
+    transition: { duration: 1 },
+  },
+  hidden: {
+    opacity: 0,
+    scale: 0.6,
+    // x: 500,
+    // display: 'none',
+  },
 };
 
 const BottomVariants = {
@@ -38,6 +44,14 @@ const BottomVariants = {
 
 export const HomeWorksCard = ({ work, className = '', ...rest }) => {
   const { title, tags, description, githubUrl, websiteUrl, imageUrl } = work;
+
+  let fallbackSrc: any = imageUrl.split('.');
+
+  if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
+    fallbackSrc = fallbackSrc.join('.').replace(/\/c_scale.*?\//gis, '/w_50/');
+  } else {
+    fallbackSrc = imageUrl.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.01/');
+  }
 
   const [ref, inView] = useInView();
   const controls = useAnimation();
@@ -59,12 +73,13 @@ export const HomeWorksCard = ({ work, className = '', ...rest }) => {
         {...rest}
       >
         <Box className='md:grid grid-cols-2 gap-4 items-center'>
-          <Box className='h-full'>
-            <Image
+          <Box className='grid'>
+            <LazyImage
               loading='lazy'
               src={imageUrl}
+              fallbackSrc={fallbackSrc}
               alt={title}
-              className='rounded-2xl'
+              className='rounded-2xl h-full w-full object-cover'
             />
           </Box>
           <Box>
@@ -101,6 +116,7 @@ export const WorksCard = ({
   websiteUrl,
   githubUrl,
   tags = [],
+  className = '',
   ...rest
 }) => {
   const [ref, inView] = useInView();
@@ -112,64 +128,67 @@ export const WorksCard = ({
     } else controls.start('hidden');
   }, [controls, inView]);
 
+  let fallbackSrc: any = imageUrl.split('.');
+
+  if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
+    fallbackSrc = fallbackSrc.join('.').replace(/\/c_scale.*?\//gis, '/w_50/');
+  } else {
+    fallbackSrc = imageUrl.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.01/');
+  }
+
   return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial='hidden'
-      variants={LeftVariants}
+    <Box
+      className={clsx(className, 'relative h-full')}
+      css={{ height: '60vh' }}
       {...rest}
     >
-      <Box className='relative' css={{ height: '70vh' }}>
-        <Image
+      <Box className='grid'>
+        <LazyImage
+          loading='lazy'
+          fallbackSrc={fallbackSrc}
           src={imageUrl}
           alt={title}
           className='rounded-2xl h-full w-4/6 object-cover object-left'
         />
-
-        <Box className='absolute top-0 right-0 w-2/5 h-full py-12'>
-          <motion.div
-            ref={ref}
-            animate={controls}
-            initial='hidden'
-            variants={RightVariants}
-            className='bg-white w-full h-full shadow-2xl rounded-2xl p-8 flex items-center'
-          >
-            <div>
-              <Styled.h2>{title}</Styled.h2>
-              {tags && (
-                <Stack row spacing='2' className='my-2'>
-                  {tags.map((tag, i) => (
-                    <Badge color='primary-600' variant='solid' key={tag + i}>
-                      {tag}
-                    </Badge>
-                  ))}
-                </Stack>
-              )}
-              <Styled.p className='text-xl mb-6'>{description}</Styled.p>
-              <Stack row>
-                <Button
-                  target='_blank'
-                  size='sm'
-                  color='gradient'
-                  to={websiteUrl}
-                >
-                  Visit site
-                </Button>
-                <Button
-                  target='_blank'
-                  size='sm'
-                  color='gray-300'
-                  to={githubUrl}
-                >
-                  View source
-                </Button>
-              </Stack>
-            </div>
-          </motion.div>
-        </Box>
       </Box>
-    </motion.div>
+
+      <Box className='absolute top-0 right-0 w-2/5 py-12'>
+        <motion.div
+          ref={ref}
+          animate={controls}
+          initial='hidden'
+          variants={RightVariants}
+          className='bg-white w-full h-full shadow-2xl rounded-2xl px-8 py-20 flex items-center'
+        >
+          <div>
+            <Styled.h2>{title}</Styled.h2>
+            {tags && (
+              <Stack row spacing='2' className='my-2'>
+                {tags.map((tag, i) => (
+                  <Badge color='primary-600' variant='solid' key={tag + i}>
+                    {tag}
+                  </Badge>
+                ))}
+              </Stack>
+            )}
+            <Styled.p className='text-xl mb-6'>{description}</Styled.p>
+            <Stack row>
+              <Button
+                target='_blank'
+                size='sm'
+                color='gradient'
+                to={websiteUrl}
+              >
+                Visit site
+              </Button>
+              <Button target='_blank' size='sm' color='gray-300' to={githubUrl}>
+                View source
+              </Button>
+            </Stack>
+          </div>
+        </motion.div>
+      </Box>
+    </Box>
   );
 };
 
@@ -184,6 +203,14 @@ export const MobileCard = ({
   ...rest
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  let fallbackSrc: any = imageUrl.split('.');
+
+  if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
+    fallbackSrc = fallbackSrc.join('.').replace(/\/c_scale.*?\//gis, '/w_50/');
+  } else {
+    fallbackSrc = imageUrl.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.01/');
+  }
 
   const [ref, inView] = useInView();
   const controls = useAnimation();
@@ -210,11 +237,15 @@ export const MobileCard = ({
         onClick={onOpen}
         {...rest}
       >
-        <Image
-          src={imageUrl}
-          alt={title}
-          className='absolute top-0 w-full h-full object-cover object-left'
-        />
+        <Box className='grid'>
+          <LazyImage
+            loading='lazy'
+            src={imageUrl}
+            fallbackSrc={fallbackSrc}
+            alt={title}
+            className='absolute top-0 w-full h-full object-cover object-left'
+          />
+        </Box>
         <div className='absolute top-0 w-full h-full bg-gradient-to-t from-gray-900' />
 
         <h2 className='text-3xl font-semibold absolute bottom-4 left-4 text-gray-100'>
@@ -226,11 +257,15 @@ export const MobileCard = ({
         <ModalOverlay className='z-50'>
           <ModalContent>
             <ModalCloseButton />
-            <Image
-              src={imageUrl}
-              alt={title}
-              className='w-full h-72 object-cover object-left'
-            />
+            <Box className='grid'>
+              <LazyImage
+                loading='lazy'
+                src={imageUrl}
+                fallbackSrc={fallbackSrc}
+                alt={title}
+                className='w-full h-72 object-cover object-left'
+              />
+            </Box>
             <ModalBody>
               <Styled.h2>{title}</Styled.h2>
               {tags && (

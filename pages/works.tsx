@@ -31,7 +31,7 @@ const Works = () => {
           centered
           className='my-12 px-6 lg:px-0 hidden md:flex'
         >
-          <Stack col spacing='20'>
+          <Stack col spacing='20' className='w-full'>
             {works.map((work) => (
               <WorksCard key={work.title} {...work} />
             ))}

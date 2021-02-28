@@ -131,14 +131,10 @@ const mdxConfig = {
       // get the slug
       const slug = fileToPath(mdxPath);
 
-      // If frontMatter includes author, add the author's data
-      const authorData = author ? await getUserData(author) : undefined;
-
       return {
         slug,
         lastEdited,
         editUrl,
-        auth: authorData,
         tags,
       };
     },

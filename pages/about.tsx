@@ -1,20 +1,31 @@
-import { Box, Image, Container, Stack } from '@nature-ui/core';
+import { Box, LazyImage, Container } from '@nature-ui/core';
 
 import { Styled } from 'components/nature-jsx-elements';
 
 import MainLayout from 'layouts/main';
 
 const About = ({}) => {
+  let imageUrl =
+    'https://res.cloudinary.com/dnature/image/upload/c_scale/v1613595453/avatar_ngv62q.jpg';
+
+  let fallbackSrc: any = imageUrl.split('.');
+
+  if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
+    fallbackSrc = fallbackSrc.join('.').replace(/\/c_scale.*?\//gis, '/w_50/');
+  } else {
+    fallbackSrc = imageUrl.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.01/');
+  }
+
   return (
     <MainLayout>
       <Container size='lg' centered className='relative z-20 my-12'>
-        <Box className='mx-4 md:mx-0'>
-          <Image
-            src={
-              'https://res.cloudinary.com/dnature/image/upload/v1613595453/avatar_ngv62q.jpg'
-            }
+        <Box className='grid mx-4 md:mx-0'>
+          <LazyImage
+            src={imageUrl}
+            loading='lazy'
+            fallbackSrc={fallbackSrc}
             alt={'Divine Hycenth'}
-            className='mx-auto md:mx-0 z-0 px-4 md:py-0'
+            className='w-2/5 h-full object-cover mx-auto md:mx-0 z-0 px-4 md:py-0'
           />
         </Box>
         <Box className='mt-12 md:-mt-40 md:ml-80 xl:ml-92 mx-4 md:mx-0 bg-white p-4 md:p-16 relative z-10'>
