@@ -55,7 +55,7 @@ function PageContainer(props: PageContainerProps) {
   if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
     fallbackSrc = fallbackSrc.join('.').replace(/\/c_scale.*?\//gis, '/w_50/');
   } else {
-    fallbackSrc = imageUrl.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.05/');
+    fallbackSrc = imageUrl.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.01/');
   }
 
   return (

@@ -15,7 +15,7 @@ const CopyButton = ({ className, ...props }: ButtonType) => (
 
 const CodeContainer = ({ className, ...props }: any) => (
   <Box
-    className={`${className} p-4 rounded-lg my-8 editor__component`}
+    className={`${className} p-4 rounded-lg editor__component`}
     css={{ backgroundColor: '#07080c' }}
     {...props}
   />
@@ -30,7 +30,7 @@ function CodeBlock(props) {
 
   return (
     <>
-      <Box className='relative z-0 editor__component' {...rest}>
+      <Box className='relative z-0 my-8 editor__component' {...rest}>
         <CodeContainer className='overflow-x-auto code_container'>
           <Highlight
             codeString={children.trim()}

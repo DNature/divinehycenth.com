@@ -22,7 +22,7 @@ const Pre = ({ ...props }) => {
     //   />
     // </El.div>
 
-    <El.div className={clsx('rounded-lg my-8 ')} {...props} />
+    <El.div className={clsx('rounded-lg')} {...props} />
   );
 };
 
@@ -92,7 +92,7 @@ const Image = ({ src, ...props }) => {
   if (fallbackSrc[fallbackSrc.length - 1] === 'gif') {
     fallbackSrc = fallbackSrc.join('.').replace(/\/c_scale.*?\//gis, '/w_50/');
   } else {
-    fallbackSrc = src.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.05/');
+    fallbackSrc = src.replace(/\/c_scale.*?\//gis, '/c_scale,w_0.01/');
   }
 
   return (
