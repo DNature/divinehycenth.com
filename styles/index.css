@@ -78,9 +78,9 @@ html {
   box-sizing: border-box;
   line-height: 1.5;
   font-family: 'Ubuntu', Consolas, Monaco, 'Andale Mono', monospace !important;
-  scroll-behavior: smooth;
   transition: background 300ms ease-in-out, color 100ms ease-in-out;
 }
+/* scroll-behavior: smooth; */
 
 * {
   transition: background 500ms ease-in-out, color 50ms ease-in-out;
