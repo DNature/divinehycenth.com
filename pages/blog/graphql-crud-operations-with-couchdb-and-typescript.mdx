@@ -212,9 +212,9 @@ field. Resolvers cannot be included in the GraphQL schema language, so they must
 be added separately. The collection of resolvers is called the "resolver map".
 It mostly consist of Queries and Mutations.
 
-#### Mutations -
+#### Mutations
 
-**4a: Creating a record** - `nano.insert()`.
+##### 4a: Creating a record - `nano.insert()`.
 
 The first operation in CRUD is Create. `nano.insert()` is used to both insert
 and update the document. This function takes either an object or a string as an
@@ -259,7 +259,7 @@ export default {
 
 <br />
 
-**4b: Update a record** - `nano.insert(id, rev)`.
+##### 4b: Update a record - `nano.insert(id, rev)`.
 
 As stated earlier, `nano.insert()` is used to both insert and update the
 document. When this function has given a document with both `_id` and `_rev,`
@@ -297,7 +297,7 @@ export default {
 
 <br />
 
-**4c: Delete record** - `nano.destroy(id, rev).
+##### 4c: Delete record - `nano.destroy(id, rev).
 
 `nano.destroy(id, rev, [callback])` is used delete a document from database.
 Underneath method deletes a blog entry given it’s `_id` and `_rev`
@@ -326,7 +326,7 @@ export default {
 
 <br />
 
-**4d 1: Retrieve a record by id** - `nano.get(id).
+##### 4d 1: Retrieve a record by id - `nano.get(id).
 
 `nano.get(id, [params], [callback])` is used to get the document by its id.
 Underneath method in BlogService class gets the blog given its id.
@@ -353,7 +353,7 @@ export default {
 
 <br />
 
-**4d 2: Retrieve multiple files** - `nano.find(selector).
+##### 4d 2: Retrieve multiple files - `nano.find(selector).
 
 `nano.find(selector, [callback])` performs a _"Mango" query_ by supplying a
 JavaScript object containing a selector: the `fields` option can be used to

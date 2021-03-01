@@ -69,7 +69,7 @@ const LinkedHeading = (props: PropsOf<typeof El.h2>) => {
           aria-label='anchor'
           href={`#${id}`}
           className={clsx(
-            'text-primary-100 focus:opacity-100 focus:shadow-outline opacity-0 ml-2 outline-none hover:opacity-100 rounded-md',
+            'text-primary-500 focus:opacity-100 focus:shadow-outline opacity-0 ml-2 outline-none hover:opacity-100 rounded-md',
             {
               'opacity-100': hover,
             },
@@ -115,7 +115,12 @@ const MDXComponents = {
   h3: (props) => (
     <LinkedHeading className='text-2xl font-medium mt-6' as='h3' {...props} />
   ),
-  h4: (props) => <LinkedHeading as='h4' {...props} />,
+  h4: (props) => (
+    <LinkedHeading as='h4' className='text-xl font-medium mt-6' {...props} />
+  ),
+  h5: (props) => (
+    <LinkedHeading as='h5' className='text-lg font-medium mt-6' {...props} />
+  ),
   hr: (props) => <Divider className='my-12' {...props} />,
   strong: (props) => <Box as='strong' className='font-medium ' {...props} />,
   inlineCode: InlineCode,
