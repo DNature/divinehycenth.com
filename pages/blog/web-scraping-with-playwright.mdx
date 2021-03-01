@@ -9,3 +9,150 @@ author: DNature
 ---
 
 ## An introduction to web scraping with playwright, nodejs and firebase.
+
+### Prerequisites
+
+If you want to follow along this tutorial, you'll need the following:
+
+- Basic Knowledge of Firebase and a Firebase account
+  [https://firebase.google.com/](https://firebase.google.com/)
+- Basic knowledge of javascript
+- A coding Editor Vscode Preferred
+- API Development/Debugging tool.
+
+### What is web scrapping?
+
+Web scrapping refers to the extraction of data from a website. This information
+is collected and exported into a format (i.e csv) that is more useful to the
+user.
+
+### What is a Headless Browser?
+
+You might have heard of the term Headless Browser but still don't know what it
+means. You don't have to worry because the Internet's got our back 🙂
+
+> Headless browsers provide automated control of a web page in an environment
+> similar to popular web browsers, but are executed via a command-line interface
+> or using network communication.
+> [wikipedia](https://en.wikipedia.org/wiki/Headless_browser).
+
+Here are few most popular Headless Browsers 👇
+
+[Puppeteer](https://developers.google.com/web/tools/puppeteer/): Puppeteer is a
+Node library which provides a high-level API to control headless Chrome or
+Chromium over the DevTools Protocol. It can also be configured to use full
+(non-headless) Chrome or Chromium.
+
+[Playwright](https://playwright.dev/): Playwright is a Node library developed by
+microsoft to automate Chromium, Firefox and WebKit with a single API. Playwright
+is built to enable cross-browser web automation that is ever-green, capable,
+reliable and fast.
+
+### Initial Setup 🚀
+
+Lets start off by initializing firebase cloud functions for javascript:
+
+```bash
+firebase init functions
+```
+
+```bash
+cd functions
+```
+
+```bash
+npm run serve
+```
+
+This installs Playwright and browser binaries for Chromium, Firefox and WebKit.
+Once installed, you can require Playwright in a Node.js script and automate web
+browser interactions.
+
+### Now lets create our Instagram Scraper
+
+Instagram on the web uses React, which means we won’t see any dynamic content
+util the page is fully loaded. Playwright is available in the Clould Functions
+runtime, allowing you to spin up a Chrome/Firefox/Webkit browser on your server.
+It will render JavaScript and handle events just like the browser you’re using
+right now.
+
+First, the function logs into a real instagram account. The page.type method
+will find the cooresponding DOM element and type characters into it. Once logged
+in, we navigate to a specific username and wait for the img tags to render on
+the screen, then scrape the src attribute from them.
+
+```js
+const functions = require('firebase-functions');
+const playwright = require('playwright');
+exports.scrapeImages = functions
+  .runWith({
+    timeoutSeconds: 500,
+  })
+  .https.onRequest(async (req, res) => {
+    // Randomly select a browser
+    // You can also specify a single browser that you prefer
+    for (const browserType of ['chromium', 'firefox', 'webkit']) {
+      console.log(browserType); // To know the chosen one 😁
+      const browser = await playwright[browserType].launch();
+      const context = await browser.newContext();
+      const page = await context.newPage();
+      await page.goto('https://www.instagram.com/accounts/login/');
+      // Login form
+      // set a delay to wait for page to completely load all contents
+      await page.waitForTimeout(9000);
+      // You can also take screenshots of pages
+      await page.screenshot({
+        path: `ig-sign-in.png`,
+      });
+      await page.type('[name=username]', '<your-username>');
+      await page.type('[type="password"]', '<your-password>');
+      await page.click('[type=submit]');
+      await page.waitForTimeout(5000);
+      await page.goto(`https://www.instagram.com/divine_hycenth`);
+      await page.waitForTimeout(5000);
+      await page.waitForSelector('img ', {
+        visible: true,
+      });
+      await page.screenshot({ path: `profile.png` });
+      await page.waitForTimeout(5000);
+      // Execute code in the DOM
+      const data = await page.evaluate(() => {
+        const images = document.querySelectorAll('img');
+        const urls = Array.from(images).map((v) => v.src);
+        return urls;
+      });
+      await browser.close();
+      console.log(data);
+      // Return the data in form of json
+      return res.status(200).json(data);
+    }
+  });
+```
+
+> Note: You might need to tweak the delay depending on the speed of your
+> internet to avoid manipulating the dom when it's not fully loaded.
+
+Now we need to test out our API and to do that we're going to need an API
+debugging tool and I'd recommend [Insomnia](https://insomnia.rest/) because it's
+the best API tool i've ever used and it has tons of features. You can also use
+whatever you want or also checkout [Postman](https://www.postman.com/).
+
+![Response data](https://res.cloudinary.com/dnature/image/upload/c_scale/v1614630865/blog/web-scraping/insomnia_vwfyco.png)
+
+In the above image, you can see the response JSON data colored with yellow on
+the right side. It is an array of urls that points to individual images on your
+instagram page.
+
+You can do whatever you want with the data (Download the images) but in our case
+we are just logging it out on the console to see what it looks like.
+
+### Conclusion
+
+Most times Bad dudes applies this technique to Illegally extract data from a
+website and I'm pretty sure that the person reading this is not one of them.
+
+> Always remember to Use your code for good 🙂
+
+I hope you find this helpful.
+
+Happy codding 💻 🙂
