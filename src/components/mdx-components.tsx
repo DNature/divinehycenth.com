@@ -134,8 +134,8 @@ const MDXComponents = {
   td: TData,
   a: (props) => (
     <El.a
-      target='_blank'
-      className='text-primary-100 hover:underline'
+      rel='noopener noreferrer'
+      className='text-primary-500 hover:underline'
       {...props}
     />
   ),
