@@ -61,7 +61,7 @@ cd functions
 ```
 
 ```bash
-npm run serve
+npm install playwright
 ```
 
 This installs Playwright and browser binaries for Chromium, Firefox and WebKit.
@@ -81,61 +81,68 @@ will find the cooresponding DOM element and type characters into it. Once logged
 in, we navigate to a specific username and wait for the img tags to render on
 the screen, then scrape the src attribute from them.
 
-```js
+```js {2,21,22,26}
 const functions = require('firebase-functions');
 const playwright = require('playwright');
-exports.scrapeImages = functions
-  .runWith({
-    timeoutSeconds: 500,
-  })
-  .https.onRequest(async (req, res) => {
-    // Randomly select a browser
-    // You can also specify a single browser that you prefer
-    for (const browserType of ['chromium', 'firefox', 'webkit']) {
-      console.log(browserType); // To know the chosen one 😁
-      const browser = await playwright[browserType].launch();
-      const context = await browser.newContext();
-      const page = await context.newPage();
-      await page.goto('https://www.instagram.com/accounts/login/');
-      // Login form
-      // set a delay to wait for page to completely load all contents
-      await page.waitForTimeout(9000);
-      // You can also take screenshots of pages
-      await page.screenshot({
-        path: `ig-sign-in.png`,
-      });
-      await page.type('[name=username]', '<your-username>');
-      await page.type('[type="password"]', '<your-password>');
-      await page.click('[type=submit]');
-      await page.waitForTimeout(5000);
-      await page.goto(`https://www.instagram.com/divine_hycenth`);
-      await page.waitForTimeout(5000);
-      await page.waitForSelector('img ', {
-        visible: true,
-      });
-      await page.screenshot({ path: `profile.png` });
-      await page.waitForTimeout(5000);
-      // Execute code in the DOM
-      const data = await page.evaluate(() => {
-        const images = document.querySelectorAll('img');
-        const urls = Array.from(images).map((v) => v.src);
-        return urls;
-      });
-      await browser.close();
-      console.log(data);
-      // Return the data in form of json
-      return res.status(200).json(data);
-    }
-  });
+
+exports.scrapeImages = functions.https.onRequest(async (req, res) => {
+  // Randomly select a browser
+  // You can also specify a single browser that you prefer
+  for (const browserType of ['firefox', 'chromium', 'webkit']) {
+    console.log(browserType); // To know the chosen one 😁
+    const browser = await playwright[browserType].launch();
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    await page.goto('https://www.instagram.com/accounts/login/');
+
+    await page.waitForSelector('[type=submit]', {
+      state: 'visible',
+    });
+    // You can also take screenshots of pages
+    await page.screenshot({
+      path: `ig-sign-in.png`,
+    });
+    await page.type('[name=username]', '<your-username>'); // ->
+    await page.type('[type="password"]', '<your-password>'); // ->
+
+    await page.click('[type=submit]');
+    await page.waitForSelector('[placeholder=Search]', { state: 'visible' });
+    await page.goto(`https://www.instagram.com/<your-username>`); // ->
+    await page.waitForSelector('img', {
+      state: 'visible',
+    });
+    await page.screenshot({ path: `profile.png` });
+    // Execute code in the DOM
+    const data = await page.evaluate(() => {
+      const images = document.querySelectorAll('img');
+      const urls = Array.from(images).map((v) => v.src);
+      return urls;
+    });
+    await browser.close();
+    console.log(data);
+    // Return the data in form of json
+    return res.status(200).json(data);
+  }
+});
 ```
 
-> Note: You might need to tweak the delay depending on the speed of your
-> internet to avoid manipulating the dom when it's not fully loaded.
+> Replace highlighted fields with valid credentials.
 
 Now we need to test out our API and to do that we're going to need an API
 debugging tool and I'd recommend [Insomnia](https://insomnia.rest/) because it's
 the best API tool i've ever used and it has tons of features. You can also use
-whatever you want or also checkout [Postman](https://www.postman.com/).
+tools like [Postman](https://www.postman.com/).
+
+start the dev server by running:
+
+```bash
+npm run serve
+```
+
+Open Insomnia and send a post request to the generated url from your firebase
+dev server.
+
+Example `http://localhost:5001/playwright-faecb/us-central1/scrapeImages`
 
 ![Response data](https://res.cloudinary.com/dnature/image/upload/c_scale/v1614630865/blog/web-scraping/insomnia_vwfyco.png)
 
@@ -143,8 +150,46 @@ In the above image, you can see the response JSON data colored with yellow on
 the right side. It is an array of urls that points to individual images on your
 instagram page.
 
+#### Lets reflect back step by step to better understand what we're doing.
+
+Playwright provides us with three different browser types so why not try three
+of them at the same time.
+
+1. We loop through the three browser types `['chromium', 'firefox', 'webkit']`.
+
+2. [**launch()**](https://playwright.dev/docs/api/class-browsertype#browsertypelaunchoptions)
+   We launch a new browser with the launch method.
+
+3. [**newContext()**](https://playwright.dev/docs/api/class-browser?_highlight=newconte#browsernewcontextoptions)
+   Creates a new browser context. A
+   [Browser context](https://playwright.dev/docs/api/class-browsercontext/)
+   provides us with most operations like creating a new tab in the browser.
+
+4. [**goto**](https://playwright.dev/docs/api/class-page?_highlight=page.goto#pagegotourl-options)
+   method navigates to a specified URL path.
+
+5. [**waitForSelector()**](https://playwright.dev/docs/api/class-page#pagewaitforselectorselector-options)
+   waits for an element to either be or not be present in the browser.
+
+6. [**screeshot()**](https://playwright.dev/docs/api/class-page?_highlight=page.scree#pagescreenshotoptions)
+   takes a screenshot of the current page.
+
+7. [**text()**](https://playwright.dev/docs/api/class-page?_highlight=page.type#pagetypeselector-text-options)
+   provides us with the ability to fill out form fields.
+
+8. [**click()**](https://playwright.dev/docs/api/class-page?_highlight=page.click#pageclickselector-options)
+   allows us to click on an element or page in the dom.
+
+9. [**evaluate()**](https://playwright.dev/docs/api/class-page?_highlight=page.evaluate#pageevaluatepagefunction-arg).
+   You can do a lot in the callback of this function; However, we're just
+   returning the `src` value of each image in the callback.
+
+10. [**browser.close()**](https://playwright.dev/docs/api/class-page?_highlight=page.close#pagecloseoptions)
+    destroys our current browser as you already know.
+
 You can do whatever you want with the data (Download the images) but in our case
-we are just logging it out on the console to see what it looks like.
+we are just logging it out on the console and returning it as a JSON string with
+a 200 response to see what it looks like.
 
 ### Conclusion
 
@@ -152,6 +197,10 @@ Most times Bad dudes applies this technique to Illegally extract data from a
 website and I'm pretty sure that the person reading this is not one of them.
 
 > Always remember to Use your code for good 🙂
+
+<dot />
+
+Complete code: <https://github.com/dnature/playwright-example>
 
 I hope you find this helpful.
 
