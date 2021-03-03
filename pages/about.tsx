@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Box, LazyImage, Container } from '@nature-ui/core';
 
 import { Styled } from 'components/nature-jsx-elements';
@@ -33,43 +34,53 @@ const About = ({}) => {
             Hello there 👋, I’m Divine Hycenth.
           </Styled.h1>
           <Styled.p className='mt-5 text-xl'>
-            I’m a Full-stack Software Engineer with 4years of experience
-            building applications, UI/UX Designer.
+            I’m a Software Engineer with 4years of experience, UI/UX Designer,
+            and Technical Writer.
           </Styled.p>
           <Styled.p className='mt-5 text-xl'>
             I spend most of my free time improving{' '}
-            <a href='https://nature-ui.com'>Nature UI</a>. Of course, I also hit
-            the Jym, play football, and do some other fun activities when I
-            don't feel like coding.
+            <a
+              href='https://nature-ui.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Nature UI
+            </a>
+            . Of course, I also hit the Jym, play football, and do some other
+            fun activities when I don't feel like coding.
           </Styled.p>
 
-          <Styled.h3 className='mt-8'>Things I do.</Styled.h3>
           <Styled.p className='mt-5 text-xl'>
             Occasionally, I write articles related to software here on my blog
-            and also on <a href='https://dev.to/dnature'>DEV</a>. I enjoy
-            building software solutions for both organizations and open source.
+            and also on{' '}
+            <a
+              href='https://dev.to/dnature'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              DEV
+            </a>{' '}
+            and Hashnode{' '}
+            <a
+              href='https://hashnode.com/@DNature'
+              target='_blank'
+              rel='noopener noreferrer'
+            ></a>
+            . I enjoy building software solutions for both organizations and
+            open-source.
           </Styled.p>
-          <Styled.p className='mt-5 text-xl'>
-            I wanted an adds free platform that I can share how I was able to
-            solve some technical problems and also share about the tools I use
-            to solve problems and stay productive so I created{' '}
-            <a href='/blog'>this blog</a>.
+          <Styled.p className='mt-5 text-xl mb-12'>
+            I wanted an adds free platform that I can share my approach to
+            solving some technical problems, the tools I use to stay productive,
+            and a place to reflect on the things I've done in the past so I
+            created this website.
           </Styled.p>
-          <Styled.p className='mt-5 text-xl'>
-            I pay a lot of attention to software trends, design trends, best
-            practices, and the latest technologies -- This is how I keep myself
-            up to date.
-          </Styled.p>
-          <Styled.p className='mt-5 text-xl'>
-            This website is built with Nature UI, Next.js, and React and it's
-            powered by markdown. I also use Nodejs with Graphql for building
-            APIs, Figma for UI designs, and Docker + Nginx for DevOps. I use
-            technologies like Electron, Vue, Redux, etc, based on the software
-            requirements.
-            <br />
-            Of Course, I love automation (CI/CD) so I use Github actions or
-            TravisCI to automate things.
-          </Styled.p>
+
+          <Link href='/blog/my-story'>
+            <a className='text-primary-500 text-3xl font-semibold hover:underline'>
+              Read more about me and the technologies I use &#8594;
+            </a>
+          </Link>
         </Box>
       </Container>
     </MainLayout>

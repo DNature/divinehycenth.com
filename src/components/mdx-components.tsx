@@ -133,7 +133,11 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: (props) => (
-    <El.a className='text-primary-100 hover:underline' {...props} />
+    <El.a
+      target='_blank'
+      className='text-primary-100 hover:underline'
+      {...props}
+    />
   ),
   p: (props) => <El.p className='text-lg mt-5' {...props} />,
   ul: (props) => <El.ul className='mt-7 ml-7' {...props} />,

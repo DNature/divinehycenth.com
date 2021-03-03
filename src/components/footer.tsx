@@ -3,7 +3,7 @@ import siteConfig from 'configs/site-config';
 import Link from 'next/link';
 import React from 'react';
 import {
-  IoGlobeOutline,
+  IoLogoDribbble,
   IoLogoDiscord,
   IoLogoGithub,
   IoLogoLinkedin,
@@ -11,7 +11,6 @@ import {
 } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
 import { BlurLeft, BlurRight } from './BlurEffect';
-import { NigeriaFlag } from './nigeriaFlag';
 
 export const links = [
   {
@@ -25,9 +24,9 @@ export const links = [
     href: '//twitter.com/DivineHycenth',
   },
   {
-    icon: IoGlobeOutline,
-    label: 'Website',
-    href: '//divinehycenth.com',
+    icon: IoLogoDribbble,
+    label: 'Dribbble',
+    href: 'https://dribbble.com/DNature',
   },
   {
     icon: IoLogoLinkedin,
@@ -57,9 +56,9 @@ const FooterLink: React.FC<FooterLinkProps> = ({
   label,
   ...rest
 }) => (
-  <Box as='span' {...rest}>
-    <Link href={href} aria-label={label}>
-      <a target='_blank'>
+  <Box as='span' {...rest} aria-label={label}>
+    <Link href={href}>
+      <a target='_blank' aria-label={label} title={label}>
         <Icon as={icon} size='lg' className='text-gray-400' />
       </a>
     </Link>
@@ -75,10 +74,13 @@ const Footer = () => {
         <Container size='xs' centered>
           <p className='text-sm'>
             <span>
-              Proudly made in
-              <NigeriaFlag />
+              Made with 💖{' '}
+              <Link href={'//twitter.com/DivineHycenth'}>
+                <a target='_blank' className='hover:underline'>
+                  Divine Hycenth
+                </a>
+              </Link>
             </span>
-            <span>by Divine Hycenth</span>
           </p>
           <Stack row className='justify-center mt-3'>
             {links.map((link) => (
