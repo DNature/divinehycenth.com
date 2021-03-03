@@ -1,0 +1,139 @@
+[
+  {
+    "title": "Build a Progressive Web App with React.js",
+    "description": "A reference guide on how to remove unused CSS selectors, Minify CSS files to reduce your website's loading time.",
+    "tags": [
+      "pwa",
+      "react",
+      "javascript"
+    ],
+    "url": "blog/build-a-progressive-web-app-with-reactjs.mdx"
+  },
+  {
+    "title": "How to deploy a Gatsby site to Netlify.",
+    "description": "Learn how to deploy your typescript/javascript gatsby project to netlify in minutes",
+    "tags": [
+      "react",
+      "gatsby",
+      "netlify"
+    ],
+    "url": "blog/deploy-gatsby-site-to-netlify.mdx"
+  },
+  {
+    "title": "Deploy Next.js project to Netlify",
+    "description": "Learn how to publish you Next.js app to netlify in minutes.",
+    "tags": [
+      "deploy",
+      "netlify",
+      "nextjs"
+    ],
+    "url": "blog/deploy-nextjs-project-to-netlify.mdx"
+  },
+  {
+    "title": "File uploads with React and apollo (Part 2).",
+    "description": "A complete guide on how to upload files to graphql server with react and apollo-upload-client",
+    "tags": [
+      "react",
+      "apollo",
+      "upload"
+    ],
+    "url": "blog/file-upload-with-react-and-apollo.mdx"
+  },
+  {
+    "title": "Handling File Uploads with Apollo Server 2.0.",
+    "description": "A comprehensive guide on how to upload files with Apollo-server 2.0 and Mongodb.",
+    "tags": [
+      "graphql",
+      "nodejs",
+      "upload"
+    ],
+    "url": "blog/file-uploads-with-apolloserver-2.mdx"
+  },
+  {
+    "title": "Graphql CRUD operations on a CouchDB database with nodejs.",
+    "description": "Learn how to perform basic CRUD (Create, Read, Update, and Delete) operations on a Couchdb database through a Graphql API.",
+    "tags": [
+      "grapphql",
+      "nodejs",
+      "couchdb"
+    ],
+    "url": "blog/graphql-crud-operations-with-couchdb-and-typescript.mdx"
+  },
+  {
+    "title": "Build a Desktop app with Gridsome and Electron.",
+    "description": "Learn how to combine your knowledge of Gridsome for SPA and Electron for desktop apps to build a desktop App.",
+    "tags": [
+      "gridsome",
+      "electron",
+      "desktop"
+    ],
+    "url": "blog/gridsome-with-electron.mdx"
+  },
+  {
+    "title": "How to Reduce file sizes with Gulpjs",
+    "description": "Learn how to publish you Next.js app to netlify in minutes.",
+    "tags": [
+      "gulp",
+      "javascript"
+    ],
+    "url": "blog/how-to-reduce-file-sizes-with-gulpjs.mdx"
+  },
+  {
+    "title": "Setup Tailwind, and PurgeCSS in Nextjs",
+    "description": "How to setup your Nextjs project with tailwindcss, purgecss, autoprefixer and postcss.",
+    "tags": [
+      "next",
+      "tailwind",
+      "optimization"
+    ],
+    "url": "blog/how-to-setup-tailwind-purgecss-and-nextjs.mdx"
+  },
+  {
+    "title": "Convert a Base64 data into an Image in Node.js",
+    "description": "Learn how to convert an image into a base64 string and back to an image.",
+    "tags": [
+      "base64",
+      "image",
+      "nodejs"
+    ],
+    "url": "blog/Image-Base64-Encoding-and-Decoding-in-Node.mdx"
+  },
+  {
+    "title": "My Journey as an engineer.",
+    "description": "Here I wrote about how I got into computers and software development.",
+    "tags": [
+      "story"
+    ],
+    "url": "blog/my-story.mdx"
+  },
+  {
+    "title": "Remove all unused CSS Selectors",
+    "description": "A reference guide on how to remove unused CSS selectors, Minify CSS files to reduce your website's loading time.",
+    "tags": [
+      "css",
+      "gulp",
+      "performance"
+    ],
+    "url": "blog/remove-all-unused-css.mdx"
+  },
+  {
+    "title": "Web Scraping with Playwright and Firebase.",
+    "description": "Learn how to Scrape data from your instagram page with Nodejs, Playwright and Firebase.",
+    "tags": [
+      "firebase",
+      "nodejs",
+      "playwright"
+    ],
+    "url": "blog/web-scraping-with-playwright.mdx"
+  },
+  {
+    "title": "Setup Yarn workspaces with typescript.",
+    "description": "A complete guide on how to setup Yarn workspace for React web, and React-Native(expo) with Typescript.",
+    "tags": [
+      "yarn",
+      "workspace",
+      "typescript"
+    ],
+    "url": "blog/yarn-workspace-monorepo.mdx"
+  }
+]

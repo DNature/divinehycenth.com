@@ -4,12 +4,11 @@ import path from 'path';
 import shell from 'shelljs';
 import { calcReadTime } from 'utils/calc-read-time';
 
-const loadMDXFromPages = async (mdxDir = 'docs') => {
+const loadMDXFromPages = async (mdxDir = 'blog') => {
   const { processFrontMatter } = require('utils/mdx-utils');
 
   const dir = path.join(process.cwd(), 'pages', mdxDir);
   const filenames = shell.ls('-R', `${dir}/**/*.mdx`);
-
 
   const dataPromise = filenames.map(async (filename: string) => {
     

@@ -10,12 +10,11 @@ import {
   ModalContent,
   Box,
   clsx,
-  Portal,
 } from '@nature-ui/core';
 import { SearchIcon } from '@nature-ui/icons';
 import Link from 'next/link';
 import Head from 'next/head';
-import { DocSearchModal, useDocSearchKeyboardEvents } from '@docsearch/react';
+import { useDocSearchKeyboardEvents } from '@docsearch/react';
 import { useRouter } from 'next/router';
 import { startsWith } from 'lodash/fp';
 

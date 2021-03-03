@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "build-search": "node src/scripts/generate-search-data.js",
+    "predev": "yarn build-search",
+    "prebuild": "yarn build-search",
     "start": "next start",
     "typecheck": "tsc",
     "lint": "eslint --fix --ext=ts,tsx"
