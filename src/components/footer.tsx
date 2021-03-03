@@ -13,8 +13,6 @@ import { MdEmail } from 'react-icons/md';
 import { BlurLeft, BlurRight } from './BlurEffect';
 import { NigeriaFlag } from './nigeriaFlag';
 
-// 🇳🇬
-
 export const links = [
   {
     icon: IoLogoGithub,

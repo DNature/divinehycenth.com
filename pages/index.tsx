@@ -1,6 +1,7 @@
 /** ** */
 import * as React from 'react';
 import { Container, Box, Stack } from '@nature-ui/core';
+import Link from 'next/link';
 
 import { Styled } from 'components/nature-jsx-elements';
 import { BlurLeft, BlurRight } from 'components/BlurEffect';
@@ -25,8 +26,10 @@ const Index = ({ posts }) => {
             <span className='text-gradient shadow-text'>Divine Hycenth.</span>
           </Styled.h1>
           <Styled.h2>
-            I’m a full stack software developer, technical writer, and UI/UX
-            Designer.
+            I’m a software engineer, UI/UX Designer and I love playing football{' '}
+            <Link href='/about'>
+              <a className='text-primary-500 font-bold text-5xl'>&#8594;</a>
+            </Link>
           </Styled.h2>
 
           <div className='mt-12 mx-auto px-6 md:hidden'>
