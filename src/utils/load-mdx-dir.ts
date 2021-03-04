@@ -21,6 +21,7 @@ const loadMDXFromPages = async (mdxDir = 'blog') => {
     
     // extract frontMatter and content from markdown string
     const { frontMatter, content } = await parseMarkdownFile(filename);
+
     
     // extends frontMatter with more useful information
     return processFrontMatter({
@@ -31,7 +32,7 @@ const loadMDXFromPages = async (mdxDir = 'blog') => {
       readTimeMinutes: calcReadTime(content),
     });
   });
-
+  
   const data = await Promise.all(dataPromise);
 
   return data;

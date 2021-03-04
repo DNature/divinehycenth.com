@@ -18,7 +18,7 @@ const About = ({}) => {
   }
 
   return (
-    <MainLayout>
+    <MainLayout title='About me'>
       <Container size='lg' centered className='relative z-20 my-12'>
         <Box className='grid mx-4 md:mx-0'>
           <LazyImage

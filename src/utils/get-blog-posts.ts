@@ -18,13 +18,16 @@ const byDateDesc = (a: BlogPost, b: BlogPost) => {
 
 export const getBlogPosts = async () => {
   const mdxData = await loadMDXFromPages('blog');
+  
   return mdxData
-    .map((blogPostData) => ({
-      ...blogPostData,
-      slug: blogPostData.slug.replace(/\/index$/, ''),
-      author: blogPostData.author ?? null,
-      date: new Date(blogPostData.lastEdited.date).toISOString(),
-      tags: Array.isArray(blogPostData.tags) ? blogPostData.tags : [],
-    }))
+    .map((blogPostData) => {
+      return {
+        ...blogPostData,
+        slug: blogPostData.slug.replace(/\/index$/, ''),
+        author: blogPostData.author ?? null,
+        date: new Date(blogPostData.lastEdited.date).toISOString(),
+        tags: Array.isArray(blogPostData.tags) ? blogPostData.tags : [],
+      }
+    })
     .sort(byDateDesc);
 };

@@ -7,7 +7,7 @@
       "react",
       "javascript"
     ],
-    "url": "blog/build-a-progressive-web-app-with-reactjs.mdx"
+    "url": "/blog/build-a-progressive-web-app-with-reactjs"
   },
   {
     "title": "How to deploy a Gatsby site to Netlify.",
@@ -17,7 +17,7 @@
       "gatsby",
       "netlify"
     ],
-    "url": "blog/deploy-gatsby-site-to-netlify.mdx"
+    "url": "/blog/deploy-gatsby-site-to-netlify"
   },
   {
     "title": "Deploy Next.js project to Netlify",
@@ -27,7 +27,7 @@
       "netlify",
       "nextjs"
     ],
-    "url": "blog/deploy-nextjs-project-to-netlify.mdx"
+    "url": "/blog/deploy-nextjs-project-to-netlify"
   },
   {
     "title": "File uploads with React and apollo (Part 2).",
@@ -35,9 +35,10 @@
     "tags": [
       "react",
       "apollo",
-      "upload"
+      "upload",
+      "file"
     ],
-    "url": "blog/file-upload-with-react-and-apollo.mdx"
+    "url": "/blog/file-upload-with-react-and-apollo"
   },
   {
     "title": "Handling File Uploads with Apollo Server 2.0.",
@@ -45,9 +46,10 @@
     "tags": [
       "graphql",
       "nodejs",
-      "upload"
+      "upload",
+      "file"
     ],
-    "url": "blog/file-uploads-with-apolloserver-2.mdx"
+    "url": "/blog/file-uploads-with-apolloserver-2"
   },
   {
     "title": "Graphql CRUD operations on a CouchDB database with nodejs.",
@@ -57,7 +59,7 @@
       "nodejs",
       "couchdb"
     ],
-    "url": "blog/graphql-crud-operations-with-couchdb-and-typescript.mdx"
+    "url": "/blog/graphql-crud-operations-with-couchdb-and-typescript"
   },
   {
     "title": "Build a Desktop app with Gridsome and Electron.",
@@ -67,7 +69,7 @@
       "electron",
       "desktop"
     ],
-    "url": "blog/gridsome-with-electron.mdx"
+    "url": "/blog/gridsome-with-electron"
   },
   {
     "title": "How to Reduce file sizes with Gulpjs",
@@ -76,7 +78,7 @@
       "gulp",
       "javascript"
     ],
-    "url": "blog/how-to-reduce-file-sizes-with-gulpjs.mdx"
+    "url": "/blog/how-to-reduce-file-sizes-with-gulpjs"
   },
   {
     "title": "Setup Tailwind, and PurgeCSS in Nextjs",
@@ -86,7 +88,7 @@
       "tailwind",
       "optimization"
     ],
-    "url": "blog/how-to-setup-tailwind-purgecss-and-nextjs.mdx"
+    "url": "/blog/how-to-setup-tailwind-purgecss-and-nextjs"
   },
   {
     "title": "Convert a Base64 data into an Image in Node.js",
@@ -96,7 +98,7 @@
       "image",
       "nodejs"
     ],
-    "url": "blog/Image-Base64-Encoding-and-Decoding-in-Node.mdx"
+    "url": "/blog/Image-Base64-Encoding-and-Decoding-in-Node"
   },
   {
     "title": "My Journey as an engineer.",
@@ -104,7 +106,7 @@
     "tags": [
       "story"
     ],
-    "url": "blog/my-story.mdx"
+    "url": "/blog/my-story"
   },
   {
     "title": "Remove all unused CSS Selectors",
@@ -114,7 +116,7 @@
       "gulp",
       "performance"
     ],
-    "url": "blog/remove-all-unused-css.mdx"
+    "url": "/blog/remove-all-unused-css"
   },
   {
     "title": "Web Scraping with Playwright and Firebase.",
@@ -124,7 +126,7 @@
       "nodejs",
       "playwright"
     ],
-    "url": "blog/web-scraping-with-playwright.mdx"
+    "url": "/blog/web-scraping-with-playwright"
   },
   {
     "title": "Setup Yarn workspaces with typescript.",
@@ -134,6 +136,6 @@
       "workspace",
       "typescript"
     ],
-    "url": "blog/yarn-workspace-monorepo.mdx"
+    "url": "/blog/yarn-workspace-monorepo"
   }
 ]

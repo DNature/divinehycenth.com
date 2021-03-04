@@ -8,7 +8,7 @@ import { IoLogoDribbble } from 'react-icons/io5';
 
 const Works = () => {
   return (
-    <MainLayout>
+    <MainLayout title='Recent projects'>
       <Box className='relative z-10'>
         <Box
           css={{

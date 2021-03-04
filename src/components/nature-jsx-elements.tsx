@@ -27,7 +27,7 @@ export const El = {
 
 export const Styled = {
   h1: ({ className = '', ...props }) => (
-    <El.h1
+    <nature.h1
       className={clsx(
         className,
         'text-4xl md:text-6xl lg:text-7xl leading-normal font-bold',
@@ -36,7 +36,7 @@ export const Styled = {
     />
   ),
   h2: ({ className = '', ...props }) => (
-    <El.h2
+    <nature.h2
       className={clsx(
         className,
         'text-3xl md:text-4xl mb-2 font-semibold leading-relaxed',
@@ -45,9 +45,18 @@ export const Styled = {
     />
   ),
   h3: ({ className = '', ...props }) => (
-    <El.h3 className={clsx(className, 'text-2xl font-semibold')} {...props} />
+    <nature.h3
+      className={clsx(className, 'text-2xl font-semibold')}
+      {...props}
+    />
+  ),
+  h4: ({ className = '', ...props }) => (
+    <nature.h4
+      className={clsx(className, 'text-xl font-semibold')}
+      {...props}
+    />
   ),
   p: ({ className = '', ...props }) => (
-    <El.p className={clsx(className)} {...props} />
+    <nature.p className={clsx(className)} {...props} />
   ),
 };

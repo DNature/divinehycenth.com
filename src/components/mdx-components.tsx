@@ -140,7 +140,7 @@ const MDXComponents = {
     />
   ),
   p: (props) => <El.p className='text-lg mt-5' {...props} />,
-  ul: (props) => <El.ul className='mt-7 ml-7' {...props} />,
+  ul: (props) => <El.ul className='mt-7' {...props} />,
   ol: (props) => <El.ol {...props} />,
   li: (props) => <El.li className='ml-8 pb-1 list-disc' {...props} />,
   blockquote: (props) => (

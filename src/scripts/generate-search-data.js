@@ -16,14 +16,11 @@ const loadMDXFromPages = async (mdxDir = 'blog') => {
       title: frontMatter.title,
       description: frontMatter.description,
       tags: frontMatter.tags,
-      url: file.replace(dir, mdxDir)
+      url: '/' + file.replace(dir, mdxDir).replace(/\.mdx$/, '')
     }
   })
 
   const data = await Promise.all(dataPromise);
-
-  console.log({data})
-
     
   fs.writeFileSync(path.join(process.cwd(), 'configs', 'search-metadata.json'), JSON.stringify(data, null, 2), {encoding: 'utf8'})
   console.log(">>>>>>> DONE <<<<<<<<")

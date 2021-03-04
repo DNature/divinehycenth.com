@@ -15,7 +15,14 @@ const BottomVariants = {
 };
 
 export const BlogCard = ({ className = '', post, ...rest }) => {
-  const { slug, tags, title, description, imageUrl } = post;
+  const {
+    slug,
+    tags,
+    title,
+    description,
+    imageUrl,
+    readTimeMinutes: readTime,
+  } = post;
 
   let fallbackSrc: any = imageUrl.split('.');
 
@@ -70,6 +77,9 @@ export const BlogCard = ({ className = '', post, ...rest }) => {
               </Stack>
             )}
             <Styled.p className='mt-4'>{getNChars(description, 400)}</Styled.p>
+            <Badge className='lowercase' variant='outline' color='dark-500'>
+              {readTime} min read
+            </Badge>
           </Box>
         </Box>
       </Link>

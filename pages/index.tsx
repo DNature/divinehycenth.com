@@ -26,7 +26,7 @@ const Index = ({ posts }) => {
             <span className='text-gradient shadow-text'>Divine Hycenth.</span>
           </Styled.h1>
           <Styled.h2>
-            I’m a software engineer, UI/UX Designer and I love playing football{' '}
+            I’m a software engineer, UI/UX Designer, and a Football lover{' '}
             <Link href='/about'>
               <a className='text-primary-500 font-bold text-5xl'>&#8594;</a>
             </Link>
@@ -82,14 +82,10 @@ const Index = ({ posts }) => {
           </Button>
         </div>
         <div className='grid md:grid-cols-2 gap-12'>
-          <Stack spacing='12' col>
-            <HomePostCards post={posts[0]} />
-            <HomePostCards post={posts[1]} />
-          </Stack>
-          <Stack spacing='12' col>
-            <HomePostCards post={posts[2]} />
-            <HomePostCards post={posts[3]} />
-          </Stack>
+          <HomePostCards post={posts[0]} />
+          <HomePostCards post={posts[1]} />
+          <HomePostCards post={posts[2]} />
+          <HomePostCards post={posts[3]} />
         </div>
       </Container>
       <Container

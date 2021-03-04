@@ -52,7 +52,7 @@ export const links = [
 
 const Contact = ({}) => {
   return (
-    <MainLayout>
+    <MainLayout title='Contact me'>
       <Container
         size='sm'
         centered

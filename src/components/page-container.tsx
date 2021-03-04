@@ -1,15 +1,20 @@
 /** ** */
 import * as React from 'react';
-import { LazyImage, Box } from '@nature-ui/core';
+import { LazyImage, Box, Badge } from '@nature-ui/core';
 import { useRouter } from 'next/router';
 
-import SEO from './seo';
+import { DefaultSeo } from 'next-seo';
+import { ArticleSEO } from './seo';
 import { EditPageLink } from './edit-page-button';
 import Footer from './footer';
 import Header from './header';
 import PageTransition from './page-transition';
 import { Styled } from './nature-jsx-elements';
 import Comments from './comments';
+
+import siteConfig from 'configs/site-config';
+import { FrontMatter } from 'types/global';
+
 function useHeadingFocusOnRouteChange() {
   const router = useRouter();
 
@@ -26,21 +31,7 @@ function useHeadingFocusOnRouteChange() {
 }
 
 interface PageContainerProps {
-  frontMatter: {
-    slug?: string;
-    title: string;
-    description?: string;
-    editUrl?: string;
-    imageUrl?: string;
-    auth?: {
-      avatarUrl?: string;
-      githubUrl?: string;
-      name?: string;
-      websiteUrl?: string;
-      twitterUsername?: string;
-    };
-    lastEdited?: string;
-  };
+  frontMatter: FrontMatter;
   children: React.ReactNode;
 }
 
@@ -48,7 +39,15 @@ function PageContainer(props: PageContainerProps) {
   const { frontMatter, children } = props;
   useHeadingFocusOnRouteChange();
 
-  const { title, description, editUrl, imageUrl, lastEdited } = frontMatter;
+  const {
+    title,
+    editUrl,
+    imageUrl,
+    lastEdited,
+    auth,
+    published,
+    readTime,
+  } = frontMatter;
 
   let fallbackSrc: any = imageUrl.split('.');
 
@@ -60,7 +59,8 @@ function PageContainer(props: PageContainerProps) {
 
   return (
     <>
-      <SEO title={title} description={description} />
+      <DefaultSeo {...siteConfig.article} />
+      <ArticleSEO {...frontMatter} />
       <Header />
       <Box as='main' className='h-full'>
         <Box centered className='flex max-w-screen-lg mx-auto'>
@@ -73,13 +73,60 @@ function PageContainer(props: PageContainerProps) {
               }}
             >
               <PageTransition>
-                <Styled.h1 className='outline-none text-6xl font-bold mb-1'>
+                <Styled.h1 className='outline-none text-4xl lg:text-6xl font-bold mb-1'>
                   {title}
                 </Styled.h1>
-                {lastEdited && (
-                  <Styled.p className='opacity-60'>
-                    Last edited: {lastEdited}
-                  </Styled.p>
+                {auth && (
+                  <>
+                    <hr className='my-4 border-dark-600 opacity-30' />
+
+                    <Box className='pl-3 flex items-center'>
+                      <LazyImage
+                        src={auth.avatarUrl}
+                        css={{
+                          height: 50,
+                          width: 50,
+                        }}
+                        fallbackSrc={fallbackSrc}
+                        className='rounded-full object-cover mr-3'
+                        alt={title}
+                      />
+                      <Box className='col-span-6'>
+                        <Styled.p className='opacity-80'>
+                          <a
+                            href={auth.websiteUrl + '/about'}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            {lastEdited.author}
+                          </a>
+                          <Badge
+                            as='span'
+                            className='text-sm font-normal ml-4'
+                            color='primary-700'
+                            variant='solid'
+                          >
+                            {readTime} min read
+                          </Badge>
+                        </Styled.p>
+                        {published && (
+                          <>
+                            <Styled.p className='opacity-60'>
+                              Published on {published.date}.
+                            </Styled.p>
+                            {lastEdited && (
+                              <Styled.p className='opacity-60'>
+                                Last edited: {lastEdited.date} by:{' '}
+                                {lastEdited.author}
+                              </Styled.p>
+                            )}
+                          </>
+                        )}
+                      </Box>
+                    </Box>
+
+                    <hr className='my-4 border-dark-600 opacity-30' />
+                  </>
                 )}
                 <div className='mt-12 grid'>
                   <LazyImage

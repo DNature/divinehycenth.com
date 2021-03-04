@@ -8,7 +8,7 @@ import { Zigzag } from 'components/zigzag';
 
 const Blog = ({ posts }) => {
   return (
-    <MainLayout>
+    <MainLayout title='Recent Articles'>
       <Box
         css={{
           minHeight: '15vh',

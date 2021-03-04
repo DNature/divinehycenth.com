@@ -1,11 +1,12 @@
 const path = require('path');
-const execa = require('execa');
+const util = require('util');
 const fromUnixTime = require('date-fns/fromUnixTime');
 const format = require('date-fns/format');
 const { getEditUrl, addLeadingSlash } = require('@docusaurus/utils');
 const { Octokit } = require('@octokit/rest');
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+const exec = util.promisify(require('child_process').exec);
 
 const fileToPath = (str) => {
   return addLeadingSlash(str.replace('.mdx', ''));
@@ -60,28 +61,33 @@ const getTimestampAndAuthor = (str) => {
   };
 };
 
+
 /**
- * Get the last edited timestamp and author from git
+ * Gets the last edited timestamp and author from git
  * using `git log`
  *
  * %an = author name
  * %ct = committer date, UNIX timestamp
- *
  */
 const getLastEdited = async (filePath) => {
   try {
-    const { stdout } = await execa('git', [
-      'log',
-      '-1',
-      '--format=%ct, %an',
-      filePath,
-    ]);
-    
-    return getTimestampAndAuthor(stdout);
-  } catch (err) {
-    console.error(err);
+    const {stdout} = await exec(`git log -1 --format="%ct, %an" --follow ${filePath}`)
+    return getTimestampAndAuthor(stdout.trim());
+  } catch (er) {
+    console.error(er)
   }
 };
+
+const getDateCreated = async (filePath) => {
+  try {
+    const {stdout} = await exec(`git log --reverse --format="%ct, %an" --follow ${filePath} | head -n 1`)
+    
+    return getTimestampAndAuthor(stdout.trim());
+  } catch (er) {
+    console.error(er)
+  }
+};
+
 
 const processFrontMatter = async (options) => {
   const { path: mdxPath, author, tags, baseEditUrl, ...rest } = options;
@@ -101,6 +107,7 @@ const processFrontMatter = async (options) => {
   // If frontMatter includes author, add the authors data
   const authorData = author ? await getGithubUserData(author) : lastEdited.author;
 
+
   return {
     ...rest,
     slug,
@@ -117,4 +124,5 @@ module.exports = {
   getLastEdited,
   processFrontMatter,
   getGithubUserData,
+  getDateCreated,
 };

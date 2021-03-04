@@ -23,6 +23,7 @@ export const HomePostCards = ({ post, ...rest }) => {
     description,
     imageUrl,
     date,
+    readTimeMinutes: readTime,
     author: { githubUrl, websiteUrl, avatarUrl, name },
   } = post;
 
@@ -35,7 +36,9 @@ export const HomePostCards = ({ post, ...rest }) => {
   }
 
   const authorProfile =
-    name === 'Divine Hycenth' ? '/about' : websiteUrl || githubUrl || '#';
+    name === 'Divine Hycenth'
+      ? '/about'
+      : `${websiteUrl}/about` || githubUrl || '#';
 
   const [ref, inView] = useInView();
   const controls = useAnimation();
@@ -56,13 +59,16 @@ export const HomePostCards = ({ post, ...rest }) => {
     >
       <Link href={slug}>
         <a>
-          <div className='grid'>
+          <div className='grid relative'>
             <LazyImage
               fallbackSrc={fallbackSrc}
               src={imageUrl}
               alt={title}
               className='rounded-2xl cursor-pointer w-full h-full object-cover'
             />
+            <Badge className='absolute top-3 right-3 lowercase'>
+              {readTime} min read
+            </Badge>
           </div>
           {tags && (
             <Stack row spacing='2' className='mt-4'>

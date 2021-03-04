@@ -1,4 +1,4 @@
-const baseUrl = 'https://github.com/nature-ui/nature-ui';
+const baseUrl = 'https://github.com/dnature/divinehycenth.com';
 
 const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} Divine Hycenth. All`,
@@ -12,46 +12,77 @@ const siteConfig = {
   },
   repo: {
     url: baseUrl,
-    editUrl: `${baseUrl}/edit/develop/website`,
-    blogUrl: `${baseUrl}/blog/develop`,
+    editUrl: `${baseUrl}/blog/master`,
   },
   discord: {
     url: 'https://discord.gg/ZA7NgwkeQ4',
   },
   seo: {
-    title: 'Nature UI',
-    titleTemplate: '%s - Nature UI',
+    title: 'Divine Hycenth',
+    titleTemplate: '%s - Divine Hycenth',
     description:
-      'Modular React based component library with built in support for tailwindcss',
-    siteUrl: 'https://nature-ui.com',
+      'Hi 👋,  I’m a software engineer, UI/UX Designer, and a Football lover',
+    siteUrl: 'https://divinehycenth.com',
     twitter: {
-      handle: '@nature-ui',
-      site: '@nature-ui',
+      handle: '@DivineHycenth',
+      site: '@divinehycenth',
       cardType: 'summary_large_image',
     },
     openGraph: {
       type: 'website',
       locale: 'en_US',
-      url: 'https://nature-ui.com',
-      title: 'Nature UI',
+      url: 'https://divinehycenth.com',
+      title: 'Divine Hycenth',
       description:
         'Modular React based component library with built in support for tailwindcss',
       site_name:
-        'Nature UI: Modular React based component library with built in support for tailwindcss',
+        'Divine Hycenth',
       images: [
         {
           url: '/og-image.png',
           width: 1240,
           height: 480,
           alt:
-            'Nature UI: Modular React based component library with built in support for tailwindcss',
+            'Divine Hycenth',
         },
         {
           url: '/twitter-og-image.png',
           width: 1012,
           height: 506,
           alt:
-            'Nature UI: Modular React based component library with built in support for tailwindcss',
+            'Divine Hycenth',
+        },
+      ],
+    },
+  },
+  article: {
+    title: 'Divine Hycenth',
+    titleTemplate: '%s - Divine Nature',
+    description:
+      'Hi 👋,  I’m a software engineer, UI/UX Designer, and a Football lover',
+    siteUrl: 'https://divinehycenth.com',
+    twitter: {
+      handle: '@DivineHycenth',
+      site: '@divinehycenth',
+      cardType: 'summary_large_image',
+    },
+    openGraph: {
+      type: 'article',
+      locale: 'en_US',
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1240,
+          height: 480,
+          alt:
+            'Divine Hycenth',
+        },
+        {
+          url: '/twitter-og-image.png',
+          width: 1012,
+          height: 506,
+          alt:
+            'Divine Hycenth',
         },
       ],
     },
