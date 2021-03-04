@@ -755,6 +755,16 @@
   dependencies:
     "@nature-ui/icon" "^1.1.1"
 
+"@nature-ui/image@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@nature-ui/image/-/image-1.2.1.tgz#256649d2e8ea583a4ffe42c6d3245236e864869b"
+  integrity sha512-mlTPCmRQ7stagDHfpHkI2BjhXjSzEXVtWg8g0+/w4mjtLtwAnLXxNhqkb7c/gZLZKHVY58jO8VOGF6daRPm8UA==
+  dependencies:
+    "@nature-ui/hooks" "^1.1.0"
+    "@nature-ui/system" "^1.2.0"
+    "@nature-ui/utils" "^1.1.0"
+    react-intersection-observer "^8.31.0"
+
 "@nature-ui/image@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@nature-ui/image/-/image-1.1.2.tgz#af8df426bc0951f4620bc5eb711f5aa443285f81"
