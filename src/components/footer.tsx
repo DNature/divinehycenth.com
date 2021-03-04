@@ -74,7 +74,7 @@ const Footer = () => {
         <Container size='xs' centered>
           <p className='text-sm'>
             <span>
-              Made with 💖{' '}
+              Made with 💖 by{' '}
               <Link href={'//twitter.com/DivineHycenth'}>
                 <a target='_blank' className='hover:underline'>
                   Divine Hycenth

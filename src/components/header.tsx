@@ -16,6 +16,7 @@ import { Logo } from './Logo';
 import { MobileNaveContent, MobileNavButton } from './mobile-nav';
 import { useRouter } from 'next/router';
 import { useColorMode, useColorModeValue } from './color-mode/color-mode';
+import { Hack } from './hack';
 
 const NavLink = ({ children, href, ...props }) => {
   const { pathname } = useRouter();
@@ -88,6 +89,8 @@ const Header = () => {
         isOpen={mobileNav.isOpen}
         onClose={mobileNav.onClose}
       />
+
+      <Hack />
     </nature.header>
   );
 };

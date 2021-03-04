@@ -41,35 +41,7 @@ const Index = ({ posts }) => {
           <Box className='shadow-lg p-10 rounded-2xl block bg-glass w-full'>
             <Styled.h3>Popular Posts</Styled.h3>
 
-            <Box className='md:grid gap-10 grid-cols-2 mt-6 w-full'>
-              {/* <Box className='text-center px-3 rounded-xl relative overflow-hidden'>
-                <h3 className='bg-gradient-to-t from-gray-900 text-gray-100 font-semibold text-xl z-10 pt-24 pb-10 absolute top-0 left-0'>
-                  Hello world
-                </h3>
-                <LazyImage
-                  src={
-                    'https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.5/v1614280922/blog/file-uploads-apollo/thumbnail_cii4sz.png'
-                  }
-                  fallbackSrc={
-                    'https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.01/v1614280922/blog/file-uploads-apollo/thumbnail_cii4sz.png'
-                  }
-                  className='absolute top-0 left-0 w-full h-full object-cover z-0'
-                />
-              </Box>
-              <Box className='text-center rounded-xl px-3 relative overflow-hidden'>
-                <h3 className='bg-gradient-to-t from-gray-900 text-gray-100 font-semibold text-xl z-10 pt-24 pb-10 absolute top-0 left-0'>
-                  Hello world
-                </h3>
-                <LazyImage
-                  src={
-                    'https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.5/v1614280922/blog/file-uploads-apollo/thumbnail_cii4sz.png'
-                  }
-                  fallbackSrc={
-                    'https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.01/v1614280922/blog/file-uploads-apollo/thumbnail_cii4sz.png'
-                  }
-                  className='absolute top-0 left-0 w-full h-full object-cover z-0'
-                />
-              </Box> */}
+            <Box className='grid md:grid-cols-1 gap-10 grid-cols-2 mt-6 w-full'>
               {popular &&
                 popular.map((post) => (
                   <Link key={post.title} href={post.href}>
@@ -80,7 +52,7 @@ const Index = ({ posts }) => {
                       }}
                       className='text-center rounded-xl relative overflow-hidden group cursor-pointer'
                     >
-                      <Box className='bg-gray-900 z-10 flex items-center h-full absolute top-0 left-0 px-3 opacity-0 group-hover:opacity-100'>
+                      <Box className='bg-gray-900 z-10  items-center h-full absolute top-0 left-0 px-3 hidden group-hover:flex'>
                         <h3 className='text-gray-100 font-semibold text-xl'>
                           {post.title}
                         </h3>
