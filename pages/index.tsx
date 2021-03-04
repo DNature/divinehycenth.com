@@ -1,6 +1,6 @@
 /** ** */
 import * as React from 'react';
-import { Container, Box, Stack } from '@nature-ui/core';
+import { Container, Box, Stack, LazyImage } from '@nature-ui/core';
 import Link from 'next/link';
 
 import { Styled } from 'components/nature-jsx-elements';
@@ -11,6 +11,7 @@ import { HomePostCards } from 'components/cards/home-post-cards';
 import { HomeWorksCard } from 'components/cards/works-card';
 import { Search } from 'components/algolia-search';
 import works from 'configs/works.json';
+import popular from 'configs/popular-posts.json';
 
 import MainLayout from 'layouts/main';
 
@@ -36,43 +37,65 @@ const Index = ({ posts }) => {
             <Search />
           </div>
         </Container>
-        <Container size='sm' className='mt-20 z-10 -mb-40'>
-          <Box className='shadow-lg p-10 rounded-2xl block bg-glass'>
+        <Container size='sm' className='mt-20 z-10 -mb-40 w-full'>
+          <Box className='shadow-lg p-10 rounded-2xl block bg-glass w-full'>
             <Styled.h3>Popular Posts</Styled.h3>
 
-            <Stack row spacing='10' className='justify-between mt-4' responsive>
-              <Box
-                css={{
-                  background:
-                    'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF) no-repeat bottom/cover;',
-                }}
-                className='pt-24 pb-10 text-center rounded-xl px-5'
-              >
-                <h3 className='text-gray-100 font-semibold text-xl'>
-                  Handling file uploads with Apollo-server 2.0
+            <Box className='md:grid gap-10 grid-cols-2 mt-6 w-full'>
+              {/* <Box className='text-center px-3 rounded-xl relative overflow-hidden'>
+                <h3 className='bg-gradient-to-t from-gray-900 text-gray-100 font-semibold text-xl z-10 pt-24 pb-10 absolute top-0 left-0'>
+                  Hello world
                 </h3>
+                <LazyImage
+                  src={
+                    'https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.5/v1614280922/blog/file-uploads-apollo/thumbnail_cii4sz.png'
+                  }
+                  fallbackSrc={
+                    'https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.01/v1614280922/blog/file-uploads-apollo/thumbnail_cii4sz.png'
+                  }
+                  className='absolute top-0 left-0 w-full h-full object-cover z-0'
+                />
               </Box>
-              <Box
-                css={{
-                  background:
-                    'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #1F2D2D 93.23%), url(https://bit.ly/2Z4KKcF);',
-                }}
-                className='pt-24 pb-10 text-center rounded-xl px-5'
-              >
-                <h3 className='text-gray-100 font-semibold text-xl'>
-                  Handling file uploads with Apollo-server 2.0
+              <Box className='text-center rounded-xl px-3 relative overflow-hidden'>
+                <h3 className='bg-gradient-to-t from-gray-900 text-gray-100 font-semibold text-xl z-10 pt-24 pb-10 absolute top-0 left-0'>
+                  Hello world
                 </h3>
-              </Box>
-            </Stack>
+                <LazyImage
+                  src={
+                    'https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.5/v1614280922/blog/file-uploads-apollo/thumbnail_cii4sz.png'
+                  }
+                  fallbackSrc={
+                    'https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.01/v1614280922/blog/file-uploads-apollo/thumbnail_cii4sz.png'
+                  }
+                  className='absolute top-0 left-0 w-full h-full object-cover z-0'
+                />
+              </Box> */}
+              {popular &&
+                popular.map((post) => (
+                  <Link key={post.title} href={post.href}>
+                    <Box
+                      as='a'
+                      css={{
+                        minHeight: 150,
+                      }}
+                      className='text-center rounded-xl relative overflow-hidden group cursor-pointer'
+                    >
+                      <Box className='bg-gray-900 z-10 flex items-center h-full absolute top-0 left-0 px-3 opacity-0 group-hover:opacity-100'>
+                        <h3 className='text-gray-100 font-semibold text-xl'>
+                          {post.title}
+                        </h3>
+                      </Box>
+                      <LazyImage
+                        src={post.imageUrl}
+                        fallbackSrc={post.fallbackSrc}
+                        className='w-full h-full object-cover z-0'
+                      />
+                    </Box>
+                  </Link>
+                ))}
+            </Box>
           </Box>
         </Container>
-        {/* <Box
-          className='absolute bottom-2 shadow-lg rounded-full'
-          css={{
-            width: '3478px',
-            height: '3501.28px',
-          }}
-        /> */}
       </main>
       <Container as='section' size='sm' className='my-28 mx-auto p-6 md:p-0'>
         <div className='flex mb-12'>

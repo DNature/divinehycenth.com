@@ -1,12 +1,14 @@
 [
   {
     "title": "Handling file uploads with Apollo-Server 2.0",
-    "imageUrl": "/images/blog/file-uploads-with-apolloserver-2/thumbnail.png",
-    "href": "/blog/file-uploads-with-apolloserver"
+    "imageUrl": "https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.5/v1614280922/blog/file-uploads-apollo/thumbnail_cii4sz.png",
+    "fallbackSrc": "https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.5/v1614280922/blog/file-uploads-apollo/thumbnail_cii4sz.png",
+    "href": "/blog/file-uploads-with-apolloserver-2"
   },
   {
     "title": "Web Scraping — Scrape data from your instagram page with Nodejs, Playwright and Firebase.",
-    "imageUrl": "/images/blog/web-scrapping/thumbnail.png",
-    "href": "/blog/web-scrapping"
+    "imageUrl": "https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.5/v1614630862/blog/web-scraping/thumbnail_ltgnyd.png",
+    "fallbackSrc": "https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.01/v1614630862/blog/web-scraping/thumbnail_ltgnyd.png",
+    "href": "/blog/web-scraping-with-playwright"
   }
 ]
