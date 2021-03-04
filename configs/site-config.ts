@@ -71,14 +71,14 @@ const siteConfig = {
       locale: 'en_US',
       images: [
         {
-          url: '/og-image.png',
+          url: 'https://res.cloudinary.com/dnature/image/upload/v1614875982/og-image_afxyyw.png',
           width: 1240,
           height: 480,
           alt:
             'Divine Hycenth',
         },
         {
-          url: '/twitter-og-image.png',
+          url: 'https://res.cloudinary.com/dnature/image/upload/v1614875796/twitter-og-image_zwftlq.png',
           width: 1012,
           height: 506,
           alt:
