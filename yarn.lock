@@ -766,8 +766,8 @@
 
 "@nature-ui/image@^1.2.0":
   version "1.2.0"
-  resolved "http://localhost:4873/@nature-ui%2fimage/-/image-1.2.0.tgz#0a0c086c394835cd7e1908eebd336350f444b1eb"
-  integrity sha512-/6Nxi7n2ki6AMdB5AN7cy040RAwU+rK7uUgl6qJwsLQ6IKKn7OXBfJxINTwsLtAdhIFwF0SSLdxAoDVivLNpdw==
+  resolved "https://registry.yarnpkg.com/@nature-ui/image/-/image-1.2.0.tgz#3f50b236c1447bf1828fddf2b2dc40d6368e8ef3"
+  integrity sha512-tCv3LFomtI0Dwky9tY3zOWVeZJRzEon+If2f2nNcTCA4tliryVqCgJAqWhzsrgWEKsDUD75eQFMSfCiqE48Y7A==
   dependencies:
     "@nature-ui/hooks" "^1.1.0"
     "@nature-ui/system" "^1.2.0"

@@ -5,7 +5,7 @@ export const Zigzag = ({ className = '', children, ...props }) => {
   return (
     <Styled.h1 className='text-6xl font-bold zigzag relative'>
       <img
-        src='/images/zigzag.png'
+        src='/zigzag.png'
         alt={children}
         className='absolute -top-5 -left-8'
       />
