@@ -41,7 +41,7 @@ const Index = ({ posts }) => {
           <Box className='shadow-lg p-10 rounded-2xl block bg-glass w-full'>
             <Styled.h3>Popular Posts</Styled.h3>
 
-            <Box className='grid md:grid-cols-1 gap-10 grid-cols-2 mt-6 w-full'>
+            <Box className='grid md:grid-cols-2 gap-10 mt-6 w-full'>
               {popular &&
                 popular.map((post) => (
                   <Link key={post.title} href={post.href}>
