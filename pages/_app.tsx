@@ -16,6 +16,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <link rel='icon' type='image/png' sizes='96x96' href='/favicon.png' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://static.cloudflareinsights.com' />
+        <meta name='yandex-verification' content='04504247f14d7c37' />
       </Head>
       <ColorModeProvider
         options={{
