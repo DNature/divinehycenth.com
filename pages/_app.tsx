@@ -4,6 +4,7 @@ import Head from 'next/head';
 
 import '../styles/index.css';
 import { ColorModeProvider } from 'components/color-mode/provider';
+import { YandexScript } from 'components/yandex-script';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -25,6 +26,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       >
         <Component {...pageProps} />
       </ColorModeProvider>
+      <YandexScript />
     </>
   );
 }
