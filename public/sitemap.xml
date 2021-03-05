@@ -1,101 +1,100 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-<url>
-<loc>https://divinehycenth.com/blog</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/about</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/works</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/contact</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/file-upload-with-react-and-apollo</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/file-uploads-with-apolloserver-2</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/my-story</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/build-a-progressive-web-app-with-reactjs</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+  <url>
+    <loc>https://divinehycenth.com/blog</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/about</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/works</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/contact</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/file-upload-with-react-and-apollo</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/file-uploads-with-apolloserver-2</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/my-story</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/build-a-progressive-web-app-with-reactjs</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/deploy-gatsby-site-to-netlify</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/deploy-nextjs-project-to-netlify</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/graphql-crud-operations-with-couchdb-and-typescript</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/gridsome-with-electron</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/how-to-reduce-file-sizes-with-gulpjs</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/how-to-setup-tailwind-purgecss-and-nextjs</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/Image-Base64-Encoding-and-Decoding-in-Node</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/remove-all-unused-css</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://divinehycenth.com/blog/web-scraping-with-playwright</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
 
-<url>
-<loc>https://divinehycenth.com/blog/deploy-gatsby-site-to-netlify</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-
-
-<url>
-<loc>https://divinehycenth.com/blog/deploy-nextjs-project-to-netlify/loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/graphql-crud-operations-with-couchdb-and-typescript</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/gridsome-with-electron</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/how-to-reduce-file-sizes-with-gulpjs</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/how-to-setup-tailwind-purgecss-and-nextjs</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/Image-Base64-Encoding-and-Decoding-in-Node</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/remove-all-unused-css</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://divinehycenth.com/blog/web-scraping-with-playwright</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-
-<loc>https://divinehycenth.com/blog/yarn-workspace-monorepo</loc>
-<lastmod>2021-03-04T20:30:54+00:00</lastmod>
-<priority>0.64</priority>
-</url>
+  <url>
+    <loc>https://divinehycenth.com/blog/yarn-workspace-monorepo</loc>
+    <lastmod>2021-03-04T20:30:54+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
 </urlset>
