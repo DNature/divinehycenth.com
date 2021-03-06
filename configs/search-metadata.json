@@ -52,6 +52,16 @@
     "url": "/blog/file-uploads-with-apolloserver-2"
   },
   {
+    "title": "Front-end Engineer in 2021",
+    "description": "Things you need to know as a Front-end Engineer in 2021.",
+    "tags": [
+      "front-end",
+      "guide",
+      "2021"
+    ],
+    "url": "/blog/front-end-engineer-in-2021"
+  },
+  {
     "title": "Graphql CRUD operations on a CouchDB database with nodejs.",
     "description": "Learn how to perform basic CRUD (Create, Read, Update, and Delete) operations on a Couchdb database through a Graphql API.",
     "tags": [
