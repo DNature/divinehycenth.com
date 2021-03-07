@@ -3,76 +3,8 @@
 @tailwind utilities;
 
 @import 'fonts.css';
-
-:root {
-  --white: #fff;
-  --dark-100: #dddddd;
-  --dark-200: #d1d2d2;
-  --dark-300: #c8caca;
-  --dark-400: #b3b6b6;
-  --dark-500: #828989;
-  --dark-600: #505b5b;
-  --dark-700: #1f2d2d;
-  /* --dark-800: #151818; */
-  /* --dark-800: #010e15; */
-  --dark-800: #111516;
-
-  --primary-300: #e4c1af;
-  --primary-400: #e4a079;
-  --primary-500: #e37c42;
-  --primary-600: #e35a0c;
-  --primary-700: #d05007;
-
-  --accent-300: #ecdfb2;
-  --accent-400: #f2d980;
-  --accent-500: #f8d34d;
-  --accent-600: #ffcd1b;
-  --accent-700: #e7b70e;
-
-  --glass: rgba(255, 255, 255, 0.3);
-  --glass-card: linear-gradient(
-    95.57deg,
-    rgba(2, 43, 65, 0.1) 6.86%,
-    rgba(2, 33, 50, 0.2) 96.38%
-  );
-}
-
-.nature-ui-dark {
-  --dark-100: #e6e6e6;
-  --dark-200: #dddddd;
-  --dark-300: #dfdfdf;
-  --dark-400: #c5c5c5;
-  --dark-500: #b5b9b9;
-  --dark-600: #a8aaaa;
-  --dark-700: #eeeeee;
-  /* --dark-800: #151818; */
-  /* --dark-800: #010e15; */
-  --dark-800: #111516;
-
-  --white: var(--dark-800);
-
-  --primary-300: #e4c1af;
-  --primary-400: #e4a079;
-  --primary-500: #e37c42;
-  --primary-600: #e35a0c;
-  --primary-700: #d05007;
-
-  --accent-300: #ecdfb2;
-  --accent-400: #f2d980;
-  --accent-500: #f8d34d;
-  --accent-600: #ffcd1b;
-  --accent-700: #e7b70e;
-
-  --glass: rgba(21, 24, 24, 0.5);
-  --glass-card: linear-gradient(
-    95.57deg,
-    rgba(80, 91, 91, 0.1) 6.86%,
-    rgba(80, 91, 91, 0.2) 96.38%
-  );
-
-  @apply bg-dark-800;
-  @apply text-dark-600;
-}
+@import 'roots.css';
+@import 'progress-bar.css';
 
 body,
 html {

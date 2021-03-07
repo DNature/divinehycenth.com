@@ -54,8 +54,6 @@ const Header = () => {
       }}
       className='sticky top-0 left-0 w-full z-50 bg-glass'
     >
-      <div className='w-full bg-gradient-line h-2 absolute top-0 left-0' />
-
       <nav className='w-full max-w-screen-lg px-4 md:px-0 md:mx-auto py-3'>
         <div className='flex items-center justify-between xl:px-0'>
           <Stack row spacing='6'>
