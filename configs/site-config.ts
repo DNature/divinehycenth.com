@@ -34,7 +34,7 @@ const siteConfig = {
       url: 'https://divinehycenth.com',
       title: 'Divine Hycenth',
       description:
-        'Modular React based component library with built in support for tailwindcss',
+        'I’m a software engineer, UI/UX Designer, and a Football lover. Learn more about me...',
       site_name:
         'Divine Hycenth',
       images: [
