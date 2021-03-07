@@ -58,7 +58,7 @@ const Contact = ({}) => {
         centered
         className='relative z-20 my-12 px-6 lg:px-0'
       >
-        <Styled.h1>Contact me on</Styled.h1>
+        <Styled.h1>Email me on</Styled.h1>
         <Styled.h3>
           <a
             href='mailto:contact@divinehycenth.com'
