@@ -15,7 +15,14 @@ bg-gray-500
 bg-gray-600
 bg-gray-700
 bg-gray-800
-bg-gray-900 bg-primary-50
+bg-gray-900 
+'
+  ></div>
+);
+
+/**
+ * 
+bg-primary-50
 bg-primary-100
 bg-primary-200
 bg-primary-300
@@ -35,6 +42,5 @@ bg-accent-500
 bg-accent-600
 bg-accent-700
 bg-accent-800
-bg-accent-900'
-  ></div>
-);
+bg-accent-900
+ */

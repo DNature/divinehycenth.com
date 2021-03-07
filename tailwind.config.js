@@ -4,7 +4,7 @@ module.exports = {
     "pages/**/*.{mdx,tsx}",
     "layouts/**/*.tsx",
     'node_modules/@nature-ui/**/*.js',
-    'node_modules/@nature-ui/layout/*.js'
+    'node_modules/@nature-ui/layout/*.js',
   ],
   theme: {
     extend: {
@@ -70,7 +70,8 @@ module.exports = {
       },
     },
   },
-
   variants: {},
-  plugins: ['node_modules/@nature-ui/**/*.js*'],
+  plugins: [
+    'node_modules/@nature-ui/**/*.js*',
+  './node_modules/nprogress/nprogress.js'],
 };

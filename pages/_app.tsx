@@ -2,31 +2,27 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Router from 'next/router';
-import ProgressBar from '@badrap/bar-of-progress';
+import NProgress from 'nprogress';
 
 import '../styles/index.css';
 import { ColorModeProvider } from 'components/color-mode/provider';
 import { YandexScript } from 'components/yandex-script';
 
-const progress = new ProgressBar({
-  size: 3,
-  className: 'bar-of-progress',
-  delay: 100,
-});
-
-if (typeof window !== 'undefined') {
-  progress.start();
-  progress.finish();
-}
-
 export default function MyApp({ Component, pageProps }: AppProps) {
   React.useEffect(() => {
-    Router.events.on('routeChangeStart', progress.start);
-    Router.events.on('routeChangeComplete', () => {
-      progress.finish();
-      window.scrollTo(0, 0);
+    Router.events.on('routeChangeStart', () => {
+      NProgress.start();
+      NProgress.set(0.1);
+      NProgress.inc(0.3);
     });
-    Router.events.on('routeChangeError', progress.finish);
+
+    Router.events.on('routeChangeComplete', () => {
+      NProgress.done();
+    });
+
+    Router.events.on('routeChangeError', () => {
+      NProgress.done();
+    });
   }, []);
 
   return (
