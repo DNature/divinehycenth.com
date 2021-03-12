@@ -10,6 +10,17 @@
     "url": "/blog/build-a-progressive-web-app-with-reactjs"
   },
   {
+    "title": "Building a component library (Part 1: React, Typescript, Storybookjs and Yarn workspaces)",
+    "description": "Learn how to setup Yarn workspace with Storybookjs, React and Typescript for your component library",
+    "tags": [
+      "yarn-workspace",
+      "react",
+      "typescript",
+      "storybook"
+    ],
+    "url": "/blog/building-a-component-library-with-react-typescript-storybookjs-and-yarn-workspaces"
+  },
+  {
     "title": "How to deploy a Gatsby site to Netlify.",
     "description": "Learn how to deploy your typescript/javascript gatsby project to netlify in minutes",
     "tags": [
