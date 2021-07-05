@@ -8,6 +8,14 @@
     "tags": ["#open-source", "#react", "#typescript"]
   },
   {
+    "title": "Crypto Compare",
+    "description": "Crypto compare is a real-time crypto dashboard built with React and Typescript.",
+    "imageUrl": "https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.8/v1625513934/works/crypto-tracker_dnfvd5.png",
+    "githubUrl": "https://github.com/DNature/bitcoin-tracker",
+    "websiteUrl": "https://bitcoin-tracker-ashy.vercel.app",
+    "tags": ["#crypto", "#react", "#typescript"]
+  },
+  {
     "title": "CombatCovid",
     "description": "Combat covid with hardware Search for well documented designs 🔍 and document new solutions.",
     "imageUrl": "https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.8/v1614461947/works/combat-covid_qxwl74.png",

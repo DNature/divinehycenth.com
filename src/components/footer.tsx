@@ -3,14 +3,13 @@ import siteConfig from 'configs/site-config';
 import Link from 'next/link';
 import React from 'react';
 import {
-  IoLogoDribbble,
   IoLogoDiscord,
+  IoLogoDribbble,
   IoLogoGithub,
   IoLogoLinkedin,
   IoLogoTwitter,
 } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
-import { BlurLeft, BlurRight } from './BlurEffect';
 
 export const links = [
   {
@@ -68,8 +67,8 @@ const FooterLink: React.FC<FooterLinkProps> = ({
 const Footer = () => {
   return (
     <Box as='footer' className='relative' css={{ justifySelf: 'flex-start' }}>
-      <BlurLeft className='absolute -top-44 left-0 lg:left-64 xl:left-80 2xl:left-96' />
-      <BlurRight className='absolute -top-44 right-0 lg:right-64 xl:right-80 2xl:right-96' />
+      {/* <BlurLeft className='absolute -top-44 left-0 lg:left-64 xl:left-80 2xl:left-96' /> */}
+      {/* <BlurRight className='absolute -top-44 right-0 lg:right-64 xl:right-80 2xl:right-96' /> */}
       <Box className='text-center py-16 relative bg-glass'>
         <Container size='xs' centered>
           <p className='text-sm'>
