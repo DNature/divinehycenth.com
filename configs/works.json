@@ -8,12 +8,20 @@
     "tags": ["#open-source", "#react", "#typescript"]
   },
   {
-    "title": "Crypto Compare",
+    "title": "Cryptocompare dashboard",
     "description": "Crypto compare is a real-time crypto dashboard built with React and Typescript.",
     "imageUrl": "https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.8/v1625513934/works/crypto-tracker_dnfvd5.png",
     "githubUrl": "https://github.com/DNature/bitcoin-tracker",
     "websiteUrl": "https://bitcoin-tracker-ashy.vercel.app",
     "tags": ["#crypto", "#react", "#typescript"]
+  },
+  {
+    "title": "TradingView Binance",
+    "description": "Tradingview charting library & Binance implementation with React.",
+    "imageUrl": "https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.8/v1627514672/works/yv_ruihgt.png",
+    "githubUrl": "https://github.com/DNature/tv-next-binance",
+    "websiteUrl": "https://tv-next-binance.vercel.app",
+    "tags": ["#crypto", "#nextjs", "#typescript"]
   },
   {
     "title": "CombatCovid",
@@ -22,6 +30,14 @@
     "githubUrl": "http://github.com/CombatCovid",
     "websiteUrl": "http://combatcovid.equipment/",
     "tags": ["#open-source", "#vue"]
+  },
+  {
+    "title": "TradingView Chart widget",
+    "description": "Tradingview charting library widget with React.",
+    "imageUrl": "https://res.cloudinary.com/dnature/image/upload/c_scale,w_0.8/v1627514295/works/tv2_mtrain.png",
+    "githubUrl": "https://github.com/DNature/tv-react-v2",
+    "websiteUrl": "https://v2-tv-react.netlify.app",
+    "tags": ["#crypto", "#react", "#typescript"]
   },
   {
     "title": "Hardocs",
